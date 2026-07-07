@@ -22,3 +22,23 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# xtext Artifakte
+src/de.fhdw.iis1.tarot/src/de/fhdw/iis1/tarot/*.java
+src/de.fhdw.iis1.tarot.generator
+src/de.fhdw.iis1.tarot.scoping
+src/de.fhdw.iis1.tarot.validation
+src/de.fhdw.iis1.tarot/src-gen/*
+src/de.fhdw.iis1.tarot/xtend-gen/*
+src/de.fhdw.iis1.tarot.ide/src/*
+src/de.fhdw.iis1.tarot.ide/src-gen/*
+src/de.fhdw.iis1.tarot.ide/xtend-gen/*
+src/de.fhdw.iis1.tarot.tests/src/*
+src/de.fhdw.iis1.tarot.tests/src-gen/*
+src/de.fhdw.iis1.tarot.tests/xtend-gen/*
+src/de.fhdw.iis1.tarot.ui/src/*
+src/de.fhdw.iis1.tarot.ui/src-gen/*
+src/de.fhdw.iis1.tarot.ui/xtend-gen/*
+src/de.fhdw.iis1.tarot.ui.tests/src/*
+src/de.fhdw.iis1.tarot.ui.tests/src-gen/*
+src/de.fhdw.iis1.tarot.ui.tests/xtend-gen/*

@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: de.fhdw.iis1.tarot
+Bundle-ManifestVersion: 2
+Bundle-Name: de.fhdw.iis1.tarot
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.fhdw.iis1.tarot; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.19.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.43.0",
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: de.fhdw.iis1.tarot.tarot,
+ de.fhdw.iis1.tarot.parser.antlr,
+ de.fhdw.iis1.tarot,
+ de.fhdw.iis1.tarot.scoping,
+ de.fhdw.iis1.tarot.generator,
+ de.fhdw.iis1.tarot.tarot.util,
+ de.fhdw.iis1.tarot.parser.antlr.internal,
+ de.fhdw.iis1.tarot.serializer,
+ de.fhdw.iis1.tarot.validation,
+ de.fhdw.iis1.tarot.tarot.impl,
+ de.fhdw.iis1.tarot.services
+Import-Package: org.apache.log4j

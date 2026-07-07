@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tarot" nsURI="http://www.fhdw.de/iis1/tarot/Tarot" nsPrefix="tarot">
+  <eClassifiers xsi:type="ecore:EClass" name="Program">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lines" upperBound="-1"
+        eType="#//Line" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Line">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instruction" eType="#//Instruction"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instruction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assignment" eSuperTypes="#//Instruction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="var" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expr" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AddSubExpr" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="left" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="right" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntLiteral" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Instruction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="var" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Instruction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="var" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Goto" eSuperTypes="#//Instruction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Line"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionalGoto" eSuperTypes="#//Instruction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="left" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="right" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Line"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stop" eSuperTypes="#//Instruction"/>
+</ecore:EPackage>

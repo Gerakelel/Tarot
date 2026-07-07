@@ -1,0 +1,63 @@
+grammar de.fhdw.iis1.tarot.Tarot with org.eclipse.xtext.common.Terminals
+
+generate tarot "http://www.fhdw.de/iis1/tarot/Tarot"
+
+Program:
+    lines+=Line+
+;
+ 
+Line:
+    name=ID ':' instruction=Instruction ';'?
+;
+ 
+Instruction:
+      Assignment
+    | Input
+    | Output
+    | Goto
+    | ConditionalGoto
+    | Stop
+;
+ 
+Assignment:
+    var=ID ':=' expr=Expression
+;
+ 
+Expression:
+    AddSubExpr | IntLiteral
+;
+ 
+AddSubExpr:
+    {AddSubExpr}
+    left=ID (op=('+'|'-') right=ID)?
+;
+ 
+IntLiteral:
+    {IntLiteral}
+    value=INT
+;
+ 
+Input:
+    'EINGABE' var=ID
+;
+ 
+Output:
+    'SCHREIBE' var=ID
+;
+ 
+Goto:
+    'GEHE' 'ZU' target=[Line|ID]
+;
+ 
+ConditionalGoto:
+    'WENN' '(' left=ID op=('=' | '<' | '>') right=Value ')'
+    'DANN' 'GEHE' 'ZU' target=[Line|ID]
+;
+ 
+Value:
+	ID | INT
+;
+ 
+Stop:
+    {Stop} 'Halt!'
+;
