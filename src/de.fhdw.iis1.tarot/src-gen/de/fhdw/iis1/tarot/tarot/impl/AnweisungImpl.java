@@ -3,7 +3,7 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.Instruction;
+import de.fhdw.iis1.tarot.tarot.Anweisung;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -12,19 +12,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Instruction</b></em>'.
+ * An implementation of the model object '<em><b>Anweisung</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class InstructionImpl extends MinimalEObjectImpl.Container implements Instruction
+public class AnweisungImpl extends MinimalEObjectImpl.Container implements Anweisung
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected InstructionImpl()
+  protected AnweisungImpl()
   {
     super();
   }
@@ -37,7 +37,7 @@ public class InstructionImpl extends MinimalEObjectImpl.Container implements Ins
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.INSTRUCTION;
+    return TarotPackage.Literals.ANWEISUNG;
   }
 
-} //InstructionImpl
+} //AnweisungImpl

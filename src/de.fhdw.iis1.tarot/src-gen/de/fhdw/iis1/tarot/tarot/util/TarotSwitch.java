@@ -73,95 +73,95 @@ public class TarotSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case TarotPackage.PROGRAM:
+      case TarotPackage.PROGRAMM:
       {
-        Program program = (Program)theEObject;
-        T result = caseProgram(program);
+        Programm programm = (Programm)theEObject;
+        T result = caseProgramm(programm);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.LINE:
+      case TarotPackage.ZEILE:
       {
-        Line line = (Line)theEObject;
-        T result = caseLine(line);
+        Zeile zeile = (Zeile)theEObject;
+        T result = caseZeile(zeile);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.INSTRUCTION:
+      case TarotPackage.ANWEISUNG:
       {
-        Instruction instruction = (Instruction)theEObject;
-        T result = caseInstruction(instruction);
+        Anweisung anweisung = (Anweisung)theEObject;
+        T result = caseAnweisung(anweisung);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.ASSIGNMENT:
+      case TarotPackage.ZUORDNUNG:
       {
-        Assignment assignment = (Assignment)theEObject;
-        T result = caseAssignment(assignment);
-        if (result == null) result = caseInstruction(assignment);
+        Zuordnung zuordnung = (Zuordnung)theEObject;
+        T result = caseZuordnung(zuordnung);
+        if (result == null) result = caseAnweisung(zuordnung);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.EXPRESSION:
+      case TarotPackage.AUSDRUCK:
       {
-        Expression expression = (Expression)theEObject;
-        T result = caseExpression(expression);
+        Ausdruck ausdruck = (Ausdruck)theEObject;
+        T result = caseAusdruck(ausdruck);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.ADD_SUB_EXPR:
+      case TarotPackage.STRICH_OPERATION:
       {
-        AddSubExpr addSubExpr = (AddSubExpr)theEObject;
-        T result = caseAddSubExpr(addSubExpr);
-        if (result == null) result = caseExpression(addSubExpr);
+        StrichOperation strichOperation = (StrichOperation)theEObject;
+        T result = caseStrichOperation(strichOperation);
+        if (result == null) result = caseAusdruck(strichOperation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.INT_LITERAL:
+      case TarotPackage.GANZZAHL:
       {
-        IntLiteral intLiteral = (IntLiteral)theEObject;
-        T result = caseIntLiteral(intLiteral);
-        if (result == null) result = caseExpression(intLiteral);
+        Ganzzahl ganzzahl = (Ganzzahl)theEObject;
+        T result = caseGanzzahl(ganzzahl);
+        if (result == null) result = caseAusdruck(ganzzahl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.INPUT:
+      case TarotPackage.EINGABE:
       {
-        Input input = (Input)theEObject;
-        T result = caseInput(input);
-        if (result == null) result = caseInstruction(input);
+        Eingabe eingabe = (Eingabe)theEObject;
+        T result = caseEingabe(eingabe);
+        if (result == null) result = caseAnweisung(eingabe);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.OUTPUT:
+      case TarotPackage.AUSGABE:
       {
-        Output output = (Output)theEObject;
-        T result = caseOutput(output);
-        if (result == null) result = caseInstruction(output);
+        Ausgabe ausgabe = (Ausgabe)theEObject;
+        T result = caseAusgabe(ausgabe);
+        if (result == null) result = caseAnweisung(ausgabe);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.GOTO:
+      case TarotPackage.GEHE_ZU:
       {
-        Goto goto_ = (Goto)theEObject;
-        T result = caseGoto(goto_);
-        if (result == null) result = caseInstruction(goto_);
+        GeheZu geheZu = (GeheZu)theEObject;
+        T result = caseGeheZu(geheZu);
+        if (result == null) result = caseAnweisung(geheZu);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.CONDITIONAL_GOTO:
+      case TarotPackage.KONDITIONALER_GEHE_ZU:
       {
-        ConditionalGoto conditionalGoto = (ConditionalGoto)theEObject;
-        T result = caseConditionalGoto(conditionalGoto);
-        if (result == null) result = caseInstruction(conditionalGoto);
+        KonditionalerGeheZu konditionalerGeheZu = (KonditionalerGeheZu)theEObject;
+        T result = caseKonditionalerGeheZu(konditionalerGeheZu);
+        if (result == null) result = caseAnweisung(konditionalerGeheZu);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TarotPackage.STOP:
+      case TarotPackage.HALT:
       {
-        Stop stop = (Stop)theEObject;
-        T result = caseStop(stop);
-        if (result == null) result = caseInstruction(stop);
+        Halt halt = (Halt)theEObject;
+        T result = caseHalt(halt);
+        if (result == null) result = caseAnweisung(halt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -170,193 +170,193 @@ public class TarotSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Program</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Programm</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Program</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Programm</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseProgram(Program object)
+  public T caseProgramm(Programm object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Line</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Zeile</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Line</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Zeile</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLine(Line object)
+  public T caseZeile(Zeile object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Instruction</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Anweisung</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Instruction</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Anweisung</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseInstruction(Instruction object)
+  public T caseAnweisung(Anweisung object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Assignment</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Zuordnung</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Assignment</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Zuordnung</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAssignment(Assignment object)
+  public T caseZuordnung(Zuordnung object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ausdruck</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ausdruck</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseExpression(Expression object)
+  public T caseAusdruck(Ausdruck object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Add Sub Expr</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Strich Operation</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Add Sub Expr</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Strich Operation</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAddSubExpr(AddSubExpr object)
+  public T caseStrichOperation(StrichOperation object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Int Literal</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ganzzahl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Int Literal</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ganzzahl</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseIntLiteral(IntLiteral object)
+  public T caseGanzzahl(Ganzzahl object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Input</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Eingabe</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Input</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Eingabe</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseInput(Input object)
+  public T caseEingabe(Eingabe object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Output</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Ausgabe</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Output</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Ausgabe</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOutput(Output object)
+  public T caseAusgabe(Ausgabe object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Goto</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Gehe Zu</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Goto</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Gehe Zu</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGoto(Goto object)
+  public T caseGeheZu(GeheZu object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Conditional Goto</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Konditionaler Gehe Zu</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Conditional Goto</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Konditionaler Gehe Zu</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseConditionalGoto(ConditionalGoto object)
+  public T caseKonditionalerGeheZu(KonditionalerGeheZu object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Stop</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Halt</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Stop</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Halt</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStop(Stop object)
+  public T caseHalt(Halt object)
   {
     return null;
   }

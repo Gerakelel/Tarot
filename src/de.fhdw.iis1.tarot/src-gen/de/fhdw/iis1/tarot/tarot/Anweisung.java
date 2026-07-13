@@ -7,14 +7,14 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Expression</b></em>'.
+ * A representation of the model object '<em><b>Anweisung</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getExpression()
+ * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getAnweisung()
  * @model
  * @generated
  */
-public interface Expression extends EObject
+public interface Anweisung extends EObject
 {
-} // Expression
+} // Anweisung

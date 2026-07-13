@@ -3,7 +3,7 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.Expression;
+import de.fhdw.iis1.tarot.tarot.Ausdruck;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -12,19 +12,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Expression</b></em>'.
+ * An implementation of the model object '<em><b>Ausdruck</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expression
+public class AusdruckImpl extends MinimalEObjectImpl.Container implements Ausdruck
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ExpressionImpl()
+  protected AusdruckImpl()
   {
     super();
   }
@@ -37,7 +37,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.EXPRESSION;
+    return TarotPackage.Literals.AUSDRUCK;
   }
 
-} //ExpressionImpl
+} //AusdruckImpl

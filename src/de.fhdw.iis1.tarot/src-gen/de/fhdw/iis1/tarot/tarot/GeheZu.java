@@ -6,42 +6,42 @@ package de.fhdw.iis1.tarot.tarot;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Goto</b></em>'.
+ * A representation of the model object '<em><b>Gehe Zu</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.Goto#getTarget <em>Target</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.GeheZu#getTarget <em>Target</em>}</li>
  * </ul>
  *
- * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getGoto()
+ * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getGeheZu()
  * @model
  * @generated
  */
-public interface Goto extends Instruction
+public interface GeheZu extends Anweisung
 {
   /**
    * Returns the value of the '<em><b>Target</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Target</em>' reference.
-   * @see #setTarget(Line)
-   * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getGoto_Target()
+   * @see #setTarget(Zeile)
+   * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getGeheZu_Target()
    * @model
    * @generated
    */
-  Line getTarget();
+  Zeile getTarget();
 
   /**
-   * Sets the value of the '{@link de.fhdw.iis1.tarot.tarot.Goto#getTarget <em>Target</em>}' reference.
+   * Sets the value of the '{@link de.fhdw.iis1.tarot.tarot.GeheZu#getTarget <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Target</em>' reference.
    * @see #getTarget()
    * @generated
    */
-  void setTarget(Line value);
+  void setTarget(Zeile value);
 
-} // Goto
+} // GeheZu

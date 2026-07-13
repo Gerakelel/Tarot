@@ -3,9 +3,9 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.ConditionalGoto;
-import de.fhdw.iis1.tarot.tarot.Line;
+import de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
+import de.fhdw.iis1.tarot.tarot.Zeile;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,41 +16,41 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Conditional Goto</b></em>'.
+ * An implementation of the model object '<em><b>Konditionaler Gehe Zu</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ConditionalGotoImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ConditionalGotoImpl#getOp <em>Op</em>}</li>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ConditionalGotoImpl#getRight <em>Right</em>}</li>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ConditionalGotoImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.KonditionalerGeheZuImpl#getLinks <em>Links</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.KonditionalerGeheZuImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.KonditionalerGeheZuImpl#getRechts <em>Rechts</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.KonditionalerGeheZuImpl#getZiel <em>Ziel</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ConditionalGotoImpl extends InstructionImpl implements ConditionalGoto
+public class KonditionalerGeheZuImpl extends AnweisungImpl implements KonditionalerGeheZu
 {
   /**
-   * The default value of the '{@link #getLeft() <em>Left</em>}' attribute.
+   * The default value of the '{@link #getLinks() <em>Links</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLeft()
+   * @see #getLinks()
    * @generated
    * @ordered
    */
-  protected static final String LEFT_EDEFAULT = null;
+  protected static final String LINKS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' attribute.
+   * The cached value of the '{@link #getLinks() <em>Links</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLeft()
+   * @see #getLinks()
    * @generated
    * @ordered
    */
-  protected String left = LEFT_EDEFAULT;
+  protected String links = LINKS_EDEFAULT;
 
   /**
    * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -73,41 +73,41 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
   protected String op = OP_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getRight() <em>Right</em>}' attribute.
+   * The default value of the '{@link #getRechts() <em>Rechts</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRight()
+   * @see #getRechts()
    * @generated
    * @ordered
    */
-  protected static final String RIGHT_EDEFAULT = null;
+  protected static final String RECHTS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRight() <em>Right</em>}' attribute.
+   * The cached value of the '{@link #getRechts() <em>Rechts</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRight()
+   * @see #getRechts()
    * @generated
    * @ordered
    */
-  protected String right = RIGHT_EDEFAULT;
+  protected String rechts = RECHTS_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+   * The cached value of the '{@link #getZiel() <em>Ziel</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTarget()
+   * @see #getZiel()
    * @generated
    * @ordered
    */
-  protected Line target;
+  protected Zeile ziel;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ConditionalGotoImpl()
+  protected KonditionalerGeheZuImpl()
   {
     super();
   }
@@ -120,7 +120,7 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.CONDITIONAL_GOTO;
+    return TarotPackage.Literals.KONDITIONALER_GEHE_ZU;
   }
 
   /**
@@ -129,9 +129,9 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
    * @generated
    */
   @Override
-  public String getLeft()
+  public String getLinks()
   {
-    return left;
+    return links;
   }
 
   /**
@@ -140,12 +140,12 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
    * @generated
    */
   @Override
-  public void setLeft(String newLeft)
+  public void setLinks(String newLinks)
   {
-    String oldLeft = left;
-    left = newLeft;
+    String oldLinks = links;
+    links = newLinks;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.CONDITIONAL_GOTO__LEFT, oldLeft, left));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.KONDITIONALER_GEHE_ZU__LINKS, oldLinks, links));
   }
 
   /**
@@ -170,7 +170,7 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
     String oldOp = op;
     op = newOp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.CONDITIONAL_GOTO__OP, oldOp, op));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.KONDITIONALER_GEHE_ZU__OP, oldOp, op));
   }
 
   /**
@@ -179,9 +179,9 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
    * @generated
    */
   @Override
-  public String getRight()
+  public String getRechts()
   {
-    return right;
+    return rechts;
   }
 
   /**
@@ -190,12 +190,12 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
    * @generated
    */
   @Override
-  public void setRight(String newRight)
+  public void setRechts(String newRechts)
   {
-    String oldRight = right;
-    right = newRight;
+    String oldRechts = rechts;
+    rechts = newRechts;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.CONDITIONAL_GOTO__RIGHT, oldRight, right));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.KONDITIONALER_GEHE_ZU__RECHTS, oldRechts, rechts));
   }
 
   /**
@@ -204,19 +204,19 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
    * @generated
    */
   @Override
-  public Line getTarget()
+  public Zeile getZiel()
   {
-    if (target != null && target.eIsProxy())
+    if (ziel != null && ziel.eIsProxy())
     {
-      InternalEObject oldTarget = (InternalEObject)target;
-      target = (Line)eResolveProxy(oldTarget);
-      if (target != oldTarget)
+      InternalEObject oldZiel = (InternalEObject)ziel;
+      ziel = (Zeile)eResolveProxy(oldZiel);
+      if (ziel != oldZiel)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TarotPackage.CONDITIONAL_GOTO__TARGET, oldTarget, target));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TarotPackage.KONDITIONALER_GEHE_ZU__ZIEL, oldZiel, ziel));
       }
     }
-    return target;
+    return ziel;
   }
 
   /**
@@ -224,9 +224,9 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
    * <!-- end-user-doc -->
    * @generated
    */
-  public Line basicGetTarget()
+  public Zeile basicGetZiel()
   {
-    return target;
+    return ziel;
   }
 
   /**
@@ -235,12 +235,12 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
    * @generated
    */
   @Override
-  public void setTarget(Line newTarget)
+  public void setZiel(Zeile newZiel)
   {
-    Line oldTarget = target;
-    target = newTarget;
+    Zeile oldZiel = ziel;
+    ziel = newZiel;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.CONDITIONAL_GOTO__TARGET, oldTarget, target));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.KONDITIONALER_GEHE_ZU__ZIEL, oldZiel, ziel));
   }
 
   /**
@@ -253,15 +253,15 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
   {
     switch (featureID)
     {
-      case TarotPackage.CONDITIONAL_GOTO__LEFT:
-        return getLeft();
-      case TarotPackage.CONDITIONAL_GOTO__OP:
+      case TarotPackage.KONDITIONALER_GEHE_ZU__LINKS:
+        return getLinks();
+      case TarotPackage.KONDITIONALER_GEHE_ZU__OP:
         return getOp();
-      case TarotPackage.CONDITIONAL_GOTO__RIGHT:
-        return getRight();
-      case TarotPackage.CONDITIONAL_GOTO__TARGET:
-        if (resolve) return getTarget();
-        return basicGetTarget();
+      case TarotPackage.KONDITIONALER_GEHE_ZU__RECHTS:
+        return getRechts();
+      case TarotPackage.KONDITIONALER_GEHE_ZU__ZIEL:
+        if (resolve) return getZiel();
+        return basicGetZiel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -276,17 +276,17 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
   {
     switch (featureID)
     {
-      case TarotPackage.CONDITIONAL_GOTO__LEFT:
-        setLeft((String)newValue);
+      case TarotPackage.KONDITIONALER_GEHE_ZU__LINKS:
+        setLinks((String)newValue);
         return;
-      case TarotPackage.CONDITIONAL_GOTO__OP:
+      case TarotPackage.KONDITIONALER_GEHE_ZU__OP:
         setOp((String)newValue);
         return;
-      case TarotPackage.CONDITIONAL_GOTO__RIGHT:
-        setRight((String)newValue);
+      case TarotPackage.KONDITIONALER_GEHE_ZU__RECHTS:
+        setRechts((String)newValue);
         return;
-      case TarotPackage.CONDITIONAL_GOTO__TARGET:
-        setTarget((Line)newValue);
+      case TarotPackage.KONDITIONALER_GEHE_ZU__ZIEL:
+        setZiel((Zeile)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -302,17 +302,17 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
   {
     switch (featureID)
     {
-      case TarotPackage.CONDITIONAL_GOTO__LEFT:
-        setLeft(LEFT_EDEFAULT);
+      case TarotPackage.KONDITIONALER_GEHE_ZU__LINKS:
+        setLinks(LINKS_EDEFAULT);
         return;
-      case TarotPackage.CONDITIONAL_GOTO__OP:
+      case TarotPackage.KONDITIONALER_GEHE_ZU__OP:
         setOp(OP_EDEFAULT);
         return;
-      case TarotPackage.CONDITIONAL_GOTO__RIGHT:
-        setRight(RIGHT_EDEFAULT);
+      case TarotPackage.KONDITIONALER_GEHE_ZU__RECHTS:
+        setRechts(RECHTS_EDEFAULT);
         return;
-      case TarotPackage.CONDITIONAL_GOTO__TARGET:
-        setTarget((Line)null);
+      case TarotPackage.KONDITIONALER_GEHE_ZU__ZIEL:
+        setZiel((Zeile)null);
         return;
     }
     super.eUnset(featureID);
@@ -328,14 +328,14 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
   {
     switch (featureID)
     {
-      case TarotPackage.CONDITIONAL_GOTO__LEFT:
-        return LEFT_EDEFAULT == null ? left != null : !LEFT_EDEFAULT.equals(left);
-      case TarotPackage.CONDITIONAL_GOTO__OP:
+      case TarotPackage.KONDITIONALER_GEHE_ZU__LINKS:
+        return LINKS_EDEFAULT == null ? links != null : !LINKS_EDEFAULT.equals(links);
+      case TarotPackage.KONDITIONALER_GEHE_ZU__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case TarotPackage.CONDITIONAL_GOTO__RIGHT:
-        return RIGHT_EDEFAULT == null ? right != null : !RIGHT_EDEFAULT.equals(right);
-      case TarotPackage.CONDITIONAL_GOTO__TARGET:
-        return target != null;
+      case TarotPackage.KONDITIONALER_GEHE_ZU__RECHTS:
+        return RECHTS_EDEFAULT == null ? rechts != null : !RECHTS_EDEFAULT.equals(rechts);
+      case TarotPackage.KONDITIONALER_GEHE_ZU__ZIEL:
+        return ziel != null;
     }
     return super.eIsSet(featureID);
   }
@@ -351,14 +351,14 @@ public class ConditionalGotoImpl extends InstructionImpl implements ConditionalG
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (left: ");
-    result.append(left);
+    result.append(" (links: ");
+    result.append(links);
     result.append(", op: ");
     result.append(op);
-    result.append(", right: ");
-    result.append(right);
+    result.append(", rechts: ");
+    result.append(rechts);
     result.append(')');
     return result.toString();
   }
 
-} //ConditionalGotoImpl
+} //KonditionalerGeheZuImpl

@@ -6,21 +6,21 @@ package de.fhdw.iis1.tarot.tarot;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Output</b></em>'.
+ * A representation of the model object '<em><b>Ausgabe</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.Output#getVar <em>Var</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.Ausgabe#getVar <em>Var</em>}</li>
  * </ul>
  *
- * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getOutput()
+ * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getAusgabe()
  * @model
  * @generated
  */
-public interface Output extends Instruction
+public interface Ausgabe extends Anweisung
 {
   /**
    * Returns the value of the '<em><b>Var</b></em>' attribute.
@@ -28,14 +28,14 @@ public interface Output extends Instruction
    * <!-- end-user-doc -->
    * @return the value of the '<em>Var</em>' attribute.
    * @see #setVar(String)
-   * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getOutput_Var()
+   * @see de.fhdw.iis1.tarot.tarot.TarotPackage#getAusgabe_Var()
    * @model
    * @generated
    */
   String getVar();
 
   /**
-   * Sets the value of the '{@link de.fhdw.iis1.tarot.tarot.Output#getVar <em>Var</em>}' attribute.
+   * Sets the value of the '{@link de.fhdw.iis1.tarot.tarot.Ausgabe#getVar <em>Var</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Var</em>' attribute.
@@ -44,4 +44,4 @@ public interface Output extends Instruction
    */
   void setVar(String value);
 
-} // Output
+} // Ausgabe

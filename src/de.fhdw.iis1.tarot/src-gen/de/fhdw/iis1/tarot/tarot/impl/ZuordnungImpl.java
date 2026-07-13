@@ -3,9 +3,9 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.Instruction;
-import de.fhdw.iis1.tarot.tarot.Line;
+import de.fhdw.iis1.tarot.tarot.Ausdruck;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
+import de.fhdw.iis1.tarot.tarot.Zuordnung;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,60 +14,59 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Line</b></em>'.
+ * An implementation of the model object '<em><b>Zuordnung</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.LineImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.LineImpl#getInstruction <em>Instruction</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ZuordnungImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ZuordnungImpl#getAusdruck <em>Ausdruck</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LineImpl extends MinimalEObjectImpl.Container implements Line
+public class ZuordnungImpl extends AnweisungImpl implements Zuordnung
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getVar() <em>Var</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String VAR_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String var = VAR_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getInstruction() <em>Instruction</em>}' containment reference.
+   * The cached value of the '{@link #getAusdruck() <em>Ausdruck</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInstruction()
+   * @see #getAusdruck()
    * @generated
    * @ordered
    */
-  protected Instruction instruction;
+  protected Ausdruck ausdruck;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LineImpl()
+  protected ZuordnungImpl()
   {
     super();
   }
@@ -80,7 +79,7 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.LINE;
+    return TarotPackage.Literals.ZUORDNUNG;
   }
 
   /**
@@ -89,9 +88,9 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
    * @generated
    */
   @Override
-  public String getName()
+  public String getVar()
   {
-    return name;
+    return var;
   }
 
   /**
@@ -100,12 +99,12 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setVar(String newVar)
   {
-    String oldName = name;
-    name = newName;
+    String oldVar = var;
+    var = newVar;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.LINE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ZUORDNUNG__VAR, oldVar, var));
   }
 
   /**
@@ -114,9 +113,9 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
    * @generated
    */
   @Override
-  public Instruction getInstruction()
+  public Ausdruck getAusdruck()
   {
-    return instruction;
+    return ausdruck;
   }
 
   /**
@@ -124,13 +123,13 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetInstruction(Instruction newInstruction, NotificationChain msgs)
+  public NotificationChain basicSetAusdruck(Ausdruck newAusdruck, NotificationChain msgs)
   {
-    Instruction oldInstruction = instruction;
-    instruction = newInstruction;
+    Ausdruck oldAusdruck = ausdruck;
+    ausdruck = newAusdruck;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TarotPackage.LINE__INSTRUCTION, oldInstruction, newInstruction);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TarotPackage.ZUORDNUNG__AUSDRUCK, oldAusdruck, newAusdruck);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -142,20 +141,20 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
    * @generated
    */
   @Override
-  public void setInstruction(Instruction newInstruction)
+  public void setAusdruck(Ausdruck newAusdruck)
   {
-    if (newInstruction != instruction)
+    if (newAusdruck != ausdruck)
     {
       NotificationChain msgs = null;
-      if (instruction != null)
-        msgs = ((InternalEObject)instruction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TarotPackage.LINE__INSTRUCTION, null, msgs);
-      if (newInstruction != null)
-        msgs = ((InternalEObject)newInstruction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TarotPackage.LINE__INSTRUCTION, null, msgs);
-      msgs = basicSetInstruction(newInstruction, msgs);
+      if (ausdruck != null)
+        msgs = ((InternalEObject)ausdruck).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TarotPackage.ZUORDNUNG__AUSDRUCK, null, msgs);
+      if (newAusdruck != null)
+        msgs = ((InternalEObject)newAusdruck).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TarotPackage.ZUORDNUNG__AUSDRUCK, null, msgs);
+      msgs = basicSetAusdruck(newAusdruck, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.LINE__INSTRUCTION, newInstruction, newInstruction));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ZUORDNUNG__AUSDRUCK, newAusdruck, newAusdruck));
   }
 
   /**
@@ -168,8 +167,8 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
   {
     switch (featureID)
     {
-      case TarotPackage.LINE__INSTRUCTION:
-        return basicSetInstruction(null, msgs);
+      case TarotPackage.ZUORDNUNG__AUSDRUCK:
+        return basicSetAusdruck(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -184,10 +183,10 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
   {
     switch (featureID)
     {
-      case TarotPackage.LINE__NAME:
-        return getName();
-      case TarotPackage.LINE__INSTRUCTION:
-        return getInstruction();
+      case TarotPackage.ZUORDNUNG__VAR:
+        return getVar();
+      case TarotPackage.ZUORDNUNG__AUSDRUCK:
+        return getAusdruck();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -202,11 +201,11 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
   {
     switch (featureID)
     {
-      case TarotPackage.LINE__NAME:
-        setName((String)newValue);
+      case TarotPackage.ZUORDNUNG__VAR:
+        setVar((String)newValue);
         return;
-      case TarotPackage.LINE__INSTRUCTION:
-        setInstruction((Instruction)newValue);
+      case TarotPackage.ZUORDNUNG__AUSDRUCK:
+        setAusdruck((Ausdruck)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -222,11 +221,11 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
   {
     switch (featureID)
     {
-      case TarotPackage.LINE__NAME:
-        setName(NAME_EDEFAULT);
+      case TarotPackage.ZUORDNUNG__VAR:
+        setVar(VAR_EDEFAULT);
         return;
-      case TarotPackage.LINE__INSTRUCTION:
-        setInstruction((Instruction)null);
+      case TarotPackage.ZUORDNUNG__AUSDRUCK:
+        setAusdruck((Ausdruck)null);
         return;
     }
     super.eUnset(featureID);
@@ -242,10 +241,10 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
   {
     switch (featureID)
     {
-      case TarotPackage.LINE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TarotPackage.LINE__INSTRUCTION:
-        return instruction != null;
+      case TarotPackage.ZUORDNUNG__VAR:
+        return VAR_EDEFAULT == null ? var != null : !VAR_EDEFAULT.equals(var);
+      case TarotPackage.ZUORDNUNG__AUSDRUCK:
+        return ausdruck != null;
     }
     return super.eIsSet(featureID);
   }
@@ -261,10 +260,10 @@ public class LineImpl extends MinimalEObjectImpl.Container implements Line
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (var: ");
+    result.append(var);
     result.append(')');
     return result.toString();
   }
 
-} //LineImpl
+} //ZuordnungImpl

@@ -4,7 +4,7 @@
 package de.fhdw.iis1.tarot.tests
 
 import com.google.inject.Inject
-import de.fhdw.iis1.tarot.tarot.Program
+import de.fhdw.iis1.tarot.tarot.Programm
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.extensions.InjectionExtension
 import org.eclipse.xtext.testing.util.ParseHelper
@@ -16,7 +16,7 @@ import org.junit.jupiter.api.^extension.ExtendWith
 @InjectWith(TarotInjectorProvider)
 class TarotParsingTest {
 	@Inject
-	ParseHelper<Program> parseHelper
+	ParseHelper<Programm> parseHelper
 	
 	@Test
 	def void loadModel() {

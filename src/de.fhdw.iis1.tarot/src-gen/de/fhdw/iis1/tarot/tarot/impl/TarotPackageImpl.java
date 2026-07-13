@@ -3,20 +3,20 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.AddSubExpr;
-import de.fhdw.iis1.tarot.tarot.Assignment;
-import de.fhdw.iis1.tarot.tarot.ConditionalGoto;
-import de.fhdw.iis1.tarot.tarot.Expression;
-import de.fhdw.iis1.tarot.tarot.Goto;
-import de.fhdw.iis1.tarot.tarot.Input;
-import de.fhdw.iis1.tarot.tarot.Instruction;
-import de.fhdw.iis1.tarot.tarot.IntLiteral;
-import de.fhdw.iis1.tarot.tarot.Line;
-import de.fhdw.iis1.tarot.tarot.Output;
-import de.fhdw.iis1.tarot.tarot.Program;
-import de.fhdw.iis1.tarot.tarot.Stop;
+import de.fhdw.iis1.tarot.tarot.Anweisung;
+import de.fhdw.iis1.tarot.tarot.Ausdruck;
+import de.fhdw.iis1.tarot.tarot.Ausgabe;
+import de.fhdw.iis1.tarot.tarot.Eingabe;
+import de.fhdw.iis1.tarot.tarot.Ganzzahl;
+import de.fhdw.iis1.tarot.tarot.GeheZu;
+import de.fhdw.iis1.tarot.tarot.Halt;
+import de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu;
+import de.fhdw.iis1.tarot.tarot.Programm;
+import de.fhdw.iis1.tarot.tarot.StrichOperation;
 import de.fhdw.iis1.tarot.tarot.TarotFactory;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
+import de.fhdw.iis1.tarot.tarot.Zeile;
+import de.fhdw.iis1.tarot.tarot.Zuordnung;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -38,84 +38,84 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass programEClass = null;
+  private EClass programmEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass lineEClass = null;
+  private EClass zeileEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass instructionEClass = null;
+  private EClass anweisungEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass assignmentEClass = null;
+  private EClass zuordnungEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass expressionEClass = null;
+  private EClass ausdruckEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass addSubExprEClass = null;
+  private EClass strichOperationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass intLiteralEClass = null;
+  private EClass ganzzahlEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass inputEClass = null;
+  private EClass eingabeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass outputEClass = null;
+  private EClass ausgabeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass gotoEClass = null;
+  private EClass geheZuEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass conditionalGotoEClass = null;
+  private EClass konditionalerGeheZuEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass stopEClass = null;
+  private EClass haltEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -185,9 +185,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getProgram()
+  public EClass getProgramm()
   {
-    return programEClass;
+    return programmEClass;
   }
 
   /**
@@ -196,9 +196,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EReference getProgram_Lines()
+  public EReference getProgramm_Zeilen()
   {
-    return (EReference)programEClass.getEStructuralFeatures().get(0);
+    return (EReference)programmEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -207,9 +207,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getLine()
+  public EClass getZeile()
   {
-    return lineEClass;
+    return zeileEClass;
   }
 
   /**
@@ -218,9 +218,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getLine_Name()
+  public EAttribute getZeile_Name()
   {
-    return (EAttribute)lineEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)zeileEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -229,9 +229,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EReference getLine_Instruction()
+  public EReference getZeile_Anweisung()
   {
-    return (EReference)lineEClass.getEStructuralFeatures().get(1);
+    return (EReference)zeileEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -240,9 +240,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getInstruction()
+  public EClass getAnweisung()
   {
-    return instructionEClass;
+    return anweisungEClass;
   }
 
   /**
@@ -251,9 +251,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getAssignment()
+  public EClass getZuordnung()
   {
-    return assignmentEClass;
+    return zuordnungEClass;
   }
 
   /**
@@ -262,9 +262,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getAssignment_Var()
+  public EAttribute getZuordnung_Var()
   {
-    return (EAttribute)assignmentEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)zuordnungEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -273,9 +273,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EReference getAssignment_Expr()
+  public EReference getZuordnung_Ausdruck()
   {
-    return (EReference)assignmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)zuordnungEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -284,9 +284,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getExpression()
+  public EClass getAusdruck()
   {
-    return expressionEClass;
+    return ausdruckEClass;
   }
 
   /**
@@ -295,9 +295,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getAddSubExpr()
+  public EClass getStrichOperation()
   {
-    return addSubExprEClass;
+    return strichOperationEClass;
   }
 
   /**
@@ -306,9 +306,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getAddSubExpr_Left()
+  public EAttribute getStrichOperation_Links()
   {
-    return (EAttribute)addSubExprEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)strichOperationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -317,9 +317,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getAddSubExpr_Op()
+  public EAttribute getStrichOperation_Op()
   {
-    return (EAttribute)addSubExprEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)strichOperationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -328,9 +328,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getAddSubExpr_Right()
+  public EAttribute getStrichOperation_Rechts()
   {
-    return (EAttribute)addSubExprEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)strichOperationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -339,9 +339,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getIntLiteral()
+  public EClass getGanzzahl()
   {
-    return intLiteralEClass;
+    return ganzzahlEClass;
   }
 
   /**
@@ -350,9 +350,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getIntLiteral_Value()
+  public EAttribute getGanzzahl_Wert()
   {
-    return (EAttribute)intLiteralEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)ganzzahlEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -361,9 +361,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getInput()
+  public EClass getEingabe()
   {
-    return inputEClass;
+    return eingabeEClass;
   }
 
   /**
@@ -372,9 +372,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getInput_Var()
+  public EAttribute getEingabe_Var()
   {
-    return (EAttribute)inputEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)eingabeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -383,9 +383,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getOutput()
+  public EClass getAusgabe()
   {
-    return outputEClass;
+    return ausgabeEClass;
   }
 
   /**
@@ -394,9 +394,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getOutput_Var()
+  public EAttribute getAusgabe_Var()
   {
-    return (EAttribute)outputEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)ausgabeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -405,9 +405,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getGoto()
+  public EClass getGeheZu()
   {
-    return gotoEClass;
+    return geheZuEClass;
   }
 
   /**
@@ -416,9 +416,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EReference getGoto_Target()
+  public EReference getGeheZu_Target()
   {
-    return (EReference)gotoEClass.getEStructuralFeatures().get(0);
+    return (EReference)geheZuEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -427,9 +427,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getConditionalGoto()
+  public EClass getKonditionalerGeheZu()
   {
-    return conditionalGotoEClass;
+    return konditionalerGeheZuEClass;
   }
 
   /**
@@ -438,9 +438,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getConditionalGoto_Left()
+  public EAttribute getKonditionalerGeheZu_Links()
   {
-    return (EAttribute)conditionalGotoEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)konditionalerGeheZuEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -449,9 +449,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getConditionalGoto_Op()
+  public EAttribute getKonditionalerGeheZu_Op()
   {
-    return (EAttribute)conditionalGotoEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)konditionalerGeheZuEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -460,9 +460,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EAttribute getConditionalGoto_Right()
+  public EAttribute getKonditionalerGeheZu_Rechts()
   {
-    return (EAttribute)conditionalGotoEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)konditionalerGeheZuEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -471,9 +471,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EReference getConditionalGoto_Target()
+  public EReference getKonditionalerGeheZu_Ziel()
   {
-    return (EReference)conditionalGotoEClass.getEStructuralFeatures().get(3);
+    return (EReference)konditionalerGeheZuEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -482,9 +482,9 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
    * @generated
    */
   @Override
-  public EClass getStop()
+  public EClass getHalt()
   {
-    return stopEClass;
+    return haltEClass;
   }
 
   /**
@@ -518,45 +518,45 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
     isCreated = true;
 
     // Create classes and their features
-    programEClass = createEClass(PROGRAM);
-    createEReference(programEClass, PROGRAM__LINES);
+    programmEClass = createEClass(PROGRAMM);
+    createEReference(programmEClass, PROGRAMM__ZEILEN);
 
-    lineEClass = createEClass(LINE);
-    createEAttribute(lineEClass, LINE__NAME);
-    createEReference(lineEClass, LINE__INSTRUCTION);
+    zeileEClass = createEClass(ZEILE);
+    createEAttribute(zeileEClass, ZEILE__NAME);
+    createEReference(zeileEClass, ZEILE__ANWEISUNG);
 
-    instructionEClass = createEClass(INSTRUCTION);
+    anweisungEClass = createEClass(ANWEISUNG);
 
-    assignmentEClass = createEClass(ASSIGNMENT);
-    createEAttribute(assignmentEClass, ASSIGNMENT__VAR);
-    createEReference(assignmentEClass, ASSIGNMENT__EXPR);
+    zuordnungEClass = createEClass(ZUORDNUNG);
+    createEAttribute(zuordnungEClass, ZUORDNUNG__VAR);
+    createEReference(zuordnungEClass, ZUORDNUNG__AUSDRUCK);
 
-    expressionEClass = createEClass(EXPRESSION);
+    ausdruckEClass = createEClass(AUSDRUCK);
 
-    addSubExprEClass = createEClass(ADD_SUB_EXPR);
-    createEAttribute(addSubExprEClass, ADD_SUB_EXPR__LEFT);
-    createEAttribute(addSubExprEClass, ADD_SUB_EXPR__OP);
-    createEAttribute(addSubExprEClass, ADD_SUB_EXPR__RIGHT);
+    strichOperationEClass = createEClass(STRICH_OPERATION);
+    createEAttribute(strichOperationEClass, STRICH_OPERATION__LINKS);
+    createEAttribute(strichOperationEClass, STRICH_OPERATION__OP);
+    createEAttribute(strichOperationEClass, STRICH_OPERATION__RECHTS);
 
-    intLiteralEClass = createEClass(INT_LITERAL);
-    createEAttribute(intLiteralEClass, INT_LITERAL__VALUE);
+    ganzzahlEClass = createEClass(GANZZAHL);
+    createEAttribute(ganzzahlEClass, GANZZAHL__WERT);
 
-    inputEClass = createEClass(INPUT);
-    createEAttribute(inputEClass, INPUT__VAR);
+    eingabeEClass = createEClass(EINGABE);
+    createEAttribute(eingabeEClass, EINGABE__VAR);
 
-    outputEClass = createEClass(OUTPUT);
-    createEAttribute(outputEClass, OUTPUT__VAR);
+    ausgabeEClass = createEClass(AUSGABE);
+    createEAttribute(ausgabeEClass, AUSGABE__VAR);
 
-    gotoEClass = createEClass(GOTO);
-    createEReference(gotoEClass, GOTO__TARGET);
+    geheZuEClass = createEClass(GEHE_ZU);
+    createEReference(geheZuEClass, GEHE_ZU__TARGET);
 
-    conditionalGotoEClass = createEClass(CONDITIONAL_GOTO);
-    createEAttribute(conditionalGotoEClass, CONDITIONAL_GOTO__LEFT);
-    createEAttribute(conditionalGotoEClass, CONDITIONAL_GOTO__OP);
-    createEAttribute(conditionalGotoEClass, CONDITIONAL_GOTO__RIGHT);
-    createEReference(conditionalGotoEClass, CONDITIONAL_GOTO__TARGET);
+    konditionalerGeheZuEClass = createEClass(KONDITIONALER_GEHE_ZU);
+    createEAttribute(konditionalerGeheZuEClass, KONDITIONALER_GEHE_ZU__LINKS);
+    createEAttribute(konditionalerGeheZuEClass, KONDITIONALER_GEHE_ZU__OP);
+    createEAttribute(konditionalerGeheZuEClass, KONDITIONALER_GEHE_ZU__RECHTS);
+    createEReference(konditionalerGeheZuEClass, KONDITIONALER_GEHE_ZU__ZIEL);
 
-    stopEClass = createEClass(STOP);
+    haltEClass = createEClass(HALT);
   }
 
   /**
@@ -588,55 +588,55 @@ public class TarotPackageImpl extends EPackageImpl implements TarotPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    assignmentEClass.getESuperTypes().add(this.getInstruction());
-    addSubExprEClass.getESuperTypes().add(this.getExpression());
-    intLiteralEClass.getESuperTypes().add(this.getExpression());
-    inputEClass.getESuperTypes().add(this.getInstruction());
-    outputEClass.getESuperTypes().add(this.getInstruction());
-    gotoEClass.getESuperTypes().add(this.getInstruction());
-    conditionalGotoEClass.getESuperTypes().add(this.getInstruction());
-    stopEClass.getESuperTypes().add(this.getInstruction());
+    zuordnungEClass.getESuperTypes().add(this.getAnweisung());
+    strichOperationEClass.getESuperTypes().add(this.getAusdruck());
+    ganzzahlEClass.getESuperTypes().add(this.getAusdruck());
+    eingabeEClass.getESuperTypes().add(this.getAnweisung());
+    ausgabeEClass.getESuperTypes().add(this.getAnweisung());
+    geheZuEClass.getESuperTypes().add(this.getAnweisung());
+    konditionalerGeheZuEClass.getESuperTypes().add(this.getAnweisung());
+    haltEClass.getESuperTypes().add(this.getAnweisung());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getProgram_Lines(), this.getLine(), null, "lines", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(programmEClass, Programm.class, "Programm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getProgramm_Zeilen(), this.getZeile(), null, "zeilen", null, 0, -1, Programm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(lineEClass, Line.class, "Line", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLine_Name(), ecorePackage.getEString(), "name", null, 0, 1, Line.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLine_Instruction(), this.getInstruction(), null, "instruction", null, 0, 1, Line.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(zeileEClass, Zeile.class, "Zeile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getZeile_Name(), ecorePackage.getEString(), "name", null, 0, 1, Zeile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getZeile_Anweisung(), this.getAnweisung(), null, "anweisung", null, 0, 1, Zeile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(instructionEClass, Instruction.class, "Instruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(anweisungEClass, Anweisung.class, "Anweisung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(assignmentEClass, Assignment.class, "Assignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAssignment_Var(), ecorePackage.getEString(), "var", null, 0, 1, Assignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAssignment_Expr(), this.getExpression(), null, "expr", null, 0, 1, Assignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(zuordnungEClass, Zuordnung.class, "Zuordnung", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getZuordnung_Var(), ecorePackage.getEString(), "var", null, 0, 1, Zuordnung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getZuordnung_Ausdruck(), this.getAusdruck(), null, "ausdruck", null, 0, 1, Zuordnung.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(ausdruckEClass, Ausdruck.class, "Ausdruck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(addSubExprEClass, AddSubExpr.class, "AddSubExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAddSubExpr_Left(), ecorePackage.getEString(), "left", null, 0, 1, AddSubExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAddSubExpr_Op(), ecorePackage.getEString(), "op", null, 0, 1, AddSubExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAddSubExpr_Right(), ecorePackage.getEString(), "right", null, 0, 1, AddSubExpr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(strichOperationEClass, StrichOperation.class, "StrichOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStrichOperation_Links(), ecorePackage.getEString(), "links", null, 0, 1, StrichOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getStrichOperation_Op(), ecorePackage.getEString(), "op", null, 0, 1, StrichOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getStrichOperation_Rechts(), ecorePackage.getEString(), "rechts", null, 0, 1, StrichOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(intLiteralEClass, IntLiteral.class, "IntLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(ganzzahlEClass, Ganzzahl.class, "Ganzzahl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGanzzahl_Wert(), ecorePackage.getEInt(), "wert", null, 0, 1, Ganzzahl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInput_Var(), ecorePackage.getEString(), "var", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(eingabeEClass, Eingabe.class, "Eingabe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEingabe_Var(), ecorePackage.getEString(), "var", null, 0, 1, Eingabe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getOutput_Var(), ecorePackage.getEString(), "var", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(ausgabeEClass, Ausgabe.class, "Ausgabe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAusgabe_Var(), ecorePackage.getEString(), "var", null, 0, 1, Ausgabe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(gotoEClass, Goto.class, "Goto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getGoto_Target(), this.getLine(), null, "target", null, 0, 1, Goto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(geheZuEClass, GeheZu.class, "GeheZu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGeheZu_Target(), this.getZeile(), null, "target", null, 0, 1, GeheZu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(conditionalGotoEClass, ConditionalGoto.class, "ConditionalGoto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConditionalGoto_Left(), ecorePackage.getEString(), "left", null, 0, 1, ConditionalGoto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getConditionalGoto_Op(), ecorePackage.getEString(), "op", null, 0, 1, ConditionalGoto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getConditionalGoto_Right(), ecorePackage.getEString(), "right", null, 0, 1, ConditionalGoto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConditionalGoto_Target(), this.getLine(), null, "target", null, 0, 1, ConditionalGoto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(konditionalerGeheZuEClass, KonditionalerGeheZu.class, "KonditionalerGeheZu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getKonditionalerGeheZu_Links(), ecorePackage.getEString(), "links", null, 0, 1, KonditionalerGeheZu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKonditionalerGeheZu_Op(), ecorePackage.getEString(), "op", null, 0, 1, KonditionalerGeheZu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKonditionalerGeheZu_Rechts(), ecorePackage.getEString(), "rechts", null, 0, 1, KonditionalerGeheZu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getKonditionalerGeheZu_Ziel(), this.getZeile(), null, "ziel", null, 0, 1, KonditionalerGeheZu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(stopEClass, Stop.class, "Stop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(haltEClass, Halt.class, "Halt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

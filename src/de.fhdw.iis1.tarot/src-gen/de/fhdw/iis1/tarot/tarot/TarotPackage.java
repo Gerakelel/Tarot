@@ -58,42 +58,42 @@ public interface TarotPackage extends EPackage
   TarotPackage eINSTANCE = de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.ProgramImpl <em>Program</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.ProgrammImpl <em>Programm</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.ProgramImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getProgram()
+   * @see de.fhdw.iis1.tarot.tarot.impl.ProgrammImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getProgramm()
    * @generated
    */
-  int PROGRAM = 0;
+  int PROGRAMM = 0;
 
   /**
-   * The feature id for the '<em><b>Lines</b></em>' containment reference list.
+   * The feature id for the '<em><b>Zeilen</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROGRAM__LINES = 0;
+  int PROGRAMM__ZEILEN = 0;
 
   /**
-   * The number of structural features of the '<em>Program</em>' class.
+   * The number of structural features of the '<em>Programm</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROGRAM_FEATURE_COUNT = 1;
+  int PROGRAMM_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.LineImpl <em>Line</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.ZeileImpl <em>Zeile</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.LineImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getLine()
+   * @see de.fhdw.iis1.tarot.tarot.impl.ZeileImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getZeile()
    * @generated
    */
-  int LINE = 1;
+  int ZEILE = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -102,54 +102,54 @@ public interface TarotPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINE__NAME = 0;
+  int ZEILE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Instruction</b></em>' containment reference.
+   * The feature id for the '<em><b>Anweisung</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINE__INSTRUCTION = 1;
+  int ZEILE__ANWEISUNG = 1;
 
   /**
-   * The number of structural features of the '<em>Line</em>' class.
+   * The number of structural features of the '<em>Zeile</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINE_FEATURE_COUNT = 2;
+  int ZEILE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.InstructionImpl <em>Instruction</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.AnweisungImpl <em>Anweisung</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.InstructionImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getInstruction()
+   * @see de.fhdw.iis1.tarot.tarot.impl.AnweisungImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAnweisung()
    * @generated
    */
-  int INSTRUCTION = 2;
+  int ANWEISUNG = 2;
 
   /**
-   * The number of structural features of the '<em>Instruction</em>' class.
+   * The number of structural features of the '<em>Anweisung</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INSTRUCTION_FEATURE_COUNT = 0;
+  int ANWEISUNG_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.AssignmentImpl <em>Assignment</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.ZuordnungImpl <em>Zuordnung</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.AssignmentImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAssignment()
+   * @see de.fhdw.iis1.tarot.tarot.impl.ZuordnungImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getZuordnung()
    * @generated
    */
-  int ASSIGNMENT = 3;
+  int ZUORDNUNG = 3;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -158,63 +158,63 @@ public interface TarotPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSIGNMENT__VAR = INSTRUCTION_FEATURE_COUNT + 0;
+  int ZUORDNUNG__VAR = ANWEISUNG_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * The feature id for the '<em><b>Ausdruck</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSIGNMENT__EXPR = INSTRUCTION_FEATURE_COUNT + 1;
+  int ZUORDNUNG__AUSDRUCK = ANWEISUNG_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Assignment</em>' class.
+   * The number of structural features of the '<em>Zuordnung</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASSIGNMENT_FEATURE_COUNT = INSTRUCTION_FEATURE_COUNT + 2;
+  int ZUORDNUNG_FEATURE_COUNT = ANWEISUNG_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.ExpressionImpl <em>Expression</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.AusdruckImpl <em>Ausdruck</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.ExpressionImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getExpression()
+   * @see de.fhdw.iis1.tarot.tarot.impl.AusdruckImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAusdruck()
    * @generated
    */
-  int EXPRESSION = 4;
+  int AUSDRUCK = 4;
 
   /**
-   * The number of structural features of the '<em>Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.AddSubExprImpl <em>Add Sub Expr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.AddSubExprImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAddSubExpr()
-   * @generated
-   */
-  int ADD_SUB_EXPR = 5;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' attribute.
+   * The number of structural features of the '<em>Ausdruck</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ADD_SUB_EXPR__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int AUSDRUCK_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.StrichOperationImpl <em>Strich Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.fhdw.iis1.tarot.tarot.impl.StrichOperationImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getStrichOperation()
+   * @generated
+   */
+  int STRICH_OPERATION = 5;
+
+  /**
+   * The feature id for the '<em><b>Links</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRICH_OPERATION__LINKS = AUSDRUCK_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -223,63 +223,63 @@ public interface TarotPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADD_SUB_EXPR__OP = EXPRESSION_FEATURE_COUNT + 1;
+  int STRICH_OPERATION__OP = AUSDRUCK_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' attribute.
+   * The feature id for the '<em><b>Rechts</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ADD_SUB_EXPR__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+  int STRICH_OPERATION__RECHTS = AUSDRUCK_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Add Sub Expr</em>' class.
+   * The number of structural features of the '<em>Strich Operation</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ADD_SUB_EXPR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+  int STRICH_OPERATION_FEATURE_COUNT = AUSDRUCK_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.IntLiteralImpl <em>Int Literal</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.GanzzahlImpl <em>Ganzzahl</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.IntLiteralImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getIntLiteral()
+   * @see de.fhdw.iis1.tarot.tarot.impl.GanzzahlImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getGanzzahl()
    * @generated
    */
-  int INT_LITERAL = 6;
+  int GANZZAHL = 6;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Int Literal</em>' class.
+   * The feature id for the '<em><b>Wert</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INT_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int GANZZAHL__WERT = AUSDRUCK_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.InputImpl <em>Input</em>}' class.
+   * The number of structural features of the '<em>Ganzzahl</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.InputImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getInput()
+   * @generated
+   * @ordered
+   */
+  int GANZZAHL_FEATURE_COUNT = AUSDRUCK_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.EingabeImpl <em>Eingabe</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.fhdw.iis1.tarot.tarot.impl.EingabeImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getEingabe()
    * @generated
    */
-  int INPUT = 7;
+  int EINGABE = 7;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -288,26 +288,26 @@ public interface TarotPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INPUT__VAR = INSTRUCTION_FEATURE_COUNT + 0;
+  int EINGABE__VAR = ANWEISUNG_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Input</em>' class.
+   * The number of structural features of the '<em>Eingabe</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INPUT_FEATURE_COUNT = INSTRUCTION_FEATURE_COUNT + 1;
+  int EINGABE_FEATURE_COUNT = ANWEISUNG_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.OutputImpl <em>Output</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.AusgabeImpl <em>Ausgabe</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.OutputImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getOutput()
+   * @see de.fhdw.iis1.tarot.tarot.impl.AusgabeImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAusgabe()
    * @generated
    */
-  int OUTPUT = 8;
+  int AUSGABE = 8;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -316,26 +316,26 @@ public interface TarotPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT__VAR = INSTRUCTION_FEATURE_COUNT + 0;
+  int AUSGABE__VAR = ANWEISUNG_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Output</em>' class.
+   * The number of structural features of the '<em>Ausgabe</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT_FEATURE_COUNT = INSTRUCTION_FEATURE_COUNT + 1;
+  int AUSGABE_FEATURE_COUNT = ANWEISUNG_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.GotoImpl <em>Goto</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.GeheZuImpl <em>Gehe Zu</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.GotoImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getGoto()
+   * @see de.fhdw.iis1.tarot.tarot.impl.GeheZuImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getGeheZu()
    * @generated
    */
-  int GOTO = 9;
+  int GEHE_ZU = 9;
 
   /**
    * The feature id for the '<em><b>Target</b></em>' reference.
@@ -344,35 +344,35 @@ public interface TarotPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOTO__TARGET = INSTRUCTION_FEATURE_COUNT + 0;
+  int GEHE_ZU__TARGET = ANWEISUNG_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Goto</em>' class.
+   * The number of structural features of the '<em>Gehe Zu</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GOTO_FEATURE_COUNT = INSTRUCTION_FEATURE_COUNT + 1;
+  int GEHE_ZU_FEATURE_COUNT = ANWEISUNG_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.ConditionalGotoImpl <em>Conditional Goto</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.KonditionalerGeheZuImpl <em>Konditionaler Gehe Zu</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.ConditionalGotoImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getConditionalGoto()
+   * @see de.fhdw.iis1.tarot.tarot.impl.KonditionalerGeheZuImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getKonditionalerGeheZu()
    * @generated
    */
-  int CONDITIONAL_GOTO = 10;
+  int KONDITIONALER_GEHE_ZU = 10;
 
   /**
-   * The feature id for the '<em><b>Left</b></em>' attribute.
+   * The feature id for the '<em><b>Links</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITIONAL_GOTO__LEFT = INSTRUCTION_FEATURE_COUNT + 0;
+  int KONDITIONALER_GEHE_ZU__LINKS = ANWEISUNG_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -381,350 +381,350 @@ public interface TarotPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONDITIONAL_GOTO__OP = INSTRUCTION_FEATURE_COUNT + 1;
+  int KONDITIONALER_GEHE_ZU__OP = ANWEISUNG_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' attribute.
+   * The feature id for the '<em><b>Rechts</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITIONAL_GOTO__RIGHT = INSTRUCTION_FEATURE_COUNT + 2;
+  int KONDITIONALER_GEHE_ZU__RECHTS = ANWEISUNG_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Target</b></em>' reference.
+   * The feature id for the '<em><b>Ziel</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITIONAL_GOTO__TARGET = INSTRUCTION_FEATURE_COUNT + 3;
+  int KONDITIONALER_GEHE_ZU__ZIEL = ANWEISUNG_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>Conditional Goto</em>' class.
+   * The number of structural features of the '<em>Konditionaler Gehe Zu</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITIONAL_GOTO_FEATURE_COUNT = INSTRUCTION_FEATURE_COUNT + 4;
+  int KONDITIONALER_GEHE_ZU_FEATURE_COUNT = ANWEISUNG_FEATURE_COUNT + 4;
 
   /**
-   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.StopImpl <em>Stop</em>}' class.
+   * The meta object id for the '{@link de.fhdw.iis1.tarot.tarot.impl.HaltImpl <em>Halt</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.fhdw.iis1.tarot.tarot.impl.StopImpl
-   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getStop()
+   * @see de.fhdw.iis1.tarot.tarot.impl.HaltImpl
+   * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getHalt()
    * @generated
    */
-  int STOP = 11;
+  int HALT = 11;
 
   /**
-   * The number of structural features of the '<em>Stop</em>' class.
+   * The number of structural features of the '<em>Halt</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STOP_FEATURE_COUNT = INSTRUCTION_FEATURE_COUNT + 0;
+  int HALT_FEATURE_COUNT = ANWEISUNG_FEATURE_COUNT + 0;
 
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Program <em>Program</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Programm <em>Programm</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Program</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Program
+   * @return the meta object for class '<em>Programm</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Programm
    * @generated
    */
-  EClass getProgram();
+  EClass getProgramm();
 
   /**
-   * Returns the meta object for the containment reference list '{@link de.fhdw.iis1.tarot.tarot.Program#getLines <em>Lines</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.fhdw.iis1.tarot.tarot.Programm#getZeilen <em>Zeilen</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Lines</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Program#getLines()
-   * @see #getProgram()
+   * @return the meta object for the containment reference list '<em>Zeilen</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Programm#getZeilen()
+   * @see #getProgramm()
    * @generated
    */
-  EReference getProgram_Lines();
+  EReference getProgramm_Zeilen();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Line <em>Line</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Zeile <em>Zeile</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Line</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Line
+   * @return the meta object for class '<em>Zeile</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Zeile
    * @generated
    */
-  EClass getLine();
+  EClass getZeile();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Line#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Zeile#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Line#getName()
-   * @see #getLine()
+   * @see de.fhdw.iis1.tarot.tarot.Zeile#getName()
+   * @see #getZeile()
    * @generated
    */
-  EAttribute getLine_Name();
+  EAttribute getZeile_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.fhdw.iis1.tarot.tarot.Line#getInstruction <em>Instruction</em>}'.
+   * Returns the meta object for the containment reference '{@link de.fhdw.iis1.tarot.tarot.Zeile#getAnweisung <em>Anweisung</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Instruction</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Line#getInstruction()
-   * @see #getLine()
+   * @return the meta object for the containment reference '<em>Anweisung</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Zeile#getAnweisung()
+   * @see #getZeile()
    * @generated
    */
-  EReference getLine_Instruction();
+  EReference getZeile_Anweisung();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Instruction <em>Instruction</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Anweisung <em>Anweisung</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Instruction</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Instruction
+   * @return the meta object for class '<em>Anweisung</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Anweisung
    * @generated
    */
-  EClass getInstruction();
+  EClass getAnweisung();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Assignment <em>Assignment</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Zuordnung <em>Zuordnung</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Assignment</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Assignment
+   * @return the meta object for class '<em>Zuordnung</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Zuordnung
    * @generated
    */
-  EClass getAssignment();
+  EClass getZuordnung();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Assignment#getVar <em>Var</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Zuordnung#getVar <em>Var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Var</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Assignment#getVar()
-   * @see #getAssignment()
+   * @see de.fhdw.iis1.tarot.tarot.Zuordnung#getVar()
+   * @see #getZuordnung()
    * @generated
    */
-  EAttribute getAssignment_Var();
+  EAttribute getZuordnung_Var();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.fhdw.iis1.tarot.tarot.Assignment#getExpr <em>Expr</em>}'.
+   * Returns the meta object for the containment reference '{@link de.fhdw.iis1.tarot.tarot.Zuordnung#getAusdruck <em>Ausdruck</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expr</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Assignment#getExpr()
-   * @see #getAssignment()
+   * @return the meta object for the containment reference '<em>Ausdruck</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Zuordnung#getAusdruck()
+   * @see #getZuordnung()
    * @generated
    */
-  EReference getAssignment_Expr();
+  EReference getZuordnung_Ausdruck();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Expression <em>Expression</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Ausdruck <em>Ausdruck</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Expression</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Expression
+   * @return the meta object for class '<em>Ausdruck</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Ausdruck
    * @generated
    */
-  EClass getExpression();
+  EClass getAusdruck();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.AddSubExpr <em>Add Sub Expr</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.StrichOperation <em>Strich Operation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Add Sub Expr</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.AddSubExpr
+   * @return the meta object for class '<em>Strich Operation</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.StrichOperation
    * @generated
    */
-  EClass getAddSubExpr();
+  EClass getStrichOperation();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.AddSubExpr#getLeft <em>Left</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.StrichOperation#getLinks <em>Links</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Left</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.AddSubExpr#getLeft()
-   * @see #getAddSubExpr()
+   * @return the meta object for the attribute '<em>Links</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.StrichOperation#getLinks()
+   * @see #getStrichOperation()
    * @generated
    */
-  EAttribute getAddSubExpr_Left();
+  EAttribute getStrichOperation_Links();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.AddSubExpr#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.StrichOperation#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.AddSubExpr#getOp()
-   * @see #getAddSubExpr()
+   * @see de.fhdw.iis1.tarot.tarot.StrichOperation#getOp()
+   * @see #getStrichOperation()
    * @generated
    */
-  EAttribute getAddSubExpr_Op();
+  EAttribute getStrichOperation_Op();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.AddSubExpr#getRight <em>Right</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.StrichOperation#getRechts <em>Rechts</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Right</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.AddSubExpr#getRight()
-   * @see #getAddSubExpr()
+   * @return the meta object for the attribute '<em>Rechts</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.StrichOperation#getRechts()
+   * @see #getStrichOperation()
    * @generated
    */
-  EAttribute getAddSubExpr_Right();
+  EAttribute getStrichOperation_Rechts();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.IntLiteral <em>Int Literal</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Ganzzahl <em>Ganzzahl</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Int Literal</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.IntLiteral
+   * @return the meta object for class '<em>Ganzzahl</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Ganzzahl
    * @generated
    */
-  EClass getIntLiteral();
+  EClass getGanzzahl();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.IntLiteral#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Ganzzahl#getWert <em>Wert</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.IntLiteral#getValue()
-   * @see #getIntLiteral()
+   * @return the meta object for the attribute '<em>Wert</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Ganzzahl#getWert()
+   * @see #getGanzzahl()
    * @generated
    */
-  EAttribute getIntLiteral_Value();
+  EAttribute getGanzzahl_Wert();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Input <em>Input</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Eingabe <em>Eingabe</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Input</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Input
+   * @return the meta object for class '<em>Eingabe</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Eingabe
    * @generated
    */
-  EClass getInput();
+  EClass getEingabe();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Input#getVar <em>Var</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Var</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Input#getVar()
-   * @see #getInput()
-   * @generated
-   */
-  EAttribute getInput_Var();
-
-  /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Output <em>Output</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Output</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Output
-   * @generated
-   */
-  EClass getOutput();
-
-  /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Output#getVar <em>Var</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Eingabe#getVar <em>Var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Var</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Output#getVar()
-   * @see #getOutput()
+   * @see de.fhdw.iis1.tarot.tarot.Eingabe#getVar()
+   * @see #getEingabe()
    * @generated
    */
-  EAttribute getOutput_Var();
+  EAttribute getEingabe_Var();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Goto <em>Goto</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Ausgabe <em>Ausgabe</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Goto</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Goto
+   * @return the meta object for class '<em>Ausgabe</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Ausgabe
    * @generated
    */
-  EClass getGoto();
+  EClass getAusgabe();
 
   /**
-   * Returns the meta object for the reference '{@link de.fhdw.iis1.tarot.tarot.Goto#getTarget <em>Target</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.Ausgabe#getVar <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Var</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Ausgabe#getVar()
+   * @see #getAusgabe()
+   * @generated
+   */
+  EAttribute getAusgabe_Var();
+
+  /**
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.GeheZu <em>Gehe Zu</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Gehe Zu</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.GeheZu
+   * @generated
+   */
+  EClass getGeheZu();
+
+  /**
+   * Returns the meta object for the reference '{@link de.fhdw.iis1.tarot.tarot.GeheZu#getTarget <em>Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Target</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Goto#getTarget()
-   * @see #getGoto()
+   * @see de.fhdw.iis1.tarot.tarot.GeheZu#getTarget()
+   * @see #getGeheZu()
    * @generated
    */
-  EReference getGoto_Target();
+  EReference getGeheZu_Target();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.ConditionalGoto <em>Conditional Goto</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu <em>Konditionaler Gehe Zu</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Conditional Goto</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.ConditionalGoto
+   * @return the meta object for class '<em>Konditionaler Gehe Zu</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu
    * @generated
    */
-  EClass getConditionalGoto();
+  EClass getKonditionalerGeheZu();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.ConditionalGoto#getLeft <em>Left</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu#getLinks <em>Links</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Left</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.ConditionalGoto#getLeft()
-   * @see #getConditionalGoto()
+   * @return the meta object for the attribute '<em>Links</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu#getLinks()
+   * @see #getKonditionalerGeheZu()
    * @generated
    */
-  EAttribute getConditionalGoto_Left();
+  EAttribute getKonditionalerGeheZu_Links();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.ConditionalGoto#getOp <em>Op</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu#getOp <em>Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Op</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.ConditionalGoto#getOp()
-   * @see #getConditionalGoto()
+   * @see de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu#getOp()
+   * @see #getKonditionalerGeheZu()
    * @generated
    */
-  EAttribute getConditionalGoto_Op();
+  EAttribute getKonditionalerGeheZu_Op();
 
   /**
-   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.ConditionalGoto#getRight <em>Right</em>}'.
+   * Returns the meta object for the attribute '{@link de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu#getRechts <em>Rechts</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Right</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.ConditionalGoto#getRight()
-   * @see #getConditionalGoto()
+   * @return the meta object for the attribute '<em>Rechts</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu#getRechts()
+   * @see #getKonditionalerGeheZu()
    * @generated
    */
-  EAttribute getConditionalGoto_Right();
+  EAttribute getKonditionalerGeheZu_Rechts();
 
   /**
-   * Returns the meta object for the reference '{@link de.fhdw.iis1.tarot.tarot.ConditionalGoto#getTarget <em>Target</em>}'.
+   * Returns the meta object for the reference '{@link de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu#getZiel <em>Ziel</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Target</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.ConditionalGoto#getTarget()
-   * @see #getConditionalGoto()
+   * @return the meta object for the reference '<em>Ziel</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu#getZiel()
+   * @see #getKonditionalerGeheZu()
    * @generated
    */
-  EReference getConditionalGoto_Target();
+  EReference getKonditionalerGeheZu_Ziel();
 
   /**
-   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Stop <em>Stop</em>}'.
+   * Returns the meta object for class '{@link de.fhdw.iis1.tarot.tarot.Halt <em>Halt</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Stop</em>'.
-   * @see de.fhdw.iis1.tarot.tarot.Stop
+   * @return the meta object for class '<em>Halt</em>'.
+   * @see de.fhdw.iis1.tarot.tarot.Halt
    * @generated
    */
-  EClass getStop();
+  EClass getHalt();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -750,32 +750,32 @@ public interface TarotPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.ProgramImpl <em>Program</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.ProgrammImpl <em>Programm</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.ProgramImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getProgram()
+     * @see de.fhdw.iis1.tarot.tarot.impl.ProgrammImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getProgramm()
      * @generated
      */
-    EClass PROGRAM = eINSTANCE.getProgram();
+    EClass PROGRAMM = eINSTANCE.getProgramm();
 
     /**
-     * The meta object literal for the '<em><b>Lines</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Zeilen</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PROGRAM__LINES = eINSTANCE.getProgram_Lines();
+    EReference PROGRAMM__ZEILEN = eINSTANCE.getProgramm_Zeilen();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.LineImpl <em>Line</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.ZeileImpl <em>Zeile</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.LineImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getLine()
+     * @see de.fhdw.iis1.tarot.tarot.impl.ZeileImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getZeile()
      * @generated
      */
-    EClass LINE = eINSTANCE.getLine();
+    EClass ZEILE = eINSTANCE.getZeile();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -783,35 +783,35 @@ public interface TarotPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LINE__NAME = eINSTANCE.getLine_Name();
+    EAttribute ZEILE__NAME = eINSTANCE.getZeile_Name();
 
     /**
-     * The meta object literal for the '<em><b>Instruction</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Anweisung</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LINE__INSTRUCTION = eINSTANCE.getLine_Instruction();
+    EReference ZEILE__ANWEISUNG = eINSTANCE.getZeile_Anweisung();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.InstructionImpl <em>Instruction</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.AnweisungImpl <em>Anweisung</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.InstructionImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getInstruction()
+     * @see de.fhdw.iis1.tarot.tarot.impl.AnweisungImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAnweisung()
      * @generated
      */
-    EClass INSTRUCTION = eINSTANCE.getInstruction();
+    EClass ANWEISUNG = eINSTANCE.getAnweisung();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.AssignmentImpl <em>Assignment</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.ZuordnungImpl <em>Zuordnung</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.AssignmentImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAssignment()
+     * @see de.fhdw.iis1.tarot.tarot.impl.ZuordnungImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getZuordnung()
      * @generated
      */
-    EClass ASSIGNMENT = eINSTANCE.getAssignment();
+    EClass ZUORDNUNG = eINSTANCE.getZuordnung();
 
     /**
      * The meta object literal for the '<em><b>Var</b></em>' attribute feature.
@@ -819,43 +819,43 @@ public interface TarotPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ASSIGNMENT__VAR = eINSTANCE.getAssignment_Var();
+    EAttribute ZUORDNUNG__VAR = eINSTANCE.getZuordnung_Var();
 
     /**
-     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Ausdruck</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ASSIGNMENT__EXPR = eINSTANCE.getAssignment_Expr();
+    EReference ZUORDNUNG__AUSDRUCK = eINSTANCE.getZuordnung_Ausdruck();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.ExpressionImpl <em>Expression</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.AusdruckImpl <em>Ausdruck</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.ExpressionImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getExpression()
+     * @see de.fhdw.iis1.tarot.tarot.impl.AusdruckImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAusdruck()
      * @generated
      */
-    EClass EXPRESSION = eINSTANCE.getExpression();
+    EClass AUSDRUCK = eINSTANCE.getAusdruck();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.AddSubExprImpl <em>Add Sub Expr</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.StrichOperationImpl <em>Strich Operation</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.AddSubExprImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAddSubExpr()
+     * @see de.fhdw.iis1.tarot.tarot.impl.StrichOperationImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getStrichOperation()
      * @generated
      */
-    EClass ADD_SUB_EXPR = eINSTANCE.getAddSubExpr();
+    EClass STRICH_OPERATION = eINSTANCE.getStrichOperation();
 
     /**
-     * The meta object literal for the '<em><b>Left</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Links</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ADD_SUB_EXPR__LEFT = eINSTANCE.getAddSubExpr_Left();
+    EAttribute STRICH_OPERATION__LINKS = eINSTANCE.getStrichOperation_Links();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -863,61 +863,43 @@ public interface TarotPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ADD_SUB_EXPR__OP = eINSTANCE.getAddSubExpr_Op();
+    EAttribute STRICH_OPERATION__OP = eINSTANCE.getStrichOperation_Op();
 
     /**
-     * The meta object literal for the '<em><b>Right</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Rechts</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ADD_SUB_EXPR__RIGHT = eINSTANCE.getAddSubExpr_Right();
+    EAttribute STRICH_OPERATION__RECHTS = eINSTANCE.getStrichOperation_Rechts();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.IntLiteralImpl <em>Int Literal</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.GanzzahlImpl <em>Ganzzahl</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.IntLiteralImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getIntLiteral()
+     * @see de.fhdw.iis1.tarot.tarot.impl.GanzzahlImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getGanzzahl()
      * @generated
      */
-    EClass INT_LITERAL = eINSTANCE.getIntLiteral();
+    EClass GANZZAHL = eINSTANCE.getGanzzahl();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INT_LITERAL__VALUE = eINSTANCE.getIntLiteral_Value();
-
-    /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.InputImpl <em>Input</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.InputImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getInput()
-     * @generated
-     */
-    EClass INPUT = eINSTANCE.getInput();
-
-    /**
-     * The meta object literal for the '<em><b>Var</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Wert</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute INPUT__VAR = eINSTANCE.getInput_Var();
+    EAttribute GANZZAHL__WERT = eINSTANCE.getGanzzahl_Wert();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.OutputImpl <em>Output</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.EingabeImpl <em>Eingabe</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.OutputImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getOutput()
+     * @see de.fhdw.iis1.tarot.tarot.impl.EingabeImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getEingabe()
      * @generated
      */
-    EClass OUTPUT = eINSTANCE.getOutput();
+    EClass EINGABE = eINSTANCE.getEingabe();
 
     /**
      * The meta object literal for the '<em><b>Var</b></em>' attribute feature.
@@ -925,17 +907,35 @@ public interface TarotPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute OUTPUT__VAR = eINSTANCE.getOutput_Var();
+    EAttribute EINGABE__VAR = eINSTANCE.getEingabe_Var();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.GotoImpl <em>Goto</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.AusgabeImpl <em>Ausgabe</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.GotoImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getGoto()
+     * @see de.fhdw.iis1.tarot.tarot.impl.AusgabeImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getAusgabe()
      * @generated
      */
-    EClass GOTO = eINSTANCE.getGoto();
+    EClass AUSGABE = eINSTANCE.getAusgabe();
+
+    /**
+     * The meta object literal for the '<em><b>Var</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AUSGABE__VAR = eINSTANCE.getAusgabe_Var();
+
+    /**
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.GeheZuImpl <em>Gehe Zu</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.fhdw.iis1.tarot.tarot.impl.GeheZuImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getGeheZu()
+     * @generated
+     */
+    EClass GEHE_ZU = eINSTANCE.getGeheZu();
 
     /**
      * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -943,25 +943,25 @@ public interface TarotPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference GOTO__TARGET = eINSTANCE.getGoto_Target();
+    EReference GEHE_ZU__TARGET = eINSTANCE.getGeheZu_Target();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.ConditionalGotoImpl <em>Conditional Goto</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.KonditionalerGeheZuImpl <em>Konditionaler Gehe Zu</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.ConditionalGotoImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getConditionalGoto()
+     * @see de.fhdw.iis1.tarot.tarot.impl.KonditionalerGeheZuImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getKonditionalerGeheZu()
      * @generated
      */
-    EClass CONDITIONAL_GOTO = eINSTANCE.getConditionalGoto();
+    EClass KONDITIONALER_GEHE_ZU = eINSTANCE.getKonditionalerGeheZu();
 
     /**
-     * The meta object literal for the '<em><b>Left</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Links</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONDITIONAL_GOTO__LEFT = eINSTANCE.getConditionalGoto_Left();
+    EAttribute KONDITIONALER_GEHE_ZU__LINKS = eINSTANCE.getKonditionalerGeheZu_Links();
 
     /**
      * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
@@ -969,33 +969,33 @@ public interface TarotPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONDITIONAL_GOTO__OP = eINSTANCE.getConditionalGoto_Op();
+    EAttribute KONDITIONALER_GEHE_ZU__OP = eINSTANCE.getKonditionalerGeheZu_Op();
 
     /**
-     * The meta object literal for the '<em><b>Right</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Rechts</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONDITIONAL_GOTO__RIGHT = eINSTANCE.getConditionalGoto_Right();
+    EAttribute KONDITIONALER_GEHE_ZU__RECHTS = eINSTANCE.getKonditionalerGeheZu_Rechts();
 
     /**
-     * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ziel</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONDITIONAL_GOTO__TARGET = eINSTANCE.getConditionalGoto_Target();
+    EReference KONDITIONALER_GEHE_ZU__ZIEL = eINSTANCE.getKonditionalerGeheZu_Ziel();
 
     /**
-     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.StopImpl <em>Stop</em>}' class.
+     * The meta object literal for the '{@link de.fhdw.iis1.tarot.tarot.impl.HaltImpl <em>Halt</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.fhdw.iis1.tarot.tarot.impl.StopImpl
-     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getStop()
+     * @see de.fhdw.iis1.tarot.tarot.impl.HaltImpl
+     * @see de.fhdw.iis1.tarot.tarot.impl.TarotPackageImpl#getHalt()
      * @generated
      */
-    EClass STOP = eINSTANCE.getStop();
+    EClass HALT = eINSTANCE.getHalt();
 
   }
 

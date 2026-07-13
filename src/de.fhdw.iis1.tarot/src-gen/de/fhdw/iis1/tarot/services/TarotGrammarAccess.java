@@ -24,38 +24,38 @@ import org.eclipse.xtext.service.GrammarProvider;
 @Singleton
 public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarElementFinder {
 	
-	public class ProgramElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Program");
-		private final Assignment cLinesAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cLinesLineParserRuleCall_0 = (RuleCall)cLinesAssignment.eContents().get(0);
+	public class ProgrammElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Programm");
+		private final Assignment cZeilenAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cZeilenZeileParserRuleCall_0 = (RuleCall)cZeilenAssignment.eContents().get(0);
 		
-		//Program:
-		//    lines+=Line+
+		//Programm:
+		//    zeilen+=Zeile+
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//lines+=Line+
-		public Assignment getLinesAssignment() { return cLinesAssignment; }
+		//zeilen+=Zeile+
+		public Assignment getZeilenAssignment() { return cZeilenAssignment; }
 		
-		//Line
-		public RuleCall getLinesLineParserRuleCall_0() { return cLinesLineParserRuleCall_0; }
+		//Zeile
+		public RuleCall getZeilenZeileParserRuleCall_0() { return cZeilenZeileParserRuleCall_0; }
 	}
-	public class LineElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Line");
+	public class ZeileElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Zeile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cInstructionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cInstructionInstructionParserRuleCall_2_0 = (RuleCall)cInstructionAssignment_2.eContents().get(0);
+		private final Assignment cAnweisungAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cAnweisungAnweisungParserRuleCall_2_0 = (RuleCall)cAnweisungAssignment_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//Line:
-		//    name=ID ':' instruction=Instruction ';'?
+		//Zeile:
+		//    name=ID ':' anweisung=Anweisung ';'?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=ID ':' instruction=Instruction ';'?
+		//name=ID ':' anweisung=Anweisung ';'?
 		public Group getGroup() { return cGroup; }
 		
 		//name=ID
@@ -67,76 +67,76 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//':'
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 		
-		//instruction=Instruction
-		public Assignment getInstructionAssignment_2() { return cInstructionAssignment_2; }
+		//anweisung=Anweisung
+		public Assignment getAnweisungAssignment_2() { return cAnweisungAssignment_2; }
 		
-		//Instruction
-		public RuleCall getInstructionInstructionParserRuleCall_2_0() { return cInstructionInstructionParserRuleCall_2_0; }
+		//Anweisung
+		public RuleCall getAnweisungAnweisungParserRuleCall_2_0() { return cAnweisungAnweisungParserRuleCall_2_0; }
 		
 		//';'?
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
-	public class InstructionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Instruction");
+	public class AnweisungElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Anweisung");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAssignmentParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cInputParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cOutputParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cGotoParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cConditionalGotoParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cStopParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cZuordnungParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cEingabeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cAusgabeParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cGeheZuParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cKonditionalerGeheZuParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cHaltParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
-		//Instruction:
-		//      Assignment
-		//    | Input
-		//    | Output
-		//    | Goto
-		//    | ConditionalGoto
-		//    | Stop
+		//Anweisung:
+		//      Zuordnung
+		//    | Eingabe
+		//    | Ausgabe
+		//    | GeheZu
+		//    | KonditionalerGeheZu
+		//    | Halt
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//  Assignment
-		//| Input
-		//| Output
-		//| Goto
-		//| ConditionalGoto
-		//| Stop
+		//  Zuordnung
+		//| Eingabe
+		//| Ausgabe
+		//| GeheZu
+		//| KonditionalerGeheZu
+		//| Halt
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//Assignment
-		public RuleCall getAssignmentParserRuleCall_0() { return cAssignmentParserRuleCall_0; }
+		//Zuordnung
+		public RuleCall getZuordnungParserRuleCall_0() { return cZuordnungParserRuleCall_0; }
 		
-		//Input
-		public RuleCall getInputParserRuleCall_1() { return cInputParserRuleCall_1; }
+		//Eingabe
+		public RuleCall getEingabeParserRuleCall_1() { return cEingabeParserRuleCall_1; }
 		
-		//Output
-		public RuleCall getOutputParserRuleCall_2() { return cOutputParserRuleCall_2; }
+		//Ausgabe
+		public RuleCall getAusgabeParserRuleCall_2() { return cAusgabeParserRuleCall_2; }
 		
-		//Goto
-		public RuleCall getGotoParserRuleCall_3() { return cGotoParserRuleCall_3; }
+		//GeheZu
+		public RuleCall getGeheZuParserRuleCall_3() { return cGeheZuParserRuleCall_3; }
 		
-		//ConditionalGoto
-		public RuleCall getConditionalGotoParserRuleCall_4() { return cConditionalGotoParserRuleCall_4; }
+		//KonditionalerGeheZu
+		public RuleCall getKonditionalerGeheZuParserRuleCall_4() { return cKonditionalerGeheZuParserRuleCall_4; }
 		
-		//Stop
-		public RuleCall getStopParserRuleCall_5() { return cStopParserRuleCall_5; }
+		//Halt
+		public RuleCall getHaltParserRuleCall_5() { return cHaltParserRuleCall_5; }
 	}
-	public class AssignmentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Assignment");
+	public class ZuordnungElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Zuordnung");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cVarAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cVarIDTerminalRuleCall_0_0 = (RuleCall)cVarAssignment_0.eContents().get(0);
 		private final Keyword cColonEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cExprAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cExprExpressionParserRuleCall_2_0 = (RuleCall)cExprAssignment_2.eContents().get(0);
+		private final Assignment cAusdruckAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cAusdruckAusdruckParserRuleCall_2_0 = (RuleCall)cAusdruckAssignment_2.eContents().get(0);
 		
-		//Assignment:
-		//    var=ID ':=' expr=Expression
+		//Zuordnung:
+		//    var=ID ':=' ausdruck=Ausdruck
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//var=ID ':=' expr=Expression
+		//var=ID ':=' ausdruck=Ausdruck
 		public Group getGroup() { return cGroup; }
 		
 		//var=ID
@@ -148,66 +148,66 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//':='
 		public Keyword getColonEqualsSignKeyword_1() { return cColonEqualsSignKeyword_1; }
 		
-		//expr=Expression
-		public Assignment getExprAssignment_2() { return cExprAssignment_2; }
+		//ausdruck=Ausdruck
+		public Assignment getAusdruckAssignment_2() { return cAusdruckAssignment_2; }
 		
-		//Expression
-		public RuleCall getExprExpressionParserRuleCall_2_0() { return cExprExpressionParserRuleCall_2_0; }
+		//Ausdruck
+		public RuleCall getAusdruckAusdruckParserRuleCall_2_0() { return cAusdruckAusdruckParserRuleCall_2_0; }
 	}
-	public class ExpressionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Expression");
+	public class AusdruckElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Ausdruck");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAddSubExprParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cIntLiteralParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cStrichOperationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGanzzahlParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Expression:
-		//    AddSubExpr | IntLiteral
+		//Ausdruck:
+		//    StrichOperation | Ganzzahl
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//AddSubExpr | IntLiteral
+		//StrichOperation | Ganzzahl
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//AddSubExpr
-		public RuleCall getAddSubExprParserRuleCall_0() { return cAddSubExprParserRuleCall_0; }
+		//StrichOperation
+		public RuleCall getStrichOperationParserRuleCall_0() { return cStrichOperationParserRuleCall_0; }
 		
-		//IntLiteral
-		public RuleCall getIntLiteralParserRuleCall_1() { return cIntLiteralParserRuleCall_1; }
+		//Ganzzahl
+		public RuleCall getGanzzahlParserRuleCall_1() { return cGanzzahlParserRuleCall_1; }
 	}
-	public class AddSubExprElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.AddSubExpr");
+	public class StrichOperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.StrichOperation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cAddSubExprAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cLeftAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cLeftIDTerminalRuleCall_1_0 = (RuleCall)cLeftAssignment_1.eContents().get(0);
+		private final Action cStrichOperationAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cLinksAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cLinksIDTerminalRuleCall_1_0 = (RuleCall)cLinksAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Assignment cOpAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final Alternatives cOpAlternatives_2_0_0 = (Alternatives)cOpAssignment_2_0.eContents().get(0);
 		private final Keyword cOpPlusSignKeyword_2_0_0_0 = (Keyword)cOpAlternatives_2_0_0.eContents().get(0);
 		private final Keyword cOpHyphenMinusKeyword_2_0_0_1 = (Keyword)cOpAlternatives_2_0_0.eContents().get(1);
-		private final Assignment cRightAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cRightIDTerminalRuleCall_2_1_0 = (RuleCall)cRightAssignment_2_1.eContents().get(0);
+		private final Assignment cRechtsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cRechtsIDTerminalRuleCall_2_1_0 = (RuleCall)cRechtsAssignment_2_1.eContents().get(0);
 		
-		//AddSubExpr:
-		//    {AddSubExpr}
-		//    left=ID (op=('+'|'-') right=ID)?
+		//StrichOperation:
+		//    {StrichOperation}
+		//    links=ID (op=('+'|'-') rechts=ID)?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{AddSubExpr}
-		//left=ID (op=('+'|'-') right=ID)?
+		//{StrichOperation}
+		//links=ID (op=('+'|'-') rechts=ID)?
 		public Group getGroup() { return cGroup; }
 		
-		//{AddSubExpr}
-		public Action getAddSubExprAction_0() { return cAddSubExprAction_0; }
+		//{StrichOperation}
+		public Action getStrichOperationAction_0() { return cStrichOperationAction_0; }
 		
-		//left=ID
-		public Assignment getLeftAssignment_1() { return cLeftAssignment_1; }
+		//links=ID
+		public Assignment getLinksAssignment_1() { return cLinksAssignment_1; }
 		
 		//ID
-		public RuleCall getLeftIDTerminalRuleCall_1_0() { return cLeftIDTerminalRuleCall_1_0; }
+		public RuleCall getLinksIDTerminalRuleCall_1_0() { return cLinksIDTerminalRuleCall_1_0; }
 		
-		//(op=('+'|'-') right=ID)?
+		//(op=('+'|'-') rechts=ID)?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//op=('+'|'-')
@@ -222,46 +222,46 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'-'
 		public Keyword getOpHyphenMinusKeyword_2_0_0_1() { return cOpHyphenMinusKeyword_2_0_0_1; }
 		
-		//right=ID
-		public Assignment getRightAssignment_2_1() { return cRightAssignment_2_1; }
+		//rechts=ID
+		public Assignment getRechtsAssignment_2_1() { return cRechtsAssignment_2_1; }
 		
 		//ID
-		public RuleCall getRightIDTerminalRuleCall_2_1_0() { return cRightIDTerminalRuleCall_2_1_0; }
+		public RuleCall getRechtsIDTerminalRuleCall_2_1_0() { return cRechtsIDTerminalRuleCall_2_1_0; }
 	}
-	public class IntLiteralElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.IntLiteral");
+	public class GanzzahlElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Ganzzahl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cIntLiteralAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueINTTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final Action cGanzzahlAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cWertAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cWertINTTerminalRuleCall_1_0 = (RuleCall)cWertAssignment_1.eContents().get(0);
 		
-		//IntLiteral:
-		//    {IntLiteral}
-		//    value=INT
+		//Ganzzahl:
+		//    {Ganzzahl}
+		//    wert=INT
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{IntLiteral}
-		//value=INT
+		//{Ganzzahl}
+		//wert=INT
 		public Group getGroup() { return cGroup; }
 		
-		//{IntLiteral}
-		public Action getIntLiteralAction_0() { return cIntLiteralAction_0; }
+		//{Ganzzahl}
+		public Action getGanzzahlAction_0() { return cGanzzahlAction_0; }
 		
-		//value=INT
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+		//wert=INT
+		public Assignment getWertAssignment_1() { return cWertAssignment_1; }
 		
 		//INT
-		public RuleCall getValueINTTerminalRuleCall_1_0() { return cValueINTTerminalRuleCall_1_0; }
+		public RuleCall getWertINTTerminalRuleCall_1_0() { return cWertINTTerminalRuleCall_1_0; }
 	}
-	public class InputElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Input");
+	public class EingabeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Eingabe");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEINGABEKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cVarAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cVarIDTerminalRuleCall_1_0 = (RuleCall)cVarAssignment_1.eContents().get(0);
 		
-		//Input:
+		//Eingabe:
 		//    'EINGABE' var=ID
 		//;
 		@Override public ParserRule getRule() { return rule; }
@@ -278,14 +278,14 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//ID
 		public RuleCall getVarIDTerminalRuleCall_1_0() { return cVarIDTerminalRuleCall_1_0; }
 	}
-	public class OutputElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Output");
+	public class AusgabeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Ausgabe");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSCHREIBEKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cVarAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cVarIDTerminalRuleCall_1_0 = (RuleCall)cVarAssignment_1.eContents().get(0);
 		
-		//Output:
+		//Ausgabe:
 		//    'SCHREIBE' var=ID
 		//;
 		@Override public ParserRule getRule() { return rule; }
@@ -302,21 +302,21 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//ID
 		public RuleCall getVarIDTerminalRuleCall_1_0() { return cVarIDTerminalRuleCall_1_0; }
 	}
-	public class GotoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Goto");
+	public class GeheZuElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.GeheZu");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGEHEKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cZUKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTargetAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cTargetLineCrossReference_2_0 = (CrossReference)cTargetAssignment_2.eContents().get(0);
-		private final RuleCall cTargetLineIDTerminalRuleCall_2_0_1 = (RuleCall)cTargetLineCrossReference_2_0.eContents().get(1);
+		private final CrossReference cTargetZeileCrossReference_2_0 = (CrossReference)cTargetAssignment_2.eContents().get(0);
+		private final RuleCall cTargetZeileIDTerminalRuleCall_2_0_1 = (RuleCall)cTargetZeileCrossReference_2_0.eContents().get(1);
 		
-		//Goto:
-		//    'GEHE' 'ZU' target=[Line|ID]
+		//GeheZu:
+		//    'GEHE' 'ZU' target=[Zeile|ID]
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'GEHE' 'ZU' target=[Line|ID]
+		//'GEHE' 'ZU' target=[Zeile|ID]
 		public Group getGroup() { return cGroup; }
 		
 		//'GEHE'
@@ -325,45 +325,45 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'ZU'
 		public Keyword getZUKeyword_1() { return cZUKeyword_1; }
 		
-		//target=[Line|ID]
+		//target=[Zeile|ID]
 		public Assignment getTargetAssignment_2() { return cTargetAssignment_2; }
 		
-		//[Line|ID]
-		public CrossReference getTargetLineCrossReference_2_0() { return cTargetLineCrossReference_2_0; }
+		//[Zeile|ID]
+		public CrossReference getTargetZeileCrossReference_2_0() { return cTargetZeileCrossReference_2_0; }
 		
 		//ID
-		public RuleCall getTargetLineIDTerminalRuleCall_2_0_1() { return cTargetLineIDTerminalRuleCall_2_0_1; }
+		public RuleCall getTargetZeileIDTerminalRuleCall_2_0_1() { return cTargetZeileIDTerminalRuleCall_2_0_1; }
 	}
-	public class ConditionalGotoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.ConditionalGoto");
+	public class KonditionalerGeheZuElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.KonditionalerGeheZu");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWENNKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cLeftAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cLeftIDTerminalRuleCall_2_0 = (RuleCall)cLeftAssignment_2.eContents().get(0);
+		private final Assignment cLinksAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLinksIDTerminalRuleCall_2_0 = (RuleCall)cLinksAssignment_2.eContents().get(0);
 		private final Assignment cOpAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final Alternatives cOpAlternatives_3_0 = (Alternatives)cOpAssignment_3.eContents().get(0);
 		private final Keyword cOpEqualsSignKeyword_3_0_0 = (Keyword)cOpAlternatives_3_0.eContents().get(0);
 		private final Keyword cOpLessThanSignKeyword_3_0_1 = (Keyword)cOpAlternatives_3_0.eContents().get(1);
 		private final Keyword cOpGreaterThanSignKeyword_3_0_2 = (Keyword)cOpAlternatives_3_0.eContents().get(2);
-		private final Assignment cRightAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cRightValueParserRuleCall_4_0 = (RuleCall)cRightAssignment_4.eContents().get(0);
+		private final Assignment cRechtsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cRechtsWertParserRuleCall_4_0 = (RuleCall)cRechtsAssignment_4.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cDANNKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cGEHEKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cZUKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cTargetAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final CrossReference cTargetLineCrossReference_9_0 = (CrossReference)cTargetAssignment_9.eContents().get(0);
-		private final RuleCall cTargetLineIDTerminalRuleCall_9_0_1 = (RuleCall)cTargetLineCrossReference_9_0.eContents().get(1);
+		private final Assignment cZielAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final CrossReference cZielZeileCrossReference_9_0 = (CrossReference)cZielAssignment_9.eContents().get(0);
+		private final RuleCall cZielZeileIDTerminalRuleCall_9_0_1 = (RuleCall)cZielZeileCrossReference_9_0.eContents().get(1);
 		
-		//ConditionalGoto:
-		//    'WENN' '(' left=ID op=('=' | '<' | '>') right=Value ')'
-		//    'DANN' 'GEHE' 'ZU' target=[Line|ID]
+		//KonditionalerGeheZu:
+		//    'WENN' '(' links=ID op=('=' | '<' | '>') rechts=Wert ')'
+		//    'DANN' 'GEHE' 'ZU' ziel=[Zeile|ID]
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'WENN' '(' left=ID op=('=' | '<' | '>') right=Value ')'
-		//'DANN' 'GEHE' 'ZU' target=[Line|ID]
+		//'WENN' '(' links=ID op=('=' | '<' | '>') rechts=Wert ')'
+		//'DANN' 'GEHE' 'ZU' ziel=[Zeile|ID]
 		public Group getGroup() { return cGroup; }
 		
 		//'WENN'
@@ -372,11 +372,11 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'('
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 		
-		//left=ID
-		public Assignment getLeftAssignment_2() { return cLeftAssignment_2; }
+		//links=ID
+		public Assignment getLinksAssignment_2() { return cLinksAssignment_2; }
 		
 		//ID
-		public RuleCall getLeftIDTerminalRuleCall_2_0() { return cLeftIDTerminalRuleCall_2_0; }
+		public RuleCall getLinksIDTerminalRuleCall_2_0() { return cLinksIDTerminalRuleCall_2_0; }
 		
 		//op=('=' | '<' | '>')
 		public Assignment getOpAssignment_3() { return cOpAssignment_3; }
@@ -393,11 +393,11 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'>'
 		public Keyword getOpGreaterThanSignKeyword_3_0_2() { return cOpGreaterThanSignKeyword_3_0_2; }
 		
-		//right=Value
-		public Assignment getRightAssignment_4() { return cRightAssignment_4; }
+		//rechts=Wert
+		public Assignment getRechtsAssignment_4() { return cRechtsAssignment_4; }
 		
-		//Value
-		public RuleCall getRightValueParserRuleCall_4_0() { return cRightValueParserRuleCall_4_0; }
+		//Wert
+		public RuleCall getRechtsWertParserRuleCall_4_0() { return cRechtsWertParserRuleCall_4_0; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
@@ -411,22 +411,22 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'ZU'
 		public Keyword getZUKeyword_8() { return cZUKeyword_8; }
 		
-		//target=[Line|ID]
-		public Assignment getTargetAssignment_9() { return cTargetAssignment_9; }
+		//ziel=[Zeile|ID]
+		public Assignment getZielAssignment_9() { return cZielAssignment_9; }
 		
-		//[Line|ID]
-		public CrossReference getTargetLineCrossReference_9_0() { return cTargetLineCrossReference_9_0; }
+		//[Zeile|ID]
+		public CrossReference getZielZeileCrossReference_9_0() { return cZielZeileCrossReference_9_0; }
 		
 		//ID
-		public RuleCall getTargetLineIDTerminalRuleCall_9_0_1() { return cTargetLineIDTerminalRuleCall_9_0_1; }
+		public RuleCall getZielZeileIDTerminalRuleCall_9_0_1() { return cZielZeileIDTerminalRuleCall_9_0_1; }
 	}
-	public class ValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Value");
+	public class WertElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Wert");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Value:
+		//Wert:
 		//    ID | INT
 		//;
 		@Override public ParserRule getRule() { return rule; }
@@ -440,41 +440,41 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//INT
 		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 	}
-	public class StopElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Stop");
+	public class HaltElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Halt");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cStopAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cHaltAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cHaltKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//Stop:
-		//    {Stop} 'Halt!'
+		//Halt:
+		//    {Halt} 'Halt!'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Stop} 'Halt!'
+		//{Halt} 'Halt!'
 		public Group getGroup() { return cGroup; }
 		
-		//{Stop}
-		public Action getStopAction_0() { return cStopAction_0; }
+		//{Halt}
+		public Action getHaltAction_0() { return cHaltAction_0; }
 		
 		//'Halt!'
 		public Keyword getHaltKeyword_1() { return cHaltKeyword_1; }
 	}
 	
 	
-	private final ProgramElements pProgram;
-	private final LineElements pLine;
-	private final InstructionElements pInstruction;
-	private final AssignmentElements pAssignment;
-	private final ExpressionElements pExpression;
-	private final AddSubExprElements pAddSubExpr;
-	private final IntLiteralElements pIntLiteral;
-	private final InputElements pInput;
-	private final OutputElements pOutput;
-	private final GotoElements pGoto;
-	private final ConditionalGotoElements pConditionalGoto;
-	private final ValueElements pValue;
-	private final StopElements pStop;
+	private final ProgrammElements pProgramm;
+	private final ZeileElements pZeile;
+	private final AnweisungElements pAnweisung;
+	private final ZuordnungElements pZuordnung;
+	private final AusdruckElements pAusdruck;
+	private final StrichOperationElements pStrichOperation;
+	private final GanzzahlElements pGanzzahl;
+	private final EingabeElements pEingabe;
+	private final AusgabeElements pAusgabe;
+	private final GeheZuElements pGeheZu;
+	private final KonditionalerGeheZuElements pKonditionalerGeheZu;
+	private final WertElements pWert;
+	private final HaltElements pHalt;
 	
 	private final Grammar grammar;
 	
@@ -485,19 +485,19 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 			TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pProgram = new ProgramElements();
-		this.pLine = new LineElements();
-		this.pInstruction = new InstructionElements();
-		this.pAssignment = new AssignmentElements();
-		this.pExpression = new ExpressionElements();
-		this.pAddSubExpr = new AddSubExprElements();
-		this.pIntLiteral = new IntLiteralElements();
-		this.pInput = new InputElements();
-		this.pOutput = new OutputElements();
-		this.pGoto = new GotoElements();
-		this.pConditionalGoto = new ConditionalGotoElements();
-		this.pValue = new ValueElements();
-		this.pStop = new StopElements();
+		this.pProgramm = new ProgrammElements();
+		this.pZeile = new ZeileElements();
+		this.pAnweisung = new AnweisungElements();
+		this.pZuordnung = new ZuordnungElements();
+		this.pAusdruck = new AusdruckElements();
+		this.pStrichOperation = new StrichOperationElements();
+		this.pGanzzahl = new GanzzahlElements();
+		this.pEingabe = new EingabeElements();
+		this.pAusgabe = new AusgabeElements();
+		this.pGeheZu = new GeheZuElements();
+		this.pKonditionalerGeheZu = new KonditionalerGeheZuElements();
+		this.pWert = new WertElements();
+		this.pHalt = new HaltElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -527,155 +527,155 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 
 	
-	//Program:
-	//    lines+=Line+
+	//Programm:
+	//    zeilen+=Zeile+
 	//;
-	public ProgramElements getProgramAccess() {
-		return pProgram;
+	public ProgrammElements getProgrammAccess() {
+		return pProgramm;
 	}
 	
-	public ParserRule getProgramRule() {
-		return getProgramAccess().getRule();
+	public ParserRule getProgrammRule() {
+		return getProgrammAccess().getRule();
 	}
 	
-	//Line:
-	//    name=ID ':' instruction=Instruction ';'?
+	//Zeile:
+	//    name=ID ':' anweisung=Anweisung ';'?
 	//;
-	public LineElements getLineAccess() {
-		return pLine;
+	public ZeileElements getZeileAccess() {
+		return pZeile;
 	}
 	
-	public ParserRule getLineRule() {
-		return getLineAccess().getRule();
+	public ParserRule getZeileRule() {
+		return getZeileAccess().getRule();
 	}
 	
-	//Instruction:
-	//      Assignment
-	//    | Input
-	//    | Output
-	//    | Goto
-	//    | ConditionalGoto
-	//    | Stop
+	//Anweisung:
+	//      Zuordnung
+	//    | Eingabe
+	//    | Ausgabe
+	//    | GeheZu
+	//    | KonditionalerGeheZu
+	//    | Halt
 	//;
-	public InstructionElements getInstructionAccess() {
-		return pInstruction;
+	public AnweisungElements getAnweisungAccess() {
+		return pAnweisung;
 	}
 	
-	public ParserRule getInstructionRule() {
-		return getInstructionAccess().getRule();
+	public ParserRule getAnweisungRule() {
+		return getAnweisungAccess().getRule();
 	}
 	
-	//Assignment:
-	//    var=ID ':=' expr=Expression
+	//Zuordnung:
+	//    var=ID ':=' ausdruck=Ausdruck
 	//;
-	public AssignmentElements getAssignmentAccess() {
-		return pAssignment;
+	public ZuordnungElements getZuordnungAccess() {
+		return pZuordnung;
 	}
 	
-	public ParserRule getAssignmentRule() {
-		return getAssignmentAccess().getRule();
+	public ParserRule getZuordnungRule() {
+		return getZuordnungAccess().getRule();
 	}
 	
-	//Expression:
-	//    AddSubExpr | IntLiteral
+	//Ausdruck:
+	//    StrichOperation | Ganzzahl
 	//;
-	public ExpressionElements getExpressionAccess() {
-		return pExpression;
+	public AusdruckElements getAusdruckAccess() {
+		return pAusdruck;
 	}
 	
-	public ParserRule getExpressionRule() {
-		return getExpressionAccess().getRule();
+	public ParserRule getAusdruckRule() {
+		return getAusdruckAccess().getRule();
 	}
 	
-	//AddSubExpr:
-	//    {AddSubExpr}
-	//    left=ID (op=('+'|'-') right=ID)?
+	//StrichOperation:
+	//    {StrichOperation}
+	//    links=ID (op=('+'|'-') rechts=ID)?
 	//;
-	public AddSubExprElements getAddSubExprAccess() {
-		return pAddSubExpr;
+	public StrichOperationElements getStrichOperationAccess() {
+		return pStrichOperation;
 	}
 	
-	public ParserRule getAddSubExprRule() {
-		return getAddSubExprAccess().getRule();
+	public ParserRule getStrichOperationRule() {
+		return getStrichOperationAccess().getRule();
 	}
 	
-	//IntLiteral:
-	//    {IntLiteral}
-	//    value=INT
+	//Ganzzahl:
+	//    {Ganzzahl}
+	//    wert=INT
 	//;
-	public IntLiteralElements getIntLiteralAccess() {
-		return pIntLiteral;
+	public GanzzahlElements getGanzzahlAccess() {
+		return pGanzzahl;
 	}
 	
-	public ParserRule getIntLiteralRule() {
-		return getIntLiteralAccess().getRule();
+	public ParserRule getGanzzahlRule() {
+		return getGanzzahlAccess().getRule();
 	}
 	
-	//Input:
+	//Eingabe:
 	//    'EINGABE' var=ID
 	//;
-	public InputElements getInputAccess() {
-		return pInput;
+	public EingabeElements getEingabeAccess() {
+		return pEingabe;
 	}
 	
-	public ParserRule getInputRule() {
-		return getInputAccess().getRule();
+	public ParserRule getEingabeRule() {
+		return getEingabeAccess().getRule();
 	}
 	
-	//Output:
+	//Ausgabe:
 	//    'SCHREIBE' var=ID
 	//;
-	public OutputElements getOutputAccess() {
-		return pOutput;
+	public AusgabeElements getAusgabeAccess() {
+		return pAusgabe;
 	}
 	
-	public ParserRule getOutputRule() {
-		return getOutputAccess().getRule();
+	public ParserRule getAusgabeRule() {
+		return getAusgabeAccess().getRule();
 	}
 	
-	//Goto:
-	//    'GEHE' 'ZU' target=[Line|ID]
+	//GeheZu:
+	//    'GEHE' 'ZU' target=[Zeile|ID]
 	//;
-	public GotoElements getGotoAccess() {
-		return pGoto;
+	public GeheZuElements getGeheZuAccess() {
+		return pGeheZu;
 	}
 	
-	public ParserRule getGotoRule() {
-		return getGotoAccess().getRule();
+	public ParserRule getGeheZuRule() {
+		return getGeheZuAccess().getRule();
 	}
 	
-	//ConditionalGoto:
-	//    'WENN' '(' left=ID op=('=' | '<' | '>') right=Value ')'
-	//    'DANN' 'GEHE' 'ZU' target=[Line|ID]
+	//KonditionalerGeheZu:
+	//    'WENN' '(' links=ID op=('=' | '<' | '>') rechts=Wert ')'
+	//    'DANN' 'GEHE' 'ZU' ziel=[Zeile|ID]
 	//;
-	public ConditionalGotoElements getConditionalGotoAccess() {
-		return pConditionalGoto;
+	public KonditionalerGeheZuElements getKonditionalerGeheZuAccess() {
+		return pKonditionalerGeheZu;
 	}
 	
-	public ParserRule getConditionalGotoRule() {
-		return getConditionalGotoAccess().getRule();
+	public ParserRule getKonditionalerGeheZuRule() {
+		return getKonditionalerGeheZuAccess().getRule();
 	}
 	
-	//Value:
+	//Wert:
 	//    ID | INT
 	//;
-	public ValueElements getValueAccess() {
-		return pValue;
+	public WertElements getWertAccess() {
+		return pWert;
 	}
 	
-	public ParserRule getValueRule() {
-		return getValueAccess().getRule();
+	public ParserRule getWertRule() {
+		return getWertAccess().getRule();
 	}
 	
-	//Stop:
-	//    {Stop} 'Halt!'
+	//Halt:
+	//    {Halt} 'Halt!'
 	//;
-	public StopElements getStopAccess() {
-		return pStop;
+	public HaltElements getHaltAccess() {
+		return pHalt;
 	}
 	
-	public ParserRule getStopRule() {
-		return getStopAccess().getRule();
+	public ParserRule getHaltRule() {
+		return getHaltAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

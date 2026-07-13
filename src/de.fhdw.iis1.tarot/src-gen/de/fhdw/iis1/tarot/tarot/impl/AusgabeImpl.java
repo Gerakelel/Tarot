@@ -3,7 +3,7 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.Input;
+import de.fhdw.iis1.tarot.tarot.Ausgabe;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Input</b></em>'.
+ * An implementation of the model object '<em><b>Ausgabe</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.InputImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.AusgabeImpl#getVar <em>Var</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class InputImpl extends InstructionImpl implements Input
+public class AusgabeImpl extends AnweisungImpl implements Ausgabe
 {
   /**
    * The default value of the '{@link #getVar() <em>Var</em>}' attribute.
@@ -52,7 +52,7 @@ public class InputImpl extends InstructionImpl implements Input
    * <!-- end-user-doc -->
    * @generated
    */
-  protected InputImpl()
+  protected AusgabeImpl()
   {
     super();
   }
@@ -65,7 +65,7 @@ public class InputImpl extends InstructionImpl implements Input
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.INPUT;
+    return TarotPackage.Literals.AUSGABE;
   }
 
   /**
@@ -90,7 +90,7 @@ public class InputImpl extends InstructionImpl implements Input
     String oldVar = var;
     var = newVar;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.INPUT__VAR, oldVar, var));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.AUSGABE__VAR, oldVar, var));
   }
 
   /**
@@ -103,7 +103,7 @@ public class InputImpl extends InstructionImpl implements Input
   {
     switch (featureID)
     {
-      case TarotPackage.INPUT__VAR:
+      case TarotPackage.AUSGABE__VAR:
         return getVar();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -119,7 +119,7 @@ public class InputImpl extends InstructionImpl implements Input
   {
     switch (featureID)
     {
-      case TarotPackage.INPUT__VAR:
+      case TarotPackage.AUSGABE__VAR:
         setVar((String)newValue);
         return;
     }
@@ -136,7 +136,7 @@ public class InputImpl extends InstructionImpl implements Input
   {
     switch (featureID)
     {
-      case TarotPackage.INPUT__VAR:
+      case TarotPackage.AUSGABE__VAR:
         setVar(VAR_EDEFAULT);
         return;
     }
@@ -153,7 +153,7 @@ public class InputImpl extends InstructionImpl implements Input
   {
     switch (featureID)
     {
-      case TarotPackage.INPUT__VAR:
+      case TarotPackage.AUSGABE__VAR:
         return VAR_EDEFAULT == null ? var != null : !VAR_EDEFAULT.equals(var);
     }
     return super.eIsSet(featureID);
@@ -176,4 +176,4 @@ public class InputImpl extends InstructionImpl implements Input
     return result.toString();
   }
 
-} //InputImpl
+} //AusgabeImpl

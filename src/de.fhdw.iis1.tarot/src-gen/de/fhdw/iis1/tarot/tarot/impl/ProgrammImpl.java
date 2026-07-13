@@ -3,9 +3,9 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.Line;
-import de.fhdw.iis1.tarot.tarot.Program;
+import de.fhdw.iis1.tarot.tarot.Programm;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
+import de.fhdw.iis1.tarot.tarot.Zeile;
 
 import java.util.Collection;
 
@@ -23,35 +23,35 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Program</b></em>'.
+ * An implementation of the model object '<em><b>Programm</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ProgramImpl#getLines <em>Lines</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ProgrammImpl#getZeilen <em>Zeilen</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
+public class ProgrammImpl extends MinimalEObjectImpl.Container implements Programm
 {
   /**
-   * The cached value of the '{@link #getLines() <em>Lines</em>}' containment reference list.
+   * The cached value of the '{@link #getZeilen() <em>Zeilen</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLines()
+   * @see #getZeilen()
    * @generated
    * @ordered
    */
-  protected EList<Line> lines;
+  protected EList<Zeile> zeilen;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ProgramImpl()
+  protected ProgrammImpl()
   {
     super();
   }
@@ -64,7 +64,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.PROGRAM;
+    return TarotPackage.Literals.PROGRAMM;
   }
 
   /**
@@ -73,13 +73,13 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * @generated
    */
   @Override
-  public EList<Line> getLines()
+  public EList<Zeile> getZeilen()
   {
-    if (lines == null)
+    if (zeilen == null)
     {
-      lines = new EObjectContainmentEList<Line>(Line.class, this, TarotPackage.PROGRAM__LINES);
+      zeilen = new EObjectContainmentEList<Zeile>(Zeile.class, this, TarotPackage.PROGRAMM__ZEILEN);
     }
-    return lines;
+    return zeilen;
   }
 
   /**
@@ -92,8 +92,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   {
     switch (featureID)
     {
-      case TarotPackage.PROGRAM__LINES:
-        return ((InternalEList<?>)getLines()).basicRemove(otherEnd, msgs);
+      case TarotPackage.PROGRAMM__ZEILEN:
+        return ((InternalEList<?>)getZeilen()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -108,8 +108,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   {
     switch (featureID)
     {
-      case TarotPackage.PROGRAM__LINES:
-        return getLines();
+      case TarotPackage.PROGRAMM__ZEILEN:
+        return getZeilen();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,9 +125,9 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   {
     switch (featureID)
     {
-      case TarotPackage.PROGRAM__LINES:
-        getLines().clear();
-        getLines().addAll((Collection<? extends Line>)newValue);
+      case TarotPackage.PROGRAMM__ZEILEN:
+        getZeilen().clear();
+        getZeilen().addAll((Collection<? extends Zeile>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +143,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   {
     switch (featureID)
     {
-      case TarotPackage.PROGRAM__LINES:
-        getLines().clear();
+      case TarotPackage.PROGRAMM__ZEILEN:
+        getZeilen().clear();
         return;
     }
     super.eUnset(featureID);
@@ -160,10 +160,10 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   {
     switch (featureID)
     {
-      case TarotPackage.PROGRAM__LINES:
-        return lines != null && !lines.isEmpty();
+      case TarotPackage.PROGRAMM__ZEILEN:
+        return zeilen != null && !zeilen.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ProgramImpl
+} //ProgrammImpl

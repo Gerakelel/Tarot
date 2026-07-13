@@ -20,12 +20,12 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class TarotSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected TarotGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Line_SemicolonKeyword_3_q;
+	protected AbstractElementAlias match_Zeile_SemicolonKeyword_3_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (TarotGrammarAccess) access;
-		match_Line_SemicolonKeyword_3_q = new TokenAlias(false, true, grammarAccess.getLineAccess().getSemicolonKeyword_3());
+		match_Zeile_SemicolonKeyword_3_q = new TokenAlias(false, true, grammarAccess.getZeileAccess().getSemicolonKeyword_3());
 	}
 	
 	@Override
@@ -40,8 +40,8 @@ public class TarotSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Line_SemicolonKeyword_3_q.equals(syntax))
-				emit_Line_SemicolonKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Zeile_SemicolonKeyword_3_q.equals(syntax))
+				emit_Zeile_SemicolonKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -52,11 +52,11 @@ public class TarotSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ';'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     instruction=Instruction (ambiguity) (rule end)
+	 *     anweisung=Anweisung (ambiguity) (rule end)
 	 
 	 * </pre>
 	 */
-	protected void emit_Line_SemicolonKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Zeile_SemicolonKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

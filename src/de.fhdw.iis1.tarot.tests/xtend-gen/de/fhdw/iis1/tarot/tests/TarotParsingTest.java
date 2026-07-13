@@ -4,7 +4,7 @@
 package de.fhdw.iis1.tarot.tests;
 
 import com.google.inject.Inject;
-import de.fhdw.iis1.tarot.tarot.Program;
+import de.fhdw.iis1.tarot.tarot.Programm;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
@@ -22,7 +22,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @SuppressWarnings("all")
 public class TarotParsingTest {
   @Inject
-  private ParseHelper<Program> parseHelper;
+  private ParseHelper<Programm> parseHelper;
 
   @Test
   public void loadModel() {
@@ -30,7 +30,7 @@ public class TarotParsingTest {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("Hello Xtext!");
       _builder.newLine();
-      final Program result = this.parseHelper.parse(_builder);
+      final Programm result = this.parseHelper.parse(_builder);
       Assertions.assertNotNull(result);
       final EList<Resource.Diagnostic> errors = result.eResource().getErrors();
       boolean _isEmpty = errors.isEmpty();

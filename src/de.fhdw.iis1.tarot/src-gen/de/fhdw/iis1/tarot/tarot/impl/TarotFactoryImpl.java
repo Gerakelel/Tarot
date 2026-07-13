@@ -65,18 +65,18 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
   {
     switch (eClass.getClassifierID())
     {
-      case TarotPackage.PROGRAM: return createProgram();
-      case TarotPackage.LINE: return createLine();
-      case TarotPackage.INSTRUCTION: return createInstruction();
-      case TarotPackage.ASSIGNMENT: return createAssignment();
-      case TarotPackage.EXPRESSION: return createExpression();
-      case TarotPackage.ADD_SUB_EXPR: return createAddSubExpr();
-      case TarotPackage.INT_LITERAL: return createIntLiteral();
-      case TarotPackage.INPUT: return createInput();
-      case TarotPackage.OUTPUT: return createOutput();
-      case TarotPackage.GOTO: return createGoto();
-      case TarotPackage.CONDITIONAL_GOTO: return createConditionalGoto();
-      case TarotPackage.STOP: return createStop();
+      case TarotPackage.PROGRAMM: return createProgramm();
+      case TarotPackage.ZEILE: return createZeile();
+      case TarotPackage.ANWEISUNG: return createAnweisung();
+      case TarotPackage.ZUORDNUNG: return createZuordnung();
+      case TarotPackage.AUSDRUCK: return createAusdruck();
+      case TarotPackage.STRICH_OPERATION: return createStrichOperation();
+      case TarotPackage.GANZZAHL: return createGanzzahl();
+      case TarotPackage.EINGABE: return createEingabe();
+      case TarotPackage.AUSGABE: return createAusgabe();
+      case TarotPackage.GEHE_ZU: return createGeheZu();
+      case TarotPackage.KONDITIONALER_GEHE_ZU: return createKonditionalerGeheZu();
+      case TarotPackage.HALT: return createHalt();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -88,10 +88,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Program createProgram()
+  public Programm createProgramm()
   {
-    ProgramImpl program = new ProgramImpl();
-    return program;
+    ProgrammImpl programm = new ProgrammImpl();
+    return programm;
   }
 
   /**
@@ -100,10 +100,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Line createLine()
+  public Zeile createZeile()
   {
-    LineImpl line = new LineImpl();
-    return line;
+    ZeileImpl zeile = new ZeileImpl();
+    return zeile;
   }
 
   /**
@@ -112,10 +112,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Instruction createInstruction()
+  public Anweisung createAnweisung()
   {
-    InstructionImpl instruction = new InstructionImpl();
-    return instruction;
+    AnweisungImpl anweisung = new AnweisungImpl();
+    return anweisung;
   }
 
   /**
@@ -124,10 +124,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Assignment createAssignment()
+  public Zuordnung createZuordnung()
   {
-    AssignmentImpl assignment = new AssignmentImpl();
-    return assignment;
+    ZuordnungImpl zuordnung = new ZuordnungImpl();
+    return zuordnung;
   }
 
   /**
@@ -136,10 +136,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Expression createExpression()
+  public Ausdruck createAusdruck()
   {
-    ExpressionImpl expression = new ExpressionImpl();
-    return expression;
+    AusdruckImpl ausdruck = new AusdruckImpl();
+    return ausdruck;
   }
 
   /**
@@ -148,10 +148,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public AddSubExpr createAddSubExpr()
+  public StrichOperation createStrichOperation()
   {
-    AddSubExprImpl addSubExpr = new AddSubExprImpl();
-    return addSubExpr;
+    StrichOperationImpl strichOperation = new StrichOperationImpl();
+    return strichOperation;
   }
 
   /**
@@ -160,10 +160,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public IntLiteral createIntLiteral()
+  public Ganzzahl createGanzzahl()
   {
-    IntLiteralImpl intLiteral = new IntLiteralImpl();
-    return intLiteral;
+    GanzzahlImpl ganzzahl = new GanzzahlImpl();
+    return ganzzahl;
   }
 
   /**
@@ -172,10 +172,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Input createInput()
+  public Eingabe createEingabe()
   {
-    InputImpl input = new InputImpl();
-    return input;
+    EingabeImpl eingabe = new EingabeImpl();
+    return eingabe;
   }
 
   /**
@@ -184,10 +184,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Output createOutput()
+  public Ausgabe createAusgabe()
   {
-    OutputImpl output = new OutputImpl();
-    return output;
+    AusgabeImpl ausgabe = new AusgabeImpl();
+    return ausgabe;
   }
 
   /**
@@ -196,10 +196,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Goto createGoto()
+  public GeheZu createGeheZu()
   {
-    GotoImpl goto_ = new GotoImpl();
-    return goto_;
+    GeheZuImpl geheZu = new GeheZuImpl();
+    return geheZu;
   }
 
   /**
@@ -208,10 +208,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public ConditionalGoto createConditionalGoto()
+  public KonditionalerGeheZu createKonditionalerGeheZu()
   {
-    ConditionalGotoImpl conditionalGoto = new ConditionalGotoImpl();
-    return conditionalGoto;
+    KonditionalerGeheZuImpl konditionalerGeheZu = new KonditionalerGeheZuImpl();
+    return konditionalerGeheZu;
   }
 
   /**
@@ -220,10 +220,10 @@ public class TarotFactoryImpl extends EFactoryImpl implements TarotFactory
    * @generated
    */
   @Override
-  public Stop createStop()
+  public Halt createHalt()
   {
-    StopImpl stop = new StopImpl();
-    return stop;
+    HaltImpl halt = new HaltImpl();
+    return halt;
   }
 
   /**

@@ -2,62 +2,63 @@ grammar de.fhdw.iis1.tarot.Tarot with org.eclipse.xtext.common.Terminals
 
 generate tarot "http://www.fhdw.de/iis1/tarot/Tarot"
 
-Program:
-    lines+=Line+
+Programm:
+    zeilen+=Zeile+
 ;
  
-Line:
-    name=ID ':' instruction=Instruction ';'?
+ 
+Zeile:
+    name=ID ':' anweisung=Anweisung ';'?
 ;
  
-Instruction:
-      Assignment
-    | Input
-    | Output
-    | Goto
-    | ConditionalGoto
-    | Stop
+Anweisung:
+      Zuordnung
+    | Eingabe
+    | Ausgabe
+    | GeheZu
+    | KonditionalerGeheZu
+    | Halt
+;
+   
+Zuordnung:
+    var=ID ':=' ausdruck=Ausdruck
 ;
  
-Assignment:
-    var=ID ':=' expr=Expression
+Ausdruck:
+    StrichOperation | Ganzzahl
 ;
  
-Expression:
-    AddSubExpr | IntLiteral
+StrichOperation:
+    {StrichOperation}
+    links=ID (op=('+'|'-') rechts=ID)?
 ;
  
-AddSubExpr:
-    {AddSubExpr}
-    left=ID (op=('+'|'-') right=ID)?
+Ganzzahl:
+    {Ganzzahl}
+    wert=INT
 ;
  
-IntLiteral:
-    {IntLiteral}
-    value=INT
-;
- 
-Input:
+Eingabe:
     'EINGABE' var=ID
 ;
  
-Output:
+Ausgabe:
     'SCHREIBE' var=ID
 ;
  
-Goto:
-    'GEHE' 'ZU' target=[Line|ID]
+GeheZu:
+    'GEHE' 'ZU' target=[Zeile|ID]
 ;
  
-ConditionalGoto:
-    'WENN' '(' left=ID op=('=' | '<' | '>') right=Value ')'
-    'DANN' 'GEHE' 'ZU' target=[Line|ID]
+KonditionalerGeheZu:
+    'WENN' '(' links=ID op=('=' | '<' | '>') rechts=Wert ')'
+    'DANN' 'GEHE' 'ZU' ziel=[Zeile|ID]
 ;
  
-Value:
+Wert:
 	ID | INT
 ;
  
-Stop:
-    {Stop} 'Halt!'
+Halt:
+    {Halt} 'Halt!'
 ;

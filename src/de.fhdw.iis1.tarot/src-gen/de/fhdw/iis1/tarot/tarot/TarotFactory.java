@@ -24,112 +24,112 @@ public interface TarotFactory extends EFactory
   TarotFactory eINSTANCE = de.fhdw.iis1.tarot.tarot.impl.TarotFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Program</em>'.
+   * Returns a new object of class '<em>Programm</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Program</em>'.
+   * @return a new object of class '<em>Programm</em>'.
    * @generated
    */
-  Program createProgram();
+  Programm createProgramm();
 
   /**
-   * Returns a new object of class '<em>Line</em>'.
+   * Returns a new object of class '<em>Zeile</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Line</em>'.
+   * @return a new object of class '<em>Zeile</em>'.
    * @generated
    */
-  Line createLine();
+  Zeile createZeile();
 
   /**
-   * Returns a new object of class '<em>Instruction</em>'.
+   * Returns a new object of class '<em>Anweisung</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Instruction</em>'.
+   * @return a new object of class '<em>Anweisung</em>'.
    * @generated
    */
-  Instruction createInstruction();
+  Anweisung createAnweisung();
 
   /**
-   * Returns a new object of class '<em>Assignment</em>'.
+   * Returns a new object of class '<em>Zuordnung</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Assignment</em>'.
+   * @return a new object of class '<em>Zuordnung</em>'.
    * @generated
    */
-  Assignment createAssignment();
+  Zuordnung createZuordnung();
 
   /**
-   * Returns a new object of class '<em>Expression</em>'.
+   * Returns a new object of class '<em>Ausdruck</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expression</em>'.
+   * @return a new object of class '<em>Ausdruck</em>'.
    * @generated
    */
-  Expression createExpression();
+  Ausdruck createAusdruck();
 
   /**
-   * Returns a new object of class '<em>Add Sub Expr</em>'.
+   * Returns a new object of class '<em>Strich Operation</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Add Sub Expr</em>'.
+   * @return a new object of class '<em>Strich Operation</em>'.
    * @generated
    */
-  AddSubExpr createAddSubExpr();
+  StrichOperation createStrichOperation();
 
   /**
-   * Returns a new object of class '<em>Int Literal</em>'.
+   * Returns a new object of class '<em>Ganzzahl</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Literal</em>'.
+   * @return a new object of class '<em>Ganzzahl</em>'.
    * @generated
    */
-  IntLiteral createIntLiteral();
+  Ganzzahl createGanzzahl();
 
   /**
-   * Returns a new object of class '<em>Input</em>'.
+   * Returns a new object of class '<em>Eingabe</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Input</em>'.
+   * @return a new object of class '<em>Eingabe</em>'.
    * @generated
    */
-  Input createInput();
+  Eingabe createEingabe();
 
   /**
-   * Returns a new object of class '<em>Output</em>'.
+   * Returns a new object of class '<em>Ausgabe</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Output</em>'.
+   * @return a new object of class '<em>Ausgabe</em>'.
    * @generated
    */
-  Output createOutput();
+  Ausgabe createAusgabe();
 
   /**
-   * Returns a new object of class '<em>Goto</em>'.
+   * Returns a new object of class '<em>Gehe Zu</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Goto</em>'.
+   * @return a new object of class '<em>Gehe Zu</em>'.
    * @generated
    */
-  Goto createGoto();
+  GeheZu createGeheZu();
 
   /**
-   * Returns a new object of class '<em>Conditional Goto</em>'.
+   * Returns a new object of class '<em>Konditionaler Gehe Zu</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Conditional Goto</em>'.
+   * @return a new object of class '<em>Konditionaler Gehe Zu</em>'.
    * @generated
    */
-  ConditionalGoto createConditionalGoto();
+  KonditionalerGeheZu createKonditionalerGeheZu();
 
   /**
-   * Returns a new object of class '<em>Stop</em>'.
+   * Returns a new object of class '<em>Halt</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Stop</em>'.
+   * @return a new object of class '<em>Halt</em>'.
    * @generated
    */
-  Stop createStop();
+  Halt createHalt();
 
   /**
    * Returns the package supported by this factory.

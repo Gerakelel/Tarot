@@ -3,48 +3,56 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.Goto;
-import de.fhdw.iis1.tarot.tarot.Line;
+import de.fhdw.iis1.tarot.tarot.Ganzzahl;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Goto</b></em>'.
+ * An implementation of the model object '<em><b>Ganzzahl</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.GotoImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.GanzzahlImpl#getWert <em>Wert</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GotoImpl extends InstructionImpl implements Goto
+public class GanzzahlImpl extends AusdruckImpl implements Ganzzahl
 {
   /**
-   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+   * The default value of the '{@link #getWert() <em>Wert</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTarget()
+   * @see #getWert()
    * @generated
    * @ordered
    */
-  protected Line target;
+  protected static final int WERT_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getWert() <em>Wert</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getWert()
+   * @generated
+   * @ordered
+   */
+  protected int wert = WERT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GotoImpl()
+  protected GanzzahlImpl()
   {
     super();
   }
@@ -57,7 +65,7 @@ public class GotoImpl extends InstructionImpl implements Goto
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.GOTO;
+    return TarotPackage.Literals.GANZZAHL;
   }
 
   /**
@@ -66,29 +74,9 @@ public class GotoImpl extends InstructionImpl implements Goto
    * @generated
    */
   @Override
-  public Line getTarget()
+  public int getWert()
   {
-    if (target != null && target.eIsProxy())
-    {
-      InternalEObject oldTarget = (InternalEObject)target;
-      target = (Line)eResolveProxy(oldTarget);
-      if (target != oldTarget)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TarotPackage.GOTO__TARGET, oldTarget, target));
-      }
-    }
-    return target;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Line basicGetTarget()
-  {
-    return target;
+    return wert;
   }
 
   /**
@@ -97,12 +85,12 @@ public class GotoImpl extends InstructionImpl implements Goto
    * @generated
    */
   @Override
-  public void setTarget(Line newTarget)
+  public void setWert(int newWert)
   {
-    Line oldTarget = target;
-    target = newTarget;
+    int oldWert = wert;
+    wert = newWert;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.GOTO__TARGET, oldTarget, target));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.GANZZAHL__WERT, oldWert, wert));
   }
 
   /**
@@ -115,9 +103,8 @@ public class GotoImpl extends InstructionImpl implements Goto
   {
     switch (featureID)
     {
-      case TarotPackage.GOTO__TARGET:
-        if (resolve) return getTarget();
-        return basicGetTarget();
+      case TarotPackage.GANZZAHL__WERT:
+        return getWert();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -132,8 +119,8 @@ public class GotoImpl extends InstructionImpl implements Goto
   {
     switch (featureID)
     {
-      case TarotPackage.GOTO__TARGET:
-        setTarget((Line)newValue);
+      case TarotPackage.GANZZAHL__WERT:
+        setWert((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,8 +136,8 @@ public class GotoImpl extends InstructionImpl implements Goto
   {
     switch (featureID)
     {
-      case TarotPackage.GOTO__TARGET:
-        setTarget((Line)null);
+      case TarotPackage.GANZZAHL__WERT:
+        setWert(WERT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -166,10 +153,27 @@ public class GotoImpl extends InstructionImpl implements Goto
   {
     switch (featureID)
     {
-      case TarotPackage.GOTO__TARGET:
-        return target != null;
+      case TarotPackage.GANZZAHL__WERT:
+        return wert != WERT_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
 
-} //GotoImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (wert: ");
+    result.append(wert);
+    result.append(')');
+    return result.toString();
+  }
+
+} //GanzzahlImpl

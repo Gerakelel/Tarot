@@ -3,7 +3,7 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.AddSubExpr;
+import de.fhdw.iis1.tarot.tarot.StrichOperation;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,40 +14,40 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Add Sub Expr</b></em>'.
+ * An implementation of the model object '<em><b>Strich Operation</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.AddSubExprImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.AddSubExprImpl#getOp <em>Op</em>}</li>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.AddSubExprImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.StrichOperationImpl#getLinks <em>Links</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.StrichOperationImpl#getOp <em>Op</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.StrichOperationImpl#getRechts <em>Rechts</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
+public class StrichOperationImpl extends AusdruckImpl implements StrichOperation
 {
   /**
-   * The default value of the '{@link #getLeft() <em>Left</em>}' attribute.
+   * The default value of the '{@link #getLinks() <em>Links</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLeft()
+   * @see #getLinks()
    * @generated
    * @ordered
    */
-  protected static final String LEFT_EDEFAULT = null;
+  protected static final String LINKS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' attribute.
+   * The cached value of the '{@link #getLinks() <em>Links</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLeft()
+   * @see #getLinks()
    * @generated
    * @ordered
    */
-  protected String left = LEFT_EDEFAULT;
+  protected String links = LINKS_EDEFAULT;
 
   /**
    * The default value of the '{@link #getOp() <em>Op</em>}' attribute.
@@ -70,31 +70,31 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
   protected String op = OP_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getRight() <em>Right</em>}' attribute.
+   * The default value of the '{@link #getRechts() <em>Rechts</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRight()
+   * @see #getRechts()
    * @generated
    * @ordered
    */
-  protected static final String RIGHT_EDEFAULT = null;
+  protected static final String RECHTS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRight() <em>Right</em>}' attribute.
+   * The cached value of the '{@link #getRechts() <em>Rechts</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRight()
+   * @see #getRechts()
    * @generated
    * @ordered
    */
-  protected String right = RIGHT_EDEFAULT;
+  protected String rechts = RECHTS_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AddSubExprImpl()
+  protected StrichOperationImpl()
   {
     super();
   }
@@ -107,7 +107,7 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.ADD_SUB_EXPR;
+    return TarotPackage.Literals.STRICH_OPERATION;
   }
 
   /**
@@ -116,9 +116,9 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
    * @generated
    */
   @Override
-  public String getLeft()
+  public String getLinks()
   {
-    return left;
+    return links;
   }
 
   /**
@@ -127,12 +127,12 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
    * @generated
    */
   @Override
-  public void setLeft(String newLeft)
+  public void setLinks(String newLinks)
   {
-    String oldLeft = left;
-    left = newLeft;
+    String oldLinks = links;
+    links = newLinks;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ADD_SUB_EXPR__LEFT, oldLeft, left));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.STRICH_OPERATION__LINKS, oldLinks, links));
   }
 
   /**
@@ -157,7 +157,7 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
     String oldOp = op;
     op = newOp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ADD_SUB_EXPR__OP, oldOp, op));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.STRICH_OPERATION__OP, oldOp, op));
   }
 
   /**
@@ -166,9 +166,9 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
    * @generated
    */
   @Override
-  public String getRight()
+  public String getRechts()
   {
-    return right;
+    return rechts;
   }
 
   /**
@@ -177,12 +177,12 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
    * @generated
    */
   @Override
-  public void setRight(String newRight)
+  public void setRechts(String newRechts)
   {
-    String oldRight = right;
-    right = newRight;
+    String oldRechts = rechts;
+    rechts = newRechts;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ADD_SUB_EXPR__RIGHT, oldRight, right));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.STRICH_OPERATION__RECHTS, oldRechts, rechts));
   }
 
   /**
@@ -195,12 +195,12 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
   {
     switch (featureID)
     {
-      case TarotPackage.ADD_SUB_EXPR__LEFT:
-        return getLeft();
-      case TarotPackage.ADD_SUB_EXPR__OP:
+      case TarotPackage.STRICH_OPERATION__LINKS:
+        return getLinks();
+      case TarotPackage.STRICH_OPERATION__OP:
         return getOp();
-      case TarotPackage.ADD_SUB_EXPR__RIGHT:
-        return getRight();
+      case TarotPackage.STRICH_OPERATION__RECHTS:
+        return getRechts();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -215,14 +215,14 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
   {
     switch (featureID)
     {
-      case TarotPackage.ADD_SUB_EXPR__LEFT:
-        setLeft((String)newValue);
+      case TarotPackage.STRICH_OPERATION__LINKS:
+        setLinks((String)newValue);
         return;
-      case TarotPackage.ADD_SUB_EXPR__OP:
+      case TarotPackage.STRICH_OPERATION__OP:
         setOp((String)newValue);
         return;
-      case TarotPackage.ADD_SUB_EXPR__RIGHT:
-        setRight((String)newValue);
+      case TarotPackage.STRICH_OPERATION__RECHTS:
+        setRechts((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,14 +238,14 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
   {
     switch (featureID)
     {
-      case TarotPackage.ADD_SUB_EXPR__LEFT:
-        setLeft(LEFT_EDEFAULT);
+      case TarotPackage.STRICH_OPERATION__LINKS:
+        setLinks(LINKS_EDEFAULT);
         return;
-      case TarotPackage.ADD_SUB_EXPR__OP:
+      case TarotPackage.STRICH_OPERATION__OP:
         setOp(OP_EDEFAULT);
         return;
-      case TarotPackage.ADD_SUB_EXPR__RIGHT:
-        setRight(RIGHT_EDEFAULT);
+      case TarotPackage.STRICH_OPERATION__RECHTS:
+        setRechts(RECHTS_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -261,12 +261,12 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
   {
     switch (featureID)
     {
-      case TarotPackage.ADD_SUB_EXPR__LEFT:
-        return LEFT_EDEFAULT == null ? left != null : !LEFT_EDEFAULT.equals(left);
-      case TarotPackage.ADD_SUB_EXPR__OP:
+      case TarotPackage.STRICH_OPERATION__LINKS:
+        return LINKS_EDEFAULT == null ? links != null : !LINKS_EDEFAULT.equals(links);
+      case TarotPackage.STRICH_OPERATION__OP:
         return OP_EDEFAULT == null ? op != null : !OP_EDEFAULT.equals(op);
-      case TarotPackage.ADD_SUB_EXPR__RIGHT:
-        return RIGHT_EDEFAULT == null ? right != null : !RIGHT_EDEFAULT.equals(right);
+      case TarotPackage.STRICH_OPERATION__RECHTS:
+        return RECHTS_EDEFAULT == null ? rechts != null : !RECHTS_EDEFAULT.equals(rechts);
     }
     return super.eIsSet(featureID);
   }
@@ -282,14 +282,14 @@ public class AddSubExprImpl extends ExpressionImpl implements AddSubExpr
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (left: ");
-    result.append(left);
+    result.append(" (links: ");
+    result.append(links);
     result.append(", op: ");
     result.append(op);
-    result.append(", right: ");
-    result.append(right);
+    result.append(", rechts: ");
+    result.append(rechts);
     result.append(')');
     return result.toString();
   }
 
-} //AddSubExprImpl
+} //StrichOperationImpl

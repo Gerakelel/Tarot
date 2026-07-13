@@ -3,56 +3,48 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.IntLiteral;
+import de.fhdw.iis1.tarot.tarot.GeheZu;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
+import de.fhdw.iis1.tarot.tarot.Zeile;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Int Literal</b></em>'.
+ * An implementation of the model object '<em><b>Gehe Zu</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.IntLiteralImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.GeheZuImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
+public class GeheZuImpl extends AnweisungImpl implements GeheZu
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getTarget()
    * @generated
    * @ordered
    */
-  protected static final int VALUE_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected int value = VALUE_EDEFAULT;
+  protected Zeile target;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IntLiteralImpl()
+  protected GeheZuImpl()
   {
     super();
   }
@@ -65,7 +57,7 @@ public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.INT_LITERAL;
+    return TarotPackage.Literals.GEHE_ZU;
   }
 
   /**
@@ -74,9 +66,29 @@ public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
    * @generated
    */
   @Override
-  public int getValue()
+  public Zeile getTarget()
   {
-    return value;
+    if (target != null && target.eIsProxy())
+    {
+      InternalEObject oldTarget = (InternalEObject)target;
+      target = (Zeile)eResolveProxy(oldTarget);
+      if (target != oldTarget)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TarotPackage.GEHE_ZU__TARGET, oldTarget, target));
+      }
+    }
+    return target;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Zeile basicGetTarget()
+  {
+    return target;
   }
 
   /**
@@ -85,12 +97,12 @@ public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
    * @generated
    */
   @Override
-  public void setValue(int newValue)
+  public void setTarget(Zeile newTarget)
   {
-    int oldValue = value;
-    value = newValue;
+    Zeile oldTarget = target;
+    target = newTarget;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.INT_LITERAL__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.GEHE_ZU__TARGET, oldTarget, target));
   }
 
   /**
@@ -103,8 +115,9 @@ public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
   {
     switch (featureID)
     {
-      case TarotPackage.INT_LITERAL__VALUE:
-        return getValue();
+      case TarotPackage.GEHE_ZU__TARGET:
+        if (resolve) return getTarget();
+        return basicGetTarget();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +132,8 @@ public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
   {
     switch (featureID)
     {
-      case TarotPackage.INT_LITERAL__VALUE:
-        setValue((Integer)newValue);
+      case TarotPackage.GEHE_ZU__TARGET:
+        setTarget((Zeile)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +149,8 @@ public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
   {
     switch (featureID)
     {
-      case TarotPackage.INT_LITERAL__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case TarotPackage.GEHE_ZU__TARGET:
+        setTarget((Zeile)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +166,10 @@ public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
   {
     switch (featureID)
     {
-      case TarotPackage.INT_LITERAL__VALUE:
-        return value != VALUE_EDEFAULT;
+      case TarotPackage.GEHE_ZU__TARGET:
+        return target != null;
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (value: ");
-    result.append(value);
-    result.append(')');
-    return result.toString();
-  }
-
-} //IntLiteralImpl
+} //GeheZuImpl

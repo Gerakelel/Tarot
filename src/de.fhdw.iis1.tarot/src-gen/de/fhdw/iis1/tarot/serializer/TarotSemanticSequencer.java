@@ -5,17 +5,17 @@ package de.fhdw.iis1.tarot.serializer;
 
 import com.google.inject.Inject;
 import de.fhdw.iis1.tarot.services.TarotGrammarAccess;
-import de.fhdw.iis1.tarot.tarot.AddSubExpr;
-import de.fhdw.iis1.tarot.tarot.Assignment;
-import de.fhdw.iis1.tarot.tarot.ConditionalGoto;
-import de.fhdw.iis1.tarot.tarot.Goto;
-import de.fhdw.iis1.tarot.tarot.Input;
-import de.fhdw.iis1.tarot.tarot.IntLiteral;
-import de.fhdw.iis1.tarot.tarot.Line;
-import de.fhdw.iis1.tarot.tarot.Output;
-import de.fhdw.iis1.tarot.tarot.Program;
-import de.fhdw.iis1.tarot.tarot.Stop;
+import de.fhdw.iis1.tarot.tarot.Ausgabe;
+import de.fhdw.iis1.tarot.tarot.Eingabe;
+import de.fhdw.iis1.tarot.tarot.Ganzzahl;
+import de.fhdw.iis1.tarot.tarot.GeheZu;
+import de.fhdw.iis1.tarot.tarot.Halt;
+import de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu;
+import de.fhdw.iis1.tarot.tarot.Programm;
+import de.fhdw.iis1.tarot.tarot.StrichOperation;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
+import de.fhdw.iis1.tarot.tarot.Zeile;
+import de.fhdw.iis1.tarot.tarot.Zuordnung;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -41,35 +41,35 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == TarotPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case TarotPackage.ADD_SUB_EXPR:
-				sequence_AddSubExpr(context, (AddSubExpr) semanticObject); 
+			case TarotPackage.AUSGABE:
+				sequence_Ausgabe(context, (Ausgabe) semanticObject); 
 				return; 
-			case TarotPackage.ASSIGNMENT:
-				sequence_Assignment(context, (Assignment) semanticObject); 
+			case TarotPackage.EINGABE:
+				sequence_Eingabe(context, (Eingabe) semanticObject); 
 				return; 
-			case TarotPackage.CONDITIONAL_GOTO:
-				sequence_ConditionalGoto(context, (ConditionalGoto) semanticObject); 
+			case TarotPackage.GANZZAHL:
+				sequence_Ganzzahl(context, (Ganzzahl) semanticObject); 
 				return; 
-			case TarotPackage.GOTO:
-				sequence_Goto(context, (Goto) semanticObject); 
+			case TarotPackage.GEHE_ZU:
+				sequence_GeheZu(context, (GeheZu) semanticObject); 
 				return; 
-			case TarotPackage.INPUT:
-				sequence_Input(context, (Input) semanticObject); 
+			case TarotPackage.HALT:
+				sequence_Halt(context, (Halt) semanticObject); 
 				return; 
-			case TarotPackage.INT_LITERAL:
-				sequence_IntLiteral(context, (IntLiteral) semanticObject); 
+			case TarotPackage.KONDITIONALER_GEHE_ZU:
+				sequence_KonditionalerGeheZu(context, (KonditionalerGeheZu) semanticObject); 
 				return; 
-			case TarotPackage.LINE:
-				sequence_Line(context, (Line) semanticObject); 
+			case TarotPackage.PROGRAMM:
+				sequence_Programm(context, (Programm) semanticObject); 
 				return; 
-			case TarotPackage.OUTPUT:
-				sequence_Output(context, (Output) semanticObject); 
+			case TarotPackage.STRICH_OPERATION:
+				sequence_StrichOperation(context, (StrichOperation) semanticObject); 
 				return; 
-			case TarotPackage.PROGRAM:
-				sequence_Program(context, (Program) semanticObject); 
+			case TarotPackage.ZEILE:
+				sequence_Zeile(context, (Zeile) semanticObject); 
 				return; 
-			case TarotPackage.STOP:
-				sequence_Stop(context, (Stop) semanticObject); 
+			case TarotPackage.ZUORDNUNG:
+				sequence_Zuordnung(context, (Zuordnung) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -79,95 +79,20 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Expression returns AddSubExpr
-	 *     AddSubExpr returns AddSubExpr
-	 *
-	 * Constraint:
-	 *     (left=ID ((op='+' | op='-') right=ID)?)
-	 * </pre>
-	 */
-	protected void sequence_AddSubExpr(ISerializationContext context, AddSubExpr semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Instruction returns Assignment
-	 *     Assignment returns Assignment
-	 *
-	 * Constraint:
-	 *     (var=ID expr=Expression)
-	 * </pre>
-	 */
-	protected void sequence_Assignment(ISerializationContext context, Assignment semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.ASSIGNMENT__VAR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.ASSIGNMENT__VAR));
-			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.ASSIGNMENT__EXPR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.ASSIGNMENT__EXPR));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAssignmentAccess().getVarIDTerminalRuleCall_0_0(), semanticObject.getVar());
-		feeder.accept(grammarAccess.getAssignmentAccess().getExprExpressionParserRuleCall_2_0(), semanticObject.getExpr());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Instruction returns ConditionalGoto
-	 *     ConditionalGoto returns ConditionalGoto
-	 *
-	 * Constraint:
-	 *     (left=ID (op='=' | op='&lt;' | op='&gt;') right=Value target=[Line|ID])
-	 * </pre>
-	 */
-	protected void sequence_ConditionalGoto(ISerializationContext context, ConditionalGoto semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Instruction returns Goto
-	 *     Goto returns Goto
-	 *
-	 * Constraint:
-	 *     target=[Line|ID]
-	 * </pre>
-	 */
-	protected void sequence_Goto(ISerializationContext context, Goto semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.GOTO__TARGET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.GOTO__TARGET));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGotoAccess().getTargetLineIDTerminalRuleCall_2_0_1(), semanticObject.eGet(TarotPackage.Literals.GOTO__TARGET, false));
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Instruction returns Input
-	 *     Input returns Input
+	 *     Anweisung returns Ausgabe
+	 *     Ausgabe returns Ausgabe
 	 *
 	 * Constraint:
 	 *     var=ID
 	 * </pre>
 	 */
-	protected void sequence_Input(ISerializationContext context, Input semanticObject) {
+	protected void sequence_Ausgabe(ISerializationContext context, Ausgabe semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.INPUT__VAR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.INPUT__VAR));
+			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.AUSGABE__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.AUSGABE__VAR));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getInputAccess().getVarIDTerminalRuleCall_1_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getAusgabeAccess().getVarIDTerminalRuleCall_1_0(), semanticObject.getVar());
 		feeder.finish();
 	}
 	
@@ -175,64 +100,20 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Expression returns IntLiteral
-	 *     IntLiteral returns IntLiteral
-	 *
-	 * Constraint:
-	 *     value=INT
-	 * </pre>
-	 */
-	protected void sequence_IntLiteral(ISerializationContext context, IntLiteral semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.INT_LITERAL__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.INT_LITERAL__VALUE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIntLiteralAccess().getValueINTTerminalRuleCall_1_0(), semanticObject.getValue());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Line returns Line
-	 *
-	 * Constraint:
-	 *     (name=ID instruction=Instruction)
-	 * </pre>
-	 */
-	protected void sequence_Line(ISerializationContext context, Line semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.LINE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.LINE__NAME));
-			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.LINE__INSTRUCTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.LINE__INSTRUCTION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLineAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getLineAccess().getInstructionInstructionParserRuleCall_2_0(), semanticObject.getInstruction());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Instruction returns Output
-	 *     Output returns Output
+	 *     Anweisung returns Eingabe
+	 *     Eingabe returns Eingabe
 	 *
 	 * Constraint:
 	 *     var=ID
 	 * </pre>
 	 */
-	protected void sequence_Output(ISerializationContext context, Output semanticObject) {
+	protected void sequence_Eingabe(ISerializationContext context, Eingabe semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.OUTPUT__VAR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.OUTPUT__VAR));
+			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.EINGABE__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.EINGABE__VAR));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getOutputAccess().getVarIDTerminalRuleCall_1_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getEingabeAccess().getVarIDTerminalRuleCall_1_0(), semanticObject.getVar());
 		feeder.finish();
 	}
 	
@@ -240,13 +121,56 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Program returns Program
+	 *     Ausdruck returns Ganzzahl
+	 *     Ganzzahl returns Ganzzahl
 	 *
 	 * Constraint:
-	 *     lines+=Line+
+	 *     wert=INT
 	 * </pre>
 	 */
-	protected void sequence_Program(ISerializationContext context, Program semanticObject) {
+	protected void sequence_Ganzzahl(ISerializationContext context, Ganzzahl semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.GANZZAHL__WERT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.GANZZAHL__WERT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGanzzahlAccess().getWertINTTerminalRuleCall_1_0(), semanticObject.getWert());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Anweisung returns GeheZu
+	 *     GeheZu returns GeheZu
+	 *
+	 * Constraint:
+	 *     target=[Zeile|ID]
+	 * </pre>
+	 */
+	protected void sequence_GeheZu(ISerializationContext context, GeheZu semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.GEHE_ZU__TARGET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.GEHE_ZU__TARGET));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGeheZuAccess().getTargetZeileIDTerminalRuleCall_2_0_1(), semanticObject.eGet(TarotPackage.Literals.GEHE_ZU__TARGET, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Anweisung returns Halt
+	 *     Halt returns Halt
+	 *
+	 * Constraint:
+	 *     {Halt}
+	 * </pre>
+	 */
+	protected void sequence_Halt(ISerializationContext context, Halt semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -254,15 +178,91 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Instruction returns Stop
-	 *     Stop returns Stop
+	 *     Anweisung returns KonditionalerGeheZu
+	 *     KonditionalerGeheZu returns KonditionalerGeheZu
 	 *
 	 * Constraint:
-	 *     {Stop}
+	 *     (links=ID (op='=' | op='&lt;' | op='&gt;') rechts=Wert ziel=[Zeile|ID])
 	 * </pre>
 	 */
-	protected void sequence_Stop(ISerializationContext context, Stop semanticObject) {
+	protected void sequence_KonditionalerGeheZu(ISerializationContext context, KonditionalerGeheZu semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Programm returns Programm
+	 *
+	 * Constraint:
+	 *     zeilen+=Zeile+
+	 * </pre>
+	 */
+	protected void sequence_Programm(ISerializationContext context, Programm semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Ausdruck returns StrichOperation
+	 *     StrichOperation returns StrichOperation
+	 *
+	 * Constraint:
+	 *     (links=ID ((op='+' | op='-') rechts=ID)?)
+	 * </pre>
+	 */
+	protected void sequence_StrichOperation(ISerializationContext context, StrichOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Zeile returns Zeile
+	 *
+	 * Constraint:
+	 *     (name=ID anweisung=Anweisung)
+	 * </pre>
+	 */
+	protected void sequence_Zeile(ISerializationContext context, Zeile semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.ZEILE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.ZEILE__NAME));
+			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.ZEILE__ANWEISUNG) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.ZEILE__ANWEISUNG));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getZeileAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getZeileAccess().getAnweisungAnweisungParserRuleCall_2_0(), semanticObject.getAnweisung());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Anweisung returns Zuordnung
+	 *     Zuordnung returns Zuordnung
+	 *
+	 * Constraint:
+	 *     (var=ID ausdruck=Ausdruck)
+	 * </pre>
+	 */
+	protected void sequence_Zuordnung(ISerializationContext context, Zuordnung semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.ZUORDNUNG__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.ZUORDNUNG__VAR));
+			if (transientValues.isValueTransient(semanticObject, TarotPackage.Literals.ZUORDNUNG__AUSDRUCK) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TarotPackage.Literals.ZUORDNUNG__AUSDRUCK));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getZuordnungAccess().getVarIDTerminalRuleCall_0_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getZuordnungAccess().getAusdruckAusdruckParserRuleCall_2_0(), semanticObject.getAusdruck());
+		feeder.finish();
 	}
 	
 	

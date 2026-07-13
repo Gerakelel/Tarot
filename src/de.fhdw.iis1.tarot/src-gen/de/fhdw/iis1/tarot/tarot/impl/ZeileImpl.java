@@ -3,9 +3,9 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.Assignment;
-import de.fhdw.iis1.tarot.tarot.Expression;
+import de.fhdw.iis1.tarot.tarot.Anweisung;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
+import de.fhdw.iis1.tarot.tarot.Zeile;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,59 +14,60 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Assignment</b></em>'.
+ * An implementation of the model object '<em><b>Zeile</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.AssignmentImpl#getVar <em>Var</em>}</li>
- *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.AssignmentImpl#getExpr <em>Expr</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ZeileImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.fhdw.iis1.tarot.tarot.impl.ZeileImpl#getAnweisung <em>Anweisung</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AssignmentImpl extends InstructionImpl implements Assignment
+public class ZeileImpl extends MinimalEObjectImpl.Container implements Zeile
 {
   /**
-   * The default value of the '{@link #getVar() <em>Var</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVar()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String VAR_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVar()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String var = VAR_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getExpr() <em>Expr</em>}' containment reference.
+   * The cached value of the '{@link #getAnweisung() <em>Anweisung</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExpr()
+   * @see #getAnweisung()
    * @generated
    * @ordered
    */
-  protected Expression expr;
+  protected Anweisung anweisung;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AssignmentImpl()
+  protected ZeileImpl()
   {
     super();
   }
@@ -79,7 +80,7 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.ASSIGNMENT;
+    return TarotPackage.Literals.ZEILE;
   }
 
   /**
@@ -88,9 +89,9 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
    * @generated
    */
   @Override
-  public String getVar()
+  public String getName()
   {
-    return var;
+    return name;
   }
 
   /**
@@ -99,12 +100,12 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
    * @generated
    */
   @Override
-  public void setVar(String newVar)
+  public void setName(String newName)
   {
-    String oldVar = var;
-    var = newVar;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ASSIGNMENT__VAR, oldVar, var));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ZEILE__NAME, oldName, name));
   }
 
   /**
@@ -113,9 +114,9 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
    * @generated
    */
   @Override
-  public Expression getExpr()
+  public Anweisung getAnweisung()
   {
-    return expr;
+    return anweisung;
   }
 
   /**
@@ -123,13 +124,13 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetExpr(Expression newExpr, NotificationChain msgs)
+  public NotificationChain basicSetAnweisung(Anweisung newAnweisung, NotificationChain msgs)
   {
-    Expression oldExpr = expr;
-    expr = newExpr;
+    Anweisung oldAnweisung = anweisung;
+    anweisung = newAnweisung;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TarotPackage.ASSIGNMENT__EXPR, oldExpr, newExpr);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TarotPackage.ZEILE__ANWEISUNG, oldAnweisung, newAnweisung);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -141,20 +142,20 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
    * @generated
    */
   @Override
-  public void setExpr(Expression newExpr)
+  public void setAnweisung(Anweisung newAnweisung)
   {
-    if (newExpr != expr)
+    if (newAnweisung != anweisung)
     {
       NotificationChain msgs = null;
-      if (expr != null)
-        msgs = ((InternalEObject)expr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TarotPackage.ASSIGNMENT__EXPR, null, msgs);
-      if (newExpr != null)
-        msgs = ((InternalEObject)newExpr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TarotPackage.ASSIGNMENT__EXPR, null, msgs);
-      msgs = basicSetExpr(newExpr, msgs);
+      if (anweisung != null)
+        msgs = ((InternalEObject)anweisung).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TarotPackage.ZEILE__ANWEISUNG, null, msgs);
+      if (newAnweisung != null)
+        msgs = ((InternalEObject)newAnweisung).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TarotPackage.ZEILE__ANWEISUNG, null, msgs);
+      msgs = basicSetAnweisung(newAnweisung, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ASSIGNMENT__EXPR, newExpr, newExpr));
+      eNotify(new ENotificationImpl(this, Notification.SET, TarotPackage.ZEILE__ANWEISUNG, newAnweisung, newAnweisung));
   }
 
   /**
@@ -167,8 +168,8 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
   {
     switch (featureID)
     {
-      case TarotPackage.ASSIGNMENT__EXPR:
-        return basicSetExpr(null, msgs);
+      case TarotPackage.ZEILE__ANWEISUNG:
+        return basicSetAnweisung(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,10 +184,10 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
   {
     switch (featureID)
     {
-      case TarotPackage.ASSIGNMENT__VAR:
-        return getVar();
-      case TarotPackage.ASSIGNMENT__EXPR:
-        return getExpr();
+      case TarotPackage.ZEILE__NAME:
+        return getName();
+      case TarotPackage.ZEILE__ANWEISUNG:
+        return getAnweisung();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -201,11 +202,11 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
   {
     switch (featureID)
     {
-      case TarotPackage.ASSIGNMENT__VAR:
-        setVar((String)newValue);
+      case TarotPackage.ZEILE__NAME:
+        setName((String)newValue);
         return;
-      case TarotPackage.ASSIGNMENT__EXPR:
-        setExpr((Expression)newValue);
+      case TarotPackage.ZEILE__ANWEISUNG:
+        setAnweisung((Anweisung)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,11 +222,11 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
   {
     switch (featureID)
     {
-      case TarotPackage.ASSIGNMENT__VAR:
-        setVar(VAR_EDEFAULT);
+      case TarotPackage.ZEILE__NAME:
+        setName(NAME_EDEFAULT);
         return;
-      case TarotPackage.ASSIGNMENT__EXPR:
-        setExpr((Expression)null);
+      case TarotPackage.ZEILE__ANWEISUNG:
+        setAnweisung((Anweisung)null);
         return;
     }
     super.eUnset(featureID);
@@ -241,10 +242,10 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
   {
     switch (featureID)
     {
-      case TarotPackage.ASSIGNMENT__VAR:
-        return VAR_EDEFAULT == null ? var != null : !VAR_EDEFAULT.equals(var);
-      case TarotPackage.ASSIGNMENT__EXPR:
-        return expr != null;
+      case TarotPackage.ZEILE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TarotPackage.ZEILE__ANWEISUNG:
+        return anweisung != null;
     }
     return super.eIsSet(featureID);
   }
@@ -260,10 +261,10 @@ public class AssignmentImpl extends InstructionImpl implements Assignment
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (var: ");
-    result.append(var);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }
 
-} //AssignmentImpl
+} //ZeileImpl

@@ -3,26 +3,26 @@
  */
 package de.fhdw.iis1.tarot.tarot.impl;
 
-import de.fhdw.iis1.tarot.tarot.Stop;
+import de.fhdw.iis1.tarot.tarot.Halt;
 import de.fhdw.iis1.tarot.tarot.TarotPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Stop</b></em>'.
+ * An implementation of the model object '<em><b>Halt</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class StopImpl extends InstructionImpl implements Stop
+public class HaltImpl extends AnweisungImpl implements Halt
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected StopImpl()
+  protected HaltImpl()
   {
     super();
   }
@@ -35,7 +35,7 @@ public class StopImpl extends InstructionImpl implements Stop
   @Override
   protected EClass eStaticClass()
   {
-    return TarotPackage.Literals.STOP;
+    return TarotPackage.Literals.HALT;
   }
 
-} //StopImpl
+} //HaltImpl

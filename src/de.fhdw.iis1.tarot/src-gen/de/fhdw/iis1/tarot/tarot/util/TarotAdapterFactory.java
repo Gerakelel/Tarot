@@ -76,64 +76,64 @@ public class TarotAdapterFactory extends AdapterFactoryImpl
     new TarotSwitch<Adapter>()
     {
       @Override
-      public Adapter caseProgram(Program object)
+      public Adapter caseProgramm(Programm object)
       {
-        return createProgramAdapter();
+        return createProgrammAdapter();
       }
       @Override
-      public Adapter caseLine(Line object)
+      public Adapter caseZeile(Zeile object)
       {
-        return createLineAdapter();
+        return createZeileAdapter();
       }
       @Override
-      public Adapter caseInstruction(Instruction object)
+      public Adapter caseAnweisung(Anweisung object)
       {
-        return createInstructionAdapter();
+        return createAnweisungAdapter();
       }
       @Override
-      public Adapter caseAssignment(Assignment object)
+      public Adapter caseZuordnung(Zuordnung object)
       {
-        return createAssignmentAdapter();
+        return createZuordnungAdapter();
       }
       @Override
-      public Adapter caseExpression(Expression object)
+      public Adapter caseAusdruck(Ausdruck object)
       {
-        return createExpressionAdapter();
+        return createAusdruckAdapter();
       }
       @Override
-      public Adapter caseAddSubExpr(AddSubExpr object)
+      public Adapter caseStrichOperation(StrichOperation object)
       {
-        return createAddSubExprAdapter();
+        return createStrichOperationAdapter();
       }
       @Override
-      public Adapter caseIntLiteral(IntLiteral object)
+      public Adapter caseGanzzahl(Ganzzahl object)
       {
-        return createIntLiteralAdapter();
+        return createGanzzahlAdapter();
       }
       @Override
-      public Adapter caseInput(Input object)
+      public Adapter caseEingabe(Eingabe object)
       {
-        return createInputAdapter();
+        return createEingabeAdapter();
       }
       @Override
-      public Adapter caseOutput(Output object)
+      public Adapter caseAusgabe(Ausgabe object)
       {
-        return createOutputAdapter();
+        return createAusgabeAdapter();
       }
       @Override
-      public Adapter caseGoto(Goto object)
+      public Adapter caseGeheZu(GeheZu object)
       {
-        return createGotoAdapter();
+        return createGeheZuAdapter();
       }
       @Override
-      public Adapter caseConditionalGoto(ConditionalGoto object)
+      public Adapter caseKonditionalerGeheZu(KonditionalerGeheZu object)
       {
-        return createConditionalGotoAdapter();
+        return createKonditionalerGeheZuAdapter();
       }
       @Override
-      public Adapter caseStop(Stop object)
+      public Adapter caseHalt(Halt object)
       {
-        return createStopAdapter();
+        return createHaltAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -158,181 +158,181 @@ public class TarotAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Program <em>Program</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Programm <em>Programm</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Program
+   * @see de.fhdw.iis1.tarot.tarot.Programm
    * @generated
    */
-  public Adapter createProgramAdapter()
+  public Adapter createProgrammAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Line <em>Line</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Zeile <em>Zeile</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Line
+   * @see de.fhdw.iis1.tarot.tarot.Zeile
    * @generated
    */
-  public Adapter createLineAdapter()
+  public Adapter createZeileAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Instruction <em>Instruction</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Anweisung <em>Anweisung</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Instruction
+   * @see de.fhdw.iis1.tarot.tarot.Anweisung
    * @generated
    */
-  public Adapter createInstructionAdapter()
+  public Adapter createAnweisungAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Assignment <em>Assignment</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Zuordnung <em>Zuordnung</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Assignment
+   * @see de.fhdw.iis1.tarot.tarot.Zuordnung
    * @generated
    */
-  public Adapter createAssignmentAdapter()
+  public Adapter createZuordnungAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Expression <em>Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Ausdruck <em>Ausdruck</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Expression
+   * @see de.fhdw.iis1.tarot.tarot.Ausdruck
    * @generated
    */
-  public Adapter createExpressionAdapter()
+  public Adapter createAusdruckAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.AddSubExpr <em>Add Sub Expr</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.StrichOperation <em>Strich Operation</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.AddSubExpr
+   * @see de.fhdw.iis1.tarot.tarot.StrichOperation
    * @generated
    */
-  public Adapter createAddSubExprAdapter()
+  public Adapter createStrichOperationAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.IntLiteral <em>Int Literal</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Ganzzahl <em>Ganzzahl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.IntLiteral
+   * @see de.fhdw.iis1.tarot.tarot.Ganzzahl
    * @generated
    */
-  public Adapter createIntLiteralAdapter()
+  public Adapter createGanzzahlAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Input <em>Input</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Eingabe <em>Eingabe</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Input
+   * @see de.fhdw.iis1.tarot.tarot.Eingabe
    * @generated
    */
-  public Adapter createInputAdapter()
+  public Adapter createEingabeAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Output <em>Output</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Ausgabe <em>Ausgabe</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Output
+   * @see de.fhdw.iis1.tarot.tarot.Ausgabe
    * @generated
    */
-  public Adapter createOutputAdapter()
+  public Adapter createAusgabeAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Goto <em>Goto</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.GeheZu <em>Gehe Zu</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Goto
+   * @see de.fhdw.iis1.tarot.tarot.GeheZu
    * @generated
    */
-  public Adapter createGotoAdapter()
+  public Adapter createGeheZuAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.ConditionalGoto <em>Conditional Goto</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu <em>Konditionaler Gehe Zu</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.ConditionalGoto
+   * @see de.fhdw.iis1.tarot.tarot.KonditionalerGeheZu
    * @generated
    */
-  public Adapter createConditionalGotoAdapter()
+  public Adapter createKonditionalerGeheZuAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Stop <em>Stop</em>}'.
+   * Creates a new adapter for an object of class '{@link de.fhdw.iis1.tarot.tarot.Halt <em>Halt</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.fhdw.iis1.tarot.tarot.Stop
+   * @see de.fhdw.iis1.tarot.tarot.Halt
    * @generated
    */
-  public Adapter createStopAdapter()
+  public Adapter createHaltAdapter()
   {
     return null;
   }
