@@ -52,7 +52,7 @@ GeheZu:
  
 KonditionalerGeheZu:
     'WENN' '(' links=ID op=('=' | '<' | '>') rechts=Wert ')'
-    'DANN' 'GEHE' 'ZU' ziel=[Zeile|ID]
+    'DANN' 'GEHE' 'ZU' ziel=ID
 ;
  
 Wert:
