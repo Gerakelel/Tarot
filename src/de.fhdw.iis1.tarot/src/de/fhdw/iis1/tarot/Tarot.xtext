@@ -51,7 +51,7 @@ GeheZu:
 ;
  
 KonditionalerGeheZu:
-    'WENN' '(' links=ID op=('=' | '<' | '>') rechts=Wert ')'
+    'WENN' '(' links=[Zeile|ID] op=('=' | '<' | '>') rechts=Wert ')'
     'DANN' 'GEHE' 'ZU' ziel=[Zeile|ID]
 ;
  
