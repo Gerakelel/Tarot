@@ -3,6 +3,12 @@
  */
 package de.fhdw.iis1.tarot.validation;
 
+import java.util.List;
+
+import org.eclipse.xtext.validation.Check;
+
+import de.fhdw.iis1.tarot.tarot.*;
+
 
 /**
  * This class contains custom validation rules. 
@@ -11,15 +17,40 @@ package de.fhdw.iis1.tarot.validation;
  */
 public class TarotValidator extends AbstractTarotValidator {
 	
-//	public static final String INVALID_NAME = "invalidName";
-//
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					TarotPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
+	public static final String UNGUELTIGER_ZEILENNAME = "Zeilennamen müssen nach dem Format 'Z[ZAHL]' benannt werden.";
+	public static final String UNGUELTIGE_ZEILENNUMMERIERUNG = "Zeilennummern müssen aufsteigend sein und mit 0 beginnen.";
+	public static final String UNGUELTIGE_ZEILENREFERENZ = "Zeilenreferenzen müssen nach dem Format 'Z[ZAHL]' angegeben werden.";
 	
+	@Check
+	public void pruefeZeilenbenennung(Zeile zeile) {
+		if (!zeile.getName().matches("Z\\d+")) {
+			error(UNGUELTIGER_ZEILENNAME, TarotPackage.Literals.ZEILE__NAME);
+		}
+	}
+	
+	@Check
+	public void pruefeAufsteigendeZeilennummer(Programm programm) {
+		List<Zeile> zeilen = programm.getZeilen();
+		
+		for (int i = 0; i < zeilen.size(); i++) {
+			String zeilennummer = zeilen.get(i).getName().substring(1);
+			if (i != Integer.parseInt(zeilennummer)){
+				error(UNGUELTIGE_ZEILENNUMMERIERUNG, TarotPackage.Literals.PROGRAMM__ZEILEN);
+			}
+		}
+	}
+	
+	@Check
+	public void pruefeGeheZu(GeheZu geheZu) {
+		if (!geheZu.getZiel().matches("Z\\d+")) {
+			error(UNGUELTIGE_ZEILENREFERENZ, TarotPackage.Literals.GEHE_ZU__ZIEL);
+		}
+	}
+	
+	@Check
+	public void pruefeKonditionalerGeheZu(KonditionalerGeheZu konditionalerGeheZu) {
+		if (konditionalerGeheZu.getZiel().matches("Z\\d+")) {
+			error(UNGUELTIGE_ZEILENREFERENZ, TarotPackage.Literals.KONDITIONALER_GEHE_ZU__ZIEL);
+		}
+	}
 }

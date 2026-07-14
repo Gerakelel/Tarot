@@ -3261,31 +3261,31 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GeheZu__Group__2__Impl"
-    // InternalTarot.g:1070:1: rule__GeheZu__Group__2__Impl : ( ( rule__GeheZu__TargetAssignment_2 ) ) ;
+    // InternalTarot.g:1070:1: rule__GeheZu__Group__2__Impl : ( ( rule__GeheZu__ZielAssignment_2 ) ) ;
     public final void rule__GeheZu__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTarot.g:1074:1: ( ( ( rule__GeheZu__TargetAssignment_2 ) ) )
-            // InternalTarot.g:1075:1: ( ( rule__GeheZu__TargetAssignment_2 ) )
+            // InternalTarot.g:1074:1: ( ( ( rule__GeheZu__ZielAssignment_2 ) ) )
+            // InternalTarot.g:1075:1: ( ( rule__GeheZu__ZielAssignment_2 ) )
             {
-            // InternalTarot.g:1075:1: ( ( rule__GeheZu__TargetAssignment_2 ) )
-            // InternalTarot.g:1076:2: ( rule__GeheZu__TargetAssignment_2 )
+            // InternalTarot.g:1075:1: ( ( rule__GeheZu__ZielAssignment_2 ) )
+            // InternalTarot.g:1076:2: ( rule__GeheZu__ZielAssignment_2 )
             {
-             before(grammarAccess.getGeheZuAccess().getTargetAssignment_2()); 
-            // InternalTarot.g:1077:2: ( rule__GeheZu__TargetAssignment_2 )
-            // InternalTarot.g:1077:3: rule__GeheZu__TargetAssignment_2
+             before(grammarAccess.getGeheZuAccess().getZielAssignment_2()); 
+            // InternalTarot.g:1077:2: ( rule__GeheZu__ZielAssignment_2 )
+            // InternalTarot.g:1077:3: rule__GeheZu__ZielAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__GeheZu__TargetAssignment_2();
+            rule__GeheZu__ZielAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getGeheZuAccess().getTargetAssignment_2()); 
+             after(grammarAccess.getGeheZuAccess().getZielAssignment_2()); 
 
             }
 
@@ -4666,30 +4666,22 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Ausgabe__VarAssignment_1"
 
 
-    // $ANTLR start "rule__GeheZu__TargetAssignment_2"
-    // InternalTarot.g:1575:1: rule__GeheZu__TargetAssignment_2 : ( ( RULE_ID ) ) ;
-    public final void rule__GeheZu__TargetAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__GeheZu__ZielAssignment_2"
+    // InternalTarot.g:1575:1: rule__GeheZu__ZielAssignment_2 : ( RULE_ID ) ;
+    public final void rule__GeheZu__ZielAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTarot.g:1579:1: ( ( ( RULE_ID ) ) )
-            // InternalTarot.g:1580:2: ( ( RULE_ID ) )
+            // InternalTarot.g:1579:1: ( ( RULE_ID ) )
+            // InternalTarot.g:1580:2: ( RULE_ID )
             {
-            // InternalTarot.g:1580:2: ( ( RULE_ID ) )
-            // InternalTarot.g:1581:3: ( RULE_ID )
+            // InternalTarot.g:1580:2: ( RULE_ID )
+            // InternalTarot.g:1581:3: RULE_ID
             {
-             before(grammarAccess.getGeheZuAccess().getTargetZeileCrossReference_2_0()); 
-            // InternalTarot.g:1582:3: ( RULE_ID )
-            // InternalTarot.g:1583:4: RULE_ID
-            {
-             before(grammarAccess.getGeheZuAccess().getTargetZeileIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getGeheZuAccess().getZielIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getGeheZuAccess().getTargetZeileIDTerminalRuleCall_2_0_1()); 
-
-            }
-
-             after(grammarAccess.getGeheZuAccess().getTargetZeileCrossReference_2_0()); 
+             after(grammarAccess.getGeheZuAccess().getZielIDTerminalRuleCall_2_0()); 
 
             }
 
@@ -4708,21 +4700,21 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__GeheZu__TargetAssignment_2"
+    // $ANTLR end "rule__GeheZu__ZielAssignment_2"
 
 
     // $ANTLR start "rule__KonditionalerGeheZu__LinksAssignment_2"
-    // InternalTarot.g:1594:1: rule__KonditionalerGeheZu__LinksAssignment_2 : ( RULE_ID ) ;
+    // InternalTarot.g:1590:1: rule__KonditionalerGeheZu__LinksAssignment_2 : ( RULE_ID ) ;
     public final void rule__KonditionalerGeheZu__LinksAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTarot.g:1598:1: ( ( RULE_ID ) )
-            // InternalTarot.g:1599:2: ( RULE_ID )
+            // InternalTarot.g:1594:1: ( ( RULE_ID ) )
+            // InternalTarot.g:1595:2: ( RULE_ID )
             {
-            // InternalTarot.g:1599:2: ( RULE_ID )
-            // InternalTarot.g:1600:3: RULE_ID
+            // InternalTarot.g:1595:2: ( RULE_ID )
+            // InternalTarot.g:1596:3: RULE_ID
             {
              before(grammarAccess.getKonditionalerGeheZuAccess().getLinksIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4749,21 +4741,21 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__KonditionalerGeheZu__OpAssignment_3"
-    // InternalTarot.g:1609:1: rule__KonditionalerGeheZu__OpAssignment_3 : ( ( rule__KonditionalerGeheZu__OpAlternatives_3_0 ) ) ;
+    // InternalTarot.g:1605:1: rule__KonditionalerGeheZu__OpAssignment_3 : ( ( rule__KonditionalerGeheZu__OpAlternatives_3_0 ) ) ;
     public final void rule__KonditionalerGeheZu__OpAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTarot.g:1613:1: ( ( ( rule__KonditionalerGeheZu__OpAlternatives_3_0 ) ) )
-            // InternalTarot.g:1614:2: ( ( rule__KonditionalerGeheZu__OpAlternatives_3_0 ) )
+            // InternalTarot.g:1609:1: ( ( ( rule__KonditionalerGeheZu__OpAlternatives_3_0 ) ) )
+            // InternalTarot.g:1610:2: ( ( rule__KonditionalerGeheZu__OpAlternatives_3_0 ) )
             {
-            // InternalTarot.g:1614:2: ( ( rule__KonditionalerGeheZu__OpAlternatives_3_0 ) )
-            // InternalTarot.g:1615:3: ( rule__KonditionalerGeheZu__OpAlternatives_3_0 )
+            // InternalTarot.g:1610:2: ( ( rule__KonditionalerGeheZu__OpAlternatives_3_0 ) )
+            // InternalTarot.g:1611:3: ( rule__KonditionalerGeheZu__OpAlternatives_3_0 )
             {
              before(grammarAccess.getKonditionalerGeheZuAccess().getOpAlternatives_3_0()); 
-            // InternalTarot.g:1616:3: ( rule__KonditionalerGeheZu__OpAlternatives_3_0 )
-            // InternalTarot.g:1616:4: rule__KonditionalerGeheZu__OpAlternatives_3_0
+            // InternalTarot.g:1612:3: ( rule__KonditionalerGeheZu__OpAlternatives_3_0 )
+            // InternalTarot.g:1612:4: rule__KonditionalerGeheZu__OpAlternatives_3_0
             {
             pushFollow(FOLLOW_2);
             rule__KonditionalerGeheZu__OpAlternatives_3_0();
@@ -4796,17 +4788,17 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__KonditionalerGeheZu__RechtsAssignment_4"
-    // InternalTarot.g:1624:1: rule__KonditionalerGeheZu__RechtsAssignment_4 : ( ruleWert ) ;
+    // InternalTarot.g:1620:1: rule__KonditionalerGeheZu__RechtsAssignment_4 : ( ruleWert ) ;
     public final void rule__KonditionalerGeheZu__RechtsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTarot.g:1628:1: ( ( ruleWert ) )
-            // InternalTarot.g:1629:2: ( ruleWert )
+            // InternalTarot.g:1624:1: ( ( ruleWert ) )
+            // InternalTarot.g:1625:2: ( ruleWert )
             {
-            // InternalTarot.g:1629:2: ( ruleWert )
-            // InternalTarot.g:1630:3: ruleWert
+            // InternalTarot.g:1625:2: ( ruleWert )
+            // InternalTarot.g:1626:3: ruleWert
             {
              before(grammarAccess.getKonditionalerGeheZuAccess().getRechtsWertParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -4837,29 +4829,21 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__KonditionalerGeheZu__ZielAssignment_9"
-    // InternalTarot.g:1639:1: rule__KonditionalerGeheZu__ZielAssignment_9 : ( ( RULE_ID ) ) ;
+    // InternalTarot.g:1635:1: rule__KonditionalerGeheZu__ZielAssignment_9 : ( RULE_ID ) ;
     public final void rule__KonditionalerGeheZu__ZielAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTarot.g:1643:1: ( ( ( RULE_ID ) ) )
-            // InternalTarot.g:1644:2: ( ( RULE_ID ) )
+            // InternalTarot.g:1639:1: ( ( RULE_ID ) )
+            // InternalTarot.g:1640:2: ( RULE_ID )
             {
-            // InternalTarot.g:1644:2: ( ( RULE_ID ) )
-            // InternalTarot.g:1645:3: ( RULE_ID )
+            // InternalTarot.g:1640:2: ( RULE_ID )
+            // InternalTarot.g:1641:3: RULE_ID
             {
-             before(grammarAccess.getKonditionalerGeheZuAccess().getZielZeileCrossReference_9_0()); 
-            // InternalTarot.g:1646:3: ( RULE_ID )
-            // InternalTarot.g:1647:4: RULE_ID
-            {
-             before(grammarAccess.getKonditionalerGeheZuAccess().getZielZeileIDTerminalRuleCall_9_0_1()); 
+             before(grammarAccess.getKonditionalerGeheZuAccess().getZielIDTerminalRuleCall_9_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getKonditionalerGeheZuAccess().getZielZeileIDTerminalRuleCall_9_0_1()); 
-
-            }
-
-             after(grammarAccess.getKonditionalerGeheZuAccess().getZielZeileCrossReference_9_0()); 
+             after(grammarAccess.getKonditionalerGeheZuAccess().getZielIDTerminalRuleCall_9_0()); 
 
             }
 

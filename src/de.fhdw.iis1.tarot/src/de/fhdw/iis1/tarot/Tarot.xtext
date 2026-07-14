@@ -47,7 +47,7 @@ Ausgabe:
 ;
  
 GeheZu:
-    'GEHE' 'ZU' ziel=[Zeile|ID]
+    'GEHE' 'ZU' ziel=ID
 ;
  
 KonditionalerGeheZu:
