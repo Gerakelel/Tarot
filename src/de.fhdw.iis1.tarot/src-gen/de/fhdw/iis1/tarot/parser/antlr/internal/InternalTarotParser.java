@@ -1455,23 +1455,23 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGeheZu"
-    // InternalTarot.g:558:1: ruleGeheZu returns [EObject current=null] : (otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (otherlv_2= RULE_ID ) ) ) ;
+    // InternalTarot.g:558:1: ruleGeheZu returns [EObject current=null] : (otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (lv_ziel_2_0= RULE_ID ) ) ) ;
     public final EObject ruleGeheZu() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
-        Token otherlv_2=null;
+        Token lv_ziel_2_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalTarot.g:564:2: ( (otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (otherlv_2= RULE_ID ) ) ) )
-            // InternalTarot.g:565:2: (otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (otherlv_2= RULE_ID ) ) )
+            // InternalTarot.g:564:2: ( (otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (lv_ziel_2_0= RULE_ID ) ) ) )
+            // InternalTarot.g:565:2: (otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (lv_ziel_2_0= RULE_ID ) ) )
             {
-            // InternalTarot.g:565:2: (otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (otherlv_2= RULE_ID ) ) )
-            // InternalTarot.g:566:3: otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (otherlv_2= RULE_ID ) )
+            // InternalTarot.g:565:2: (otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (lv_ziel_2_0= RULE_ID ) ) )
+            // InternalTarot.g:566:3: otherlv_0= 'GEHE' otherlv_1= 'ZU' ( (lv_ziel_2_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,18,FOLLOW_11); 
 
@@ -1481,20 +1481,25 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getGeheZuAccess().getZUKeyword_1());
             		
-            // InternalTarot.g:574:3: ( (otherlv_2= RULE_ID ) )
-            // InternalTarot.g:575:4: (otherlv_2= RULE_ID )
+            // InternalTarot.g:574:3: ( (lv_ziel_2_0= RULE_ID ) )
+            // InternalTarot.g:575:4: (lv_ziel_2_0= RULE_ID )
             {
-            // InternalTarot.g:575:4: (otherlv_2= RULE_ID )
-            // InternalTarot.g:576:5: otherlv_2= RULE_ID
+            // InternalTarot.g:575:4: (lv_ziel_2_0= RULE_ID )
+            // InternalTarot.g:576:5: lv_ziel_2_0= RULE_ID
             {
+            lv_ziel_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+            					newLeafNode(lv_ziel_2_0, grammarAccess.getGeheZuAccess().getZielIDTerminalRuleCall_2_0());
+            				
 
             					if (current==null) {
             						current = createModelElement(grammarAccess.getGeheZuRule());
             					}
-            				
-            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_2); 
-
-            					newLeafNode(otherlv_2, grammarAccess.getGeheZuAccess().getTargetZeileCrossReference_2_0());
+            					setWithLastConsumed(
+            						current,
+            						"ziel",
+            						lv_ziel_2_0,
+            						"org.eclipse.xtext.common.Terminals.ID");
             				
 
             }
@@ -1525,7 +1530,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleKonditionalerGeheZu"
-    // InternalTarot.g:591:1: entryRuleKonditionalerGeheZu returns [EObject current=null] : iv_ruleKonditionalerGeheZu= ruleKonditionalerGeheZu EOF ;
+    // InternalTarot.g:596:1: entryRuleKonditionalerGeheZu returns [EObject current=null] : iv_ruleKonditionalerGeheZu= ruleKonditionalerGeheZu EOF ;
     public final EObject entryRuleKonditionalerGeheZu() throws RecognitionException {
         EObject current = null;
 
@@ -1533,8 +1538,8 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTarot.g:591:60: (iv_ruleKonditionalerGeheZu= ruleKonditionalerGeheZu EOF )
-            // InternalTarot.g:592:2: iv_ruleKonditionalerGeheZu= ruleKonditionalerGeheZu EOF
+            // InternalTarot.g:596:60: (iv_ruleKonditionalerGeheZu= ruleKonditionalerGeheZu EOF )
+            // InternalTarot.g:597:2: iv_ruleKonditionalerGeheZu= ruleKonditionalerGeheZu EOF
             {
              newCompositeNode(grammarAccess.getKonditionalerGeheZuRule()); 
             pushFollow(FOLLOW_1);
@@ -1561,7 +1566,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleKonditionalerGeheZu"
-    // InternalTarot.g:598:1: ruleKonditionalerGeheZu returns [EObject current=null] : (otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (otherlv_9= RULE_ID ) ) ) ;
+    // InternalTarot.g:603:1: ruleKonditionalerGeheZu returns [EObject current=null] : (otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (lv_ziel_9_0= RULE_ID ) ) ) ;
     public final EObject ruleKonditionalerGeheZu() throws RecognitionException {
         EObject current = null;
 
@@ -1575,7 +1580,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
         Token otherlv_6=null;
         Token otherlv_7=null;
         Token otherlv_8=null;
-        Token otherlv_9=null;
+        Token lv_ziel_9_0=null;
         AntlrDatatypeRuleToken lv_rechts_4_0 = null;
 
 
@@ -1583,11 +1588,11 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTarot.g:604:2: ( (otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (otherlv_9= RULE_ID ) ) ) )
-            // InternalTarot.g:605:2: (otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (otherlv_9= RULE_ID ) ) )
+            // InternalTarot.g:609:2: ( (otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (lv_ziel_9_0= RULE_ID ) ) ) )
+            // InternalTarot.g:610:2: (otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (lv_ziel_9_0= RULE_ID ) ) )
             {
-            // InternalTarot.g:605:2: (otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (otherlv_9= RULE_ID ) ) )
-            // InternalTarot.g:606:3: otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (otherlv_9= RULE_ID ) )
+            // InternalTarot.g:610:2: (otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (lv_ziel_9_0= RULE_ID ) ) )
+            // InternalTarot.g:611:3: otherlv_0= 'WENN' otherlv_1= '(' ( (lv_links_2_0= RULE_ID ) ) ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) ) ( (lv_rechts_4_0= ruleWert ) ) otherlv_5= ')' otherlv_6= 'DANN' otherlv_7= 'GEHE' otherlv_8= 'ZU' ( (lv_ziel_9_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,20,FOLLOW_12); 
 
@@ -1597,11 +1602,11 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getKonditionalerGeheZuAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalTarot.g:614:3: ( (lv_links_2_0= RULE_ID ) )
-            // InternalTarot.g:615:4: (lv_links_2_0= RULE_ID )
+            // InternalTarot.g:619:3: ( (lv_links_2_0= RULE_ID ) )
+            // InternalTarot.g:620:4: (lv_links_2_0= RULE_ID )
             {
-            // InternalTarot.g:615:4: (lv_links_2_0= RULE_ID )
-            // InternalTarot.g:616:5: lv_links_2_0= RULE_ID
+            // InternalTarot.g:620:4: (lv_links_2_0= RULE_ID )
+            // InternalTarot.g:621:5: lv_links_2_0= RULE_ID
             {
             lv_links_2_0=(Token)match(input,RULE_ID,FOLLOW_13); 
 
@@ -1623,13 +1628,13 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTarot.g:632:3: ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) )
-            // InternalTarot.g:633:4: ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) )
+            // InternalTarot.g:637:3: ( ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) ) )
+            // InternalTarot.g:638:4: ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) )
             {
-            // InternalTarot.g:633:4: ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) )
-            // InternalTarot.g:634:5: (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' )
+            // InternalTarot.g:638:4: ( (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' ) )
+            // InternalTarot.g:639:5: (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' )
             {
-            // InternalTarot.g:634:5: (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' )
+            // InternalTarot.g:639:5: (lv_op_3_1= '=' | lv_op_3_2= '<' | lv_op_3_3= '>' )
             int alt7=3;
             switch ( input.LA(1) ) {
             case 22:
@@ -1656,7 +1661,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
             switch (alt7) {
                 case 1 :
-                    // InternalTarot.g:635:6: lv_op_3_1= '='
+                    // InternalTarot.g:640:6: lv_op_3_1= '='
                     {
                     lv_op_3_1=(Token)match(input,22,FOLLOW_8); 
 
@@ -1672,7 +1677,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTarot.g:646:6: lv_op_3_2= '<'
+                    // InternalTarot.g:651:6: lv_op_3_2= '<'
                     {
                     lv_op_3_2=(Token)match(input,23,FOLLOW_8); 
 
@@ -1688,7 +1693,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalTarot.g:657:6: lv_op_3_3= '>'
+                    // InternalTarot.g:662:6: lv_op_3_3= '>'
                     {
                     lv_op_3_3=(Token)match(input,24,FOLLOW_8); 
 
@@ -1712,11 +1717,11 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTarot.g:670:3: ( (lv_rechts_4_0= ruleWert ) )
-            // InternalTarot.g:671:4: (lv_rechts_4_0= ruleWert )
+            // InternalTarot.g:675:3: ( (lv_rechts_4_0= ruleWert ) )
+            // InternalTarot.g:676:4: (lv_rechts_4_0= ruleWert )
             {
-            // InternalTarot.g:671:4: (lv_rechts_4_0= ruleWert )
-            // InternalTarot.g:672:5: lv_rechts_4_0= ruleWert
+            // InternalTarot.g:676:4: (lv_rechts_4_0= ruleWert )
+            // InternalTarot.g:677:5: lv_rechts_4_0= ruleWert
             {
 
             					newCompositeNode(grammarAccess.getKonditionalerGeheZuAccess().getRechtsWertParserRuleCall_4_0());
@@ -1759,20 +1764,25 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getKonditionalerGeheZuAccess().getZUKeyword_8());
             		
-            // InternalTarot.g:705:3: ( (otherlv_9= RULE_ID ) )
-            // InternalTarot.g:706:4: (otherlv_9= RULE_ID )
+            // InternalTarot.g:710:3: ( (lv_ziel_9_0= RULE_ID ) )
+            // InternalTarot.g:711:4: (lv_ziel_9_0= RULE_ID )
             {
-            // InternalTarot.g:706:4: (otherlv_9= RULE_ID )
-            // InternalTarot.g:707:5: otherlv_9= RULE_ID
+            // InternalTarot.g:711:4: (lv_ziel_9_0= RULE_ID )
+            // InternalTarot.g:712:5: lv_ziel_9_0= RULE_ID
             {
+            lv_ziel_9_0=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+            					newLeafNode(lv_ziel_9_0, grammarAccess.getKonditionalerGeheZuAccess().getZielIDTerminalRuleCall_9_0());
+            				
 
             					if (current==null) {
             						current = createModelElement(grammarAccess.getKonditionalerGeheZuRule());
             					}
-            				
-            otherlv_9=(Token)match(input,RULE_ID,FOLLOW_2); 
-
-            					newLeafNode(otherlv_9, grammarAccess.getKonditionalerGeheZuAccess().getZielZeileCrossReference_9_0());
+            					setWithLastConsumed(
+            						current,
+            						"ziel",
+            						lv_ziel_9_0,
+            						"org.eclipse.xtext.common.Terminals.ID");
             				
 
             }
@@ -1803,7 +1813,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWert"
-    // InternalTarot.g:722:1: entryRuleWert returns [String current=null] : iv_ruleWert= ruleWert EOF ;
+    // InternalTarot.g:732:1: entryRuleWert returns [String current=null] : iv_ruleWert= ruleWert EOF ;
     public final String entryRuleWert() throws RecognitionException {
         String current = null;
 
@@ -1811,8 +1821,8 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTarot.g:722:44: (iv_ruleWert= ruleWert EOF )
-            // InternalTarot.g:723:2: iv_ruleWert= ruleWert EOF
+            // InternalTarot.g:732:44: (iv_ruleWert= ruleWert EOF )
+            // InternalTarot.g:733:2: iv_ruleWert= ruleWert EOF
             {
              newCompositeNode(grammarAccess.getWertRule()); 
             pushFollow(FOLLOW_1);
@@ -1839,7 +1849,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWert"
-    // InternalTarot.g:729:1: ruleWert returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | this_INT_1= RULE_INT ) ;
+    // InternalTarot.g:739:1: ruleWert returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleWert() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1850,10 +1860,10 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTarot.g:735:2: ( (this_ID_0= RULE_ID | this_INT_1= RULE_INT ) )
-            // InternalTarot.g:736:2: (this_ID_0= RULE_ID | this_INT_1= RULE_INT )
+            // InternalTarot.g:745:2: ( (this_ID_0= RULE_ID | this_INT_1= RULE_INT ) )
+            // InternalTarot.g:746:2: (this_ID_0= RULE_ID | this_INT_1= RULE_INT )
             {
-            // InternalTarot.g:736:2: (this_ID_0= RULE_ID | this_INT_1= RULE_INT )
+            // InternalTarot.g:746:2: (this_ID_0= RULE_ID | this_INT_1= RULE_INT )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1871,7 +1881,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalTarot.g:737:3: this_ID_0= RULE_ID
+                    // InternalTarot.g:747:3: this_ID_0= RULE_ID
                     {
                     this_ID_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -1884,7 +1894,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTarot.g:745:3: this_INT_1= RULE_INT
+                    // InternalTarot.g:755:3: this_INT_1= RULE_INT
                     {
                     this_INT_1=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -1919,7 +1929,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHalt"
-    // InternalTarot.g:756:1: entryRuleHalt returns [EObject current=null] : iv_ruleHalt= ruleHalt EOF ;
+    // InternalTarot.g:766:1: entryRuleHalt returns [EObject current=null] : iv_ruleHalt= ruleHalt EOF ;
     public final EObject entryRuleHalt() throws RecognitionException {
         EObject current = null;
 
@@ -1927,8 +1937,8 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTarot.g:756:45: (iv_ruleHalt= ruleHalt EOF )
-            // InternalTarot.g:757:2: iv_ruleHalt= ruleHalt EOF
+            // InternalTarot.g:766:45: (iv_ruleHalt= ruleHalt EOF )
+            // InternalTarot.g:767:2: iv_ruleHalt= ruleHalt EOF
             {
              newCompositeNode(grammarAccess.getHaltRule()); 
             pushFollow(FOLLOW_1);
@@ -1955,7 +1965,7 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHalt"
-    // InternalTarot.g:763:1: ruleHalt returns [EObject current=null] : ( () otherlv_1= 'Halt!' ) ;
+    // InternalTarot.g:773:1: ruleHalt returns [EObject current=null] : ( () otherlv_1= 'Halt!' ) ;
     public final EObject ruleHalt() throws RecognitionException {
         EObject current = null;
 
@@ -1965,14 +1975,14 @@ public class InternalTarotParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTarot.g:769:2: ( ( () otherlv_1= 'Halt!' ) )
-            // InternalTarot.g:770:2: ( () otherlv_1= 'Halt!' )
+            // InternalTarot.g:779:2: ( ( () otherlv_1= 'Halt!' ) )
+            // InternalTarot.g:780:2: ( () otherlv_1= 'Halt!' )
             {
-            // InternalTarot.g:770:2: ( () otherlv_1= 'Halt!' )
-            // InternalTarot.g:771:3: () otherlv_1= 'Halt!'
+            // InternalTarot.g:780:2: ( () otherlv_1= 'Halt!' )
+            // InternalTarot.g:781:3: () otherlv_1= 'Halt!'
             {
-            // InternalTarot.g:771:3: ()
-            // InternalTarot.g:772:4: 
+            // InternalTarot.g:781:3: ()
+            // InternalTarot.g:782:4: 
             {
 
             				current = forceCreateModelElement(
