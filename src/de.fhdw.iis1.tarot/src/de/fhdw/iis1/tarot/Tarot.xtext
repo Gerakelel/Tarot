@@ -47,11 +47,11 @@ Ausgabe:
 ;
  
 GeheZu:
-    'GEHE' 'ZU' target=[Zeile|ID]
+    'GEHE' 'ZU' ziel=[Zeile|ID]
 ;
  
 KonditionalerGeheZu:
-    'WENN' '(' links=ID op=('=' | '<' | '>') rechts=Wert ')'
+    'WENN' '(' links=ID   op=('=' | '<' | '>') rechts=Wert ')'
     'DANN' 'GEHE' 'ZU' ziel=ID
 ;
  
