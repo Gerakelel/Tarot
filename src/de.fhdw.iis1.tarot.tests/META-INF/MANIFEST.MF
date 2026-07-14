@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: de.fhdw.iis1.tarot.tests
+Bundle-ManifestVersion: 2
+Bundle-Name: de.fhdw.iis1.tarot.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.fhdw.iis1.tarot.tests; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.fhdw.iis1.tarot,
+ org.eclipse.xtext.testing,
+ org.eclipse.xtext.xbase.testing,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.43.0"
+Import-Package: org.junit.jupiter.api;version="[6.0.0,7.0.0)",
+ org.junit.jupiter.api.extension;version="[6.0.0,7.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: de.fhdw.iis1.tarot.tests;x-internal=true

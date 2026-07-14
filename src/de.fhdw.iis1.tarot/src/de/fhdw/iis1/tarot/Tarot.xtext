@@ -1,0 +1,64 @@
+grammar de.fhdw.iis1.tarot.Tarot with org.eclipse.xtext.common.Terminals
+
+generate tarot "http://www.fhdw.de/iis1/tarot/Tarot"
+
+Programm:
+    zeilen+=Zeile+
+;
+ 
+ 
+Zeile:
+    name=ID ':' anweisung=Anweisung ';'?
+;
+ 
+Anweisung:
+      Zuordnung
+    | Eingabe
+    | Ausgabe
+    | GeheZu
+    | KonditionalerGeheZu
+    | Halt
+;
+   
+Zuordnung:
+    var=ID ':=' ausdruck=Ausdruck
+;
+ 
+Ausdruck:
+    StrichOperation | Ganzzahl
+;
+ 
+StrichOperation:
+    {StrichOperation}
+    links=ID (op=('+'|'-') rechts=ID)?
+;
+ 
+Ganzzahl:
+    {Ganzzahl}
+    wert=INT
+;
+ 
+Eingabe:
+    'EINGABE' var=ID
+;
+ 
+Ausgabe:
+    'SCHREIBE' var=ID
+;
+ 
+GeheZu:
+    'GEHE' 'ZU' ziel=[Zeile|ID]
+;
+ 
+KonditionalerGeheZu:
+    'WENN' '(' links=ID   op=('=' | '<' | '>') rechts=Wert ')'
+    'DANN' 'GEHE' 'ZU' ziel=ID
+;
+ 
+Wert:
+	ID | INT
+;
+ 
+Halt:
+    {Halt} 'Halt!'
+;
