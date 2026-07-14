@@ -35,7 +35,7 @@ public class TarotValidator extends AbstractTarotValidator {
 		for (int i = 0; i < zeilen.size(); i++) {
 			String zeilennummer = zeilen.get(i).getName().substring(1);
 			if (i != Integer.parseInt(zeilennummer)){
-				error(UNGUELTIGE_ZEILENNUMMERIERUNG, TarotPackage.Literals.PROGRAMM__ZEILEN);
+				error(UNGUELTIGE_ZEILENNUMMERIERUNG + "Zeile " + i + " fehlt.", TarotPackage.Literals.PROGRAMM__ZEILEN);
 			}
 		}
 	}
@@ -49,7 +49,7 @@ public class TarotValidator extends AbstractTarotValidator {
 	
 	@Check
 	public void pruefeKonditionalerGeheZu(KonditionalerGeheZu konditionalerGeheZu) {
-		if (konditionalerGeheZu.getZiel().matches("Z\\d+")) {
+		if (!konditionalerGeheZu.getZiel().matches("Z\\d+")) {
 			error(UNGUELTIGE_ZEILENREFERENZ, TarotPackage.Literals.KONDITIONALER_GEHE_ZU__ZIEL);
 		}
 	}
