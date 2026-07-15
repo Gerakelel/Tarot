@@ -335,7 +335,7 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final Keyword cWENNKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cLinksAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cLinksIDTerminalRuleCall_2_0 = (RuleCall)cLinksAssignment_2.eContents().get(0);
+		private final RuleCall cLinksWertParserRuleCall_2_0 = (RuleCall)cLinksAssignment_2.eContents().get(0);
 		private final Assignment cOpAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final Alternatives cOpAlternatives_3_0 = (Alternatives)cOpAssignment_3.eContents().get(0);
 		private final Keyword cOpEqualsSignKeyword_3_0_0 = (Keyword)cOpAlternatives_3_0.eContents().get(0);
@@ -345,7 +345,7 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final Keyword cOpGreaterThanSignEqualsSignKeyword_3_0_4 = (Keyword)cOpAlternatives_3_0.eContents().get(4);
 		private final Keyword cOpExclamationMarkEqualsSignKeyword_3_0_5 = (Keyword)cOpAlternatives_3_0.eContents().get(5);
 		private final Assignment cRechtsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cRechtsIDTerminalRuleCall_4_0 = (RuleCall)cRechtsAssignment_4.eContents().get(0);
+		private final RuleCall cRechtsWertParserRuleCall_4_0 = (RuleCall)cRechtsAssignment_4.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cDANNKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cGEHEKeyword_7 = (Keyword)cGroup.eContents().get(7);
@@ -354,12 +354,12 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final RuleCall cZielIDTerminalRuleCall_9_0 = (RuleCall)cZielAssignment_9.eContents().get(0);
 		
 		//KonditionalerGeheZu:
-		//    'WENN' '(' links=ID   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=ID ')'
+		//    'WENN' '(' links=Wert   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=Wert ')'
 		//    'DANN' 'GEHE' 'ZU' ziel=ID
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'WENN' '(' links=ID   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=ID ')'
+		//'WENN' '(' links=Wert   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=Wert ')'
 		//'DANN' 'GEHE' 'ZU' ziel=ID
 		public Group getGroup() { return cGroup; }
 		
@@ -369,11 +369,11 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'('
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 		
-		//links=ID
+		//links=Wert
 		public Assignment getLinksAssignment_2() { return cLinksAssignment_2; }
 		
-		//ID
-		public RuleCall getLinksIDTerminalRuleCall_2_0() { return cLinksIDTerminalRuleCall_2_0; }
+		//Wert
+		public RuleCall getLinksWertParserRuleCall_2_0() { return cLinksWertParserRuleCall_2_0; }
 		
 		//op=('=' | '<' | '>' | '<=' | '>=' | '!=')
 		public Assignment getOpAssignment_3() { return cOpAssignment_3; }
@@ -399,11 +399,11 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'!='
 		public Keyword getOpExclamationMarkEqualsSignKeyword_3_0_5() { return cOpExclamationMarkEqualsSignKeyword_3_0_5; }
 		
-		//rechts=ID
+		//rechts=Wert
 		public Assignment getRechtsAssignment_4() { return cRechtsAssignment_4; }
 		
-		//ID
-		public RuleCall getRechtsIDTerminalRuleCall_4_0() { return cRechtsIDTerminalRuleCall_4_0; }
+		//Wert
+		public RuleCall getRechtsWertParserRuleCall_4_0() { return cRechtsWertParserRuleCall_4_0; }
 		
 		//')'
 		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
@@ -422,6 +422,26 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		
 		//ID
 		public RuleCall getZielIDTerminalRuleCall_9_0() { return cZielIDTerminalRuleCall_9_0; }
+	}
+	public class WertElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Wert");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Wert:
+		//    ID | INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ID | INT
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 	}
 	public class HaltElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Halt");
@@ -456,6 +476,7 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	private final AusgabeElements pAusgabe;
 	private final GeheZuElements pGeheZu;
 	private final KonditionalerGeheZuElements pKonditionalerGeheZu;
+	private final WertElements pWert;
 	private final HaltElements pHalt;
 	
 	private final Grammar grammar;
@@ -478,6 +499,7 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		this.pAusgabe = new AusgabeElements();
 		this.pGeheZu = new GeheZuElements();
 		this.pKonditionalerGeheZu = new KonditionalerGeheZuElements();
+		this.pWert = new WertElements();
 		this.pHalt = new HaltElements();
 	}
 	
@@ -626,7 +648,7 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//KonditionalerGeheZu:
-	//    'WENN' '(' links=ID   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=ID ')'
+	//    'WENN' '(' links=Wert   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=Wert ')'
 	//    'DANN' 'GEHE' 'ZU' ziel=ID
 	//;
 	public KonditionalerGeheZuElements getKonditionalerGeheZuAccess() {
@@ -635,6 +657,17 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	public ParserRule getKonditionalerGeheZuRule() {
 		return getKonditionalerGeheZuAccess().getRule();
+	}
+	
+	//Wert:
+	//    ID | INT
+	//;
+	public WertElements getWertAccess() {
+		return pWert;
+	}
+	
+	public ParserRule getWertRule() {
+		return getWertAccess().getRule();
 	}
 	
 	//Halt:

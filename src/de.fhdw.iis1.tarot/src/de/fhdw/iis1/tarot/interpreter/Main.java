@@ -18,7 +18,7 @@ public class Main {
 
 		Injector injezierer = new TarotStandaloneSetup().createInjectorAndDoEMFRegistration();
 		XtextResourceSet ressourcenSammlung = injezierer.getInstance(XtextResourceSet.class);
-		String pfad = Paths.get("..", "..", "programme", "src", "Multiplikation.tarot").toString();
+		String pfad = Paths.get("..", "..", "programme", "src", "Mul.tarot").toString();
 		Resource ressource = ressourcenSammlung.getResource(URI.createFileURI(pfad), true);
 
 		Interpretierer interpretierer = new Interpretierer();

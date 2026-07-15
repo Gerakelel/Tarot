@@ -616,19 +616,20 @@ ruleKonditionalerGeheZu returns [EObject current=null]
 		}
 		(
 			(
-				lv_links_2_0=RULE_ID
 				{
-					newLeafNode(lv_links_2_0, grammarAccess.getKonditionalerGeheZuAccess().getLinksIDTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getKonditionalerGeheZuAccess().getLinksWertParserRuleCall_2_0());
 				}
+				lv_links_2_0=ruleWert
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getKonditionalerGeheZuRule());
+						$current = createModelElementForParent(grammarAccess.getKonditionalerGeheZuRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
 						"links",
 						lv_links_2_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"de.fhdw.iis1.tarot.Tarot.Wert");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -705,19 +706,20 @@ ruleKonditionalerGeheZu returns [EObject current=null]
 		)
 		(
 			(
-				lv_rechts_4_0=RULE_ID
 				{
-					newLeafNode(lv_rechts_4_0, grammarAccess.getKonditionalerGeheZuAccess().getRechtsIDTerminalRuleCall_4_0());
+					newCompositeNode(grammarAccess.getKonditionalerGeheZuAccess().getRechtsWertParserRuleCall_4_0());
 				}
+				lv_rechts_4_0=ruleWert
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getKonditionalerGeheZuRule());
+						$current = createModelElementForParent(grammarAccess.getKonditionalerGeheZuRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
 						"rechts",
 						lv_rechts_4_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"de.fhdw.iis1.tarot.Tarot.Wert");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -755,6 +757,40 @@ ruleKonditionalerGeheZu returns [EObject current=null]
 				}
 			)
 		)
+	)
+;
+
+// Entry rule entryRuleWert
+entryRuleWert returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getWertRule()); }
+	iv_ruleWert=ruleWert
+	{ $current=$iv_ruleWert.current.getText(); }
+	EOF;
+
+// Rule Wert
+ruleWert returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_ID_0=RULE_ID
+		{
+			$current.merge(this_ID_0);
+		}
+		{
+			newLeafNode(this_ID_0, grammarAccess.getWertAccess().getIDTerminalRuleCall_0());
+		}
+		    |
+		this_INT_1=RULE_INT
+		{
+			$current.merge(this_INT_1);
+		}
+		{
+			newLeafNode(this_INT_1, grammarAccess.getWertAccess().getINTTerminalRuleCall_1());
+		}
 	)
 ;
 

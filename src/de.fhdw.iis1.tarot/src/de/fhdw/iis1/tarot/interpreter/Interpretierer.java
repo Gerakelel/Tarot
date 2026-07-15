@@ -63,20 +63,9 @@ public class Interpretierer extends TarotSwitch<Object>{
 	@Override
 	public Object caseKonditionalerGeheZu(KonditionalerGeheZu kondGeheZu) {
 		boolean bedingung = false;
-		int operandA;
-		int operandB;
-		if (speicher.containsKey(kondGeheZu.getLinks())) {
-			operandA = speicher.get(kondGeheZu.getLinks());
-		} else {
-			operandA = Integer.parseInt(kondGeheZu.getLinks());
-		}
-		
-		if (speicher.containsKey(kondGeheZu.getRechts())) {
-			operandB = speicher.get(kondGeheZu.getRechts());
-		} else {
-			operandB = Integer.parseInt(kondGeheZu.getRechts());
-		}
-		
+		int operandA = bestimmeOperand(kondGeheZu.getLinks());
+		int operandB = bestimmeOperand(kondGeheZu.getRechts());
+				
 		switch(kondGeheZu.getOp()) {
 			case("="): 
 				bedingung = operandA == operandB;
@@ -101,6 +90,14 @@ public class Interpretierer extends TarotSwitch<Object>{
 			return Integer.parseInt(kondGeheZu.getZiel().substring(1));
 		}
 		return -1; // Nicht Springen
+	}
+
+	private int bestimmeOperand(String schluessel) {
+		if (speicher.containsKey(schluessel)) {
+			return speicher.get(schluessel);
+		} else {
+			return Integer.parseInt(schluessel);
+		}
 	}
 	
 	@Override

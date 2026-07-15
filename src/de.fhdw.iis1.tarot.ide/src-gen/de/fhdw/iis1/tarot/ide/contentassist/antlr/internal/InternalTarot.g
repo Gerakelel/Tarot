@@ -331,6 +331,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleWert
+entryRuleWert
+:
+{ before(grammarAccess.getWertRule()); }
+	 ruleWert
+{ after(grammarAccess.getWertRule()); } 
+	 EOF 
+;
+
+// Rule Wert
+ruleWert 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getWertAccess().getAlternatives()); }
+		(rule__Wert__Alternatives)
+		{ after(grammarAccess.getWertAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleHalt
 entryRuleHalt
 :
@@ -482,6 +507,27 @@ rule__KonditionalerGeheZu__OpAlternatives_3_0
 		{ before(grammarAccess.getKonditionalerGeheZuAccess().getOpExclamationMarkEqualsSignKeyword_3_0_5()); }
 		'!='
 		{ after(grammarAccess.getKonditionalerGeheZuAccess().getOpExclamationMarkEqualsSignKeyword_3_0_5()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Wert__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getWertAccess().getIDTerminalRuleCall_0()); }
+		RULE_ID
+		{ after(grammarAccess.getWertAccess().getIDTerminalRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getWertAccess().getINTTerminalRuleCall_1()); }
+		RULE_INT
+		{ after(grammarAccess.getWertAccess().getINTTerminalRuleCall_1()); }
 	)
 ;
 finally {
@@ -1565,9 +1611,9 @@ rule__KonditionalerGeheZu__LinksAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getKonditionalerGeheZuAccess().getLinksIDTerminalRuleCall_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getKonditionalerGeheZuAccess().getLinksIDTerminalRuleCall_2_0()); }
+		{ before(grammarAccess.getKonditionalerGeheZuAccess().getLinksWertParserRuleCall_2_0()); }
+		ruleWert
+		{ after(grammarAccess.getKonditionalerGeheZuAccess().getLinksWertParserRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -1595,9 +1641,9 @@ rule__KonditionalerGeheZu__RechtsAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getKonditionalerGeheZuAccess().getRechtsIDTerminalRuleCall_4_0()); }
-		RULE_ID
-		{ after(grammarAccess.getKonditionalerGeheZuAccess().getRechtsIDTerminalRuleCall_4_0()); }
+		{ before(grammarAccess.getKonditionalerGeheZuAccess().getRechtsWertParserRuleCall_4_0()); }
+		ruleWert
+		{ after(grammarAccess.getKonditionalerGeheZuAccess().getRechtsWertParserRuleCall_4_0()); }
 	)
 ;
 finally {

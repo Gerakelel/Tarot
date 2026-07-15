@@ -183,7 +183,7 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *
 	 * Constraint:
 	 *     (
-	 *         links=ID 
+	 *         links=Wert 
 	 *         (
 	 *             op='=' | 
 	 *             op='&lt;' | 
@@ -192,7 +192,7 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *             op='&gt;=' | 
 	 *             op='!='
 	 *         ) 
-	 *         rechts=ID 
+	 *         rechts=Wert 
 	 *         ziel=ID
 	 *     )
 	 * </pre>
