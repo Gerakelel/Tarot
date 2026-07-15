@@ -50,8 +50,12 @@ GeheZu:
 ;
  
 KonditionalerGeheZu:
-    'WENN' '(' links=ID   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=ID ')'
+    'WENN' '(' links=Wert   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=Wert ')'
     'DANN' 'GEHE' 'ZU' ziel=ID
+;
+
+Wert:
+	ID | INT
 ;
  
 Halt:
