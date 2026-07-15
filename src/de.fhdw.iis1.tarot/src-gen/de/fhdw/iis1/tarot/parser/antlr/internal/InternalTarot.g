@@ -153,12 +153,10 @@ ruleZeile returns [EObject current=null]
 				}
 			)
 		)
-		(
-			otherlv_3=';'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getZeileAccess().getSemicolonKeyword_3());
-			}
-		)?
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getZeileAccess().getSemicolonKeyword_3());
+		}
 	)
 ;
 
@@ -417,7 +415,7 @@ ruleStrichOperation returns [EObject current=null]
 					}
 				)
 			)
-		)?
+		)
 	)
 ;
 
@@ -669,25 +667,57 @@ ruleKonditionalerGeheZu returns [EObject current=null]
 						}
 						setWithLastConsumed($current, "op", lv_op_3_3, null);
 					}
+					    |
+					lv_op_3_4='<='
+					{
+						newLeafNode(lv_op_3_4, grammarAccess.getKonditionalerGeheZuAccess().getOpLessThanSignEqualsSignKeyword_3_0_3());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getKonditionalerGeheZuRule());
+						}
+						setWithLastConsumed($current, "op", lv_op_3_4, null);
+					}
+					    |
+					lv_op_3_5='>='
+					{
+						newLeafNode(lv_op_3_5, grammarAccess.getKonditionalerGeheZuAccess().getOpGreaterThanSignEqualsSignKeyword_3_0_4());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getKonditionalerGeheZuRule());
+						}
+						setWithLastConsumed($current, "op", lv_op_3_5, null);
+					}
+					    |
+					lv_op_3_6='!='
+					{
+						newLeafNode(lv_op_3_6, grammarAccess.getKonditionalerGeheZuAccess().getOpExclamationMarkEqualsSignKeyword_3_0_5());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getKonditionalerGeheZuRule());
+						}
+						setWithLastConsumed($current, "op", lv_op_3_6, null);
+					}
 				)
 			)
 		)
 		(
 			(
+				lv_rechts_4_0=RULE_ID
 				{
-					newCompositeNode(grammarAccess.getKonditionalerGeheZuAccess().getRechtsWertParserRuleCall_4_0());
+					newLeafNode(lv_rechts_4_0, grammarAccess.getKonditionalerGeheZuAccess().getRechtsIDTerminalRuleCall_4_0());
 				}
-				lv_rechts_4_0=ruleWert
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getKonditionalerGeheZuRule());
+						$current = createModelElement(grammarAccess.getKonditionalerGeheZuRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"rechts",
 						lv_rechts_4_0,
-						"de.fhdw.iis1.tarot.Tarot.Wert");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
@@ -725,40 +755,6 @@ ruleKonditionalerGeheZu returns [EObject current=null]
 				}
 			)
 		)
-	)
-;
-
-// Entry rule entryRuleWert
-entryRuleWert returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getWertRule()); }
-	iv_ruleWert=ruleWert
-	{ $current=$iv_ruleWert.current.getText(); }
-	EOF;
-
-// Rule Wert
-ruleWert returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		this_ID_0=RULE_ID
-		{
-			$current.merge(this_ID_0);
-		}
-		{
-			newLeafNode(this_ID_0, grammarAccess.getWertAccess().getIDTerminalRuleCall_0());
-		}
-		    |
-		this_INT_1=RULE_INT
-		{
-			$current.merge(this_INT_1);
-		}
-		{
-			newLeafNode(this_INT_1, grammarAccess.getWertAccess().getINTTerminalRuleCall_1());
-		}
 	)
 ;
 

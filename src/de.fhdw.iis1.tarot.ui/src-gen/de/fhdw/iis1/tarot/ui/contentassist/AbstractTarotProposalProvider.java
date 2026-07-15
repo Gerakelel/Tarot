@@ -61,6 +61,9 @@ public abstract class AbstractTarotProposalProvider extends TerminalsProposalPro
 		// subclasses may override
 		// subclasses may override
 		// subclasses may override
+		// subclasses may override
+		// subclasses may override
+		// subclasses may override
 	}
 	public void completeKonditionalerGeheZu_Rechts(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
@@ -100,9 +103,6 @@ public abstract class AbstractTarotProposalProvider extends TerminalsProposalPro
 		// subclasses may override
 	}
 	public void complete_KonditionalerGeheZu(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		// subclasses may override
-	}
-	public void complete_Wert(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
 	public void complete_Halt(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {

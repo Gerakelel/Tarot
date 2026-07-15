@@ -4,9 +4,10 @@
 package de.fhdw.iis1.tarot.validation;
 
 import java.util.List;
+import java.util.ArrayList;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.xtext.validation.Check;
-
 import de.fhdw.iis1.tarot.tarot.*;
 
 
@@ -15,42 +16,112 @@ import de.fhdw.iis1.tarot.tarot.*;
  *
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
-public class TarotValidator extends AbstractTarotValidator {
+public class TarotValidator extends AbstractTarotValidator 
+{
 	
-	public static final String UNGUELTIGER_ZEILENNAME = "Zeilennamen müssen nach dem Format 'Z[ZAHL]' benannt werden.";
-	public static final String UNGUELTIGE_ZEILENNUMMERIERUNG = "Zeilennummern müssen aufsteigend sein und mit 0 beginnen.";
-	public static final String UNGUELTIGE_ZEILENREFERENZ = "Zeilenreferenzen müssen nach dem Format 'Z[ZAHL]' angegeben werden.";
+	private static final String UNGUELTIGER_ZEILENNAME = "Zeilennamen müssen nach dem Format 'Z[ZAHL]' benannt werden.";
+	private static final String UNGUELTIGE_ZEILENNUMMERIERUNG = "Zeilennummern müssen aufsteigend sein und mit 0 beginnen.";
+	private static final String UNGUELTIGE_ZEILENREFERENZ = "Zeilenreferenzen müssen nach dem Format 'Z[ZAHL]' angegeben werden und müssen innerhalb des Programms verweisen.";
+	private static final String UNGUELTIGER_VARIABLENNAME = "Variablennamen dürfen nicht mit einer Zahl beginnen.";
+	private static final String NICHT_DEKLARIERTE_VARIABLE = "Variablen müssen vor der Nutzung deklariert werden.";
+	
+	private int zeilenAnzahl = -1; 
+	private List<String> deklarierteVariablen = new ArrayList<String>();
 	
 	@Check
-	public void pruefeZeilenbenennung(Zeile zeile) {
-		if (!zeile.getName().matches("Z\\d+")) {
+	public void pruefeZeilenbenennung(Zeile zeile) 
+	{
+		if (!zeile.getName().matches("Z\\d+")) 
+		{
 			error(UNGUELTIGER_ZEILENNAME, TarotPackage.Literals.ZEILE__NAME);
 		}
 	}
 	
 	@Check
-	public void pruefeAufsteigendeZeilennummer(Programm programm) {
+	public void pruefeZuordnung(Zuordnung zuordnung)
+	{
+		speichereDeklarierteVariable(zuordnung.getVar(), TarotPackage.Literals.ZUORDNUNG__VAR);
+	}
+	
+	@Check
+	public void pruefeAufsteigendeZeilennummer(Programm programm) 
+	{
 		List<Zeile> zeilen = programm.getZeilen();
+		zeilenAnzahl = zeilen.size();
 		
-		for (int i = 0; i < zeilen.size(); i++) {
+		for (int i = 0; i < zeilen.size(); i++) 
+		{
 			String zeilennummer = zeilen.get(i).getName().substring(1);
-			if (i != Integer.parseInt(zeilennummer)){
-				error(UNGUELTIGE_ZEILENNUMMERIERUNG + "Zeile " + i + " fehlt.", TarotPackage.Literals.PROGRAMM__ZEILEN);
+			if (i != Integer.parseInt(zeilennummer))
+			{
+				error(UNGUELTIGE_ZEILENNUMMERIERUNG + " Zeile " + i + " fehlt.", TarotPackage.Literals.PROGRAMM__ZEILEN);
 			}
 		}
 	}
 	
 	@Check
-	public void pruefeGeheZu(GeheZu geheZu) {
-		if (!geheZu.getZiel().matches("Z\\d+")) {
-			error(UNGUELTIGE_ZEILENREFERENZ, TarotPackage.Literals.GEHE_ZU__ZIEL);
-		}
+	public void pruefeGeheZu(GeheZu geheZu) 
+	{
+		pruefeZeilenreferenz(geheZu.getZiel(), TarotPackage.Literals.GEHE_ZU__ZIEL);	
 	}
 	
 	@Check
-	public void pruefeKonditionalerGeheZu(KonditionalerGeheZu konditionalerGeheZu) {
-		if (!konditionalerGeheZu.getZiel().matches("Z\\d+")) {
+	public void pruefeKonditionalerGeheZu(KonditionalerGeheZu konditionalerGeheZu) 
+	{
+		pruefeZeilenreferenz(konditionalerGeheZu.getZiel(), TarotPackage.Literals.KONDITIONALER_GEHE_ZU__ZIEL);
+		pruefeDeklarierteVariable(konditionalerGeheZu.getLinks(), TarotPackage.Literals.KONDITIONALER_GEHE_ZU__LINKS);
+		pruefeDeklarierteVariable(konditionalerGeheZu.getRechts(), TarotPackage.Literals.KONDITIONALER_GEHE_ZU__RECHTS);
+	}
+	
+	@Check
+	public void pruefeStrichOperation(StrichOperation op)
+	{
+		pruefeDeklarierteVariable(op.getLinks(), TarotPackage.Literals.STRICH_OPERATION__LINKS);
+		pruefeDeklarierteVariable(op.getRechts(), TarotPackage.Literals.STRICH_OPERATION__RECHTS);
+	}
+	
+	@Check
+	public void pruefeEingabe(Eingabe eingabe)
+	{
+		speichereDeklarierteVariable(eingabe.getVar(), TarotPackage.Literals.EINGABE__VAR);
+	}
+	
+	@Check
+	public void pruefeAusgabe(Ausgabe ausgabe)
+	{
+		pruefeDeklarierteVariable(ausgabe.getVar(), TarotPackage.Literals.AUSGABE__VAR);
+	}
+	
+	private void pruefeZeilenreferenz(String ref, EAttribute attribut)
+	{
+		if (!ref.matches("Z\\d+")
+			|| Integer.parseInt(ref.substring(1)) >= zeilenAnzahl)
+		{
 			error(UNGUELTIGE_ZEILENREFERENZ, TarotPackage.Literals.KONDITIONALER_GEHE_ZU__ZIEL);
+		}
+	}
+	
+	private void pruefeDeklarierteVariable(String variable, EAttribute attribut) 
+	{
+		if (!Character.isDigit(variable.charAt(0))
+			&& !deklarierteVariablen.contains(variable))
+		{
+			error(NICHT_DEKLARIERTE_VARIABLE, attribut);
+		}
+	}
+	
+	private void speichereDeklarierteVariable(String var, EAttribute attribut)
+	{
+		if (!Character.isDigit(var.charAt(0))) 
+		{
+			if (!deklarierteVariablen.contains(var)) 
+			{
+				deklarierteVariablen.add(var);
+			}
+		} 
+		else 
+		{
+			error(UNGUELTIGER_VARIABLENNAME, attribut);
 		}
 	}
 }
