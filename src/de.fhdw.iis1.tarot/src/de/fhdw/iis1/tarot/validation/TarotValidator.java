@@ -3,7 +3,8 @@
  */
 package de.fhdw.iis1.tarot.validation;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.xtext.validation.Check;
