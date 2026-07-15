@@ -1,0 +1,10 @@
+Z0: R:=0;
+Z1: Const1 := 1;
+Z2: EINGABE X;
+Z3: EINGABE Y;
+Z4: WENN(Y=0)DANN GEHE ZU Z8;
+Z5: R := R + X;
+Z6: Y := Y - Const1;
+Z7: GEHE ZU Z4;
+Z8: SCHREIBE R;
+Z9: Halt!;
