@@ -2,6 +2,8 @@ package de.fhdw.iis1.tarot.interpreter;
 
 import org.eclipse.xtext.resource.XtextResourceSet;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 import org.eclipse.emf.common.util.URI;
@@ -13,27 +15,24 @@ import de.fhdw.iis1.tarot.tarot.*;
 
 public class Main {
 	public static void main(String[] args) {
-		
-		Injector injector =
-	            new TarotStandaloneSetup()
-	                .createInjectorAndDoEMFRegistration();
-	 
-	        XtextResourceSet resourceSet =
-	            injector.getInstance(XtextResourceSet.class);
-		String pfad = "C:\\Users\\admin\\Documents\\GitHub\\Tarot\\programme\\src\\Test.tarot";
-		
-		 Resource resource = resourceSet.getResource(
-		            URI.createFileURI(pfad),
-		            true
-		        );
-		 
-		 Interpreter interpreter = new Interpreter();
-		 Programm prog = (Programm) resource.getContents().get(0);
-		 List<Zeile> zeilen = prog.getZeilen();
-		 
-		 for(Zeile zeile : zeilen) {
-			 interpreter.doSwitch(zeile.getAnweisung());
-		 }
-		 
+
+		Injector injezierer = new TarotStandaloneSetup().createInjectorAndDoEMFRegistration();
+		XtextResourceSet ressourcenSammlung = injezierer.getInstance(XtextResourceSet.class);
+		String pfad = Paths.get("..", "..", "programme", "src", "Multiplikation.tarot").toString();
+		Resource ressource = ressourcenSammlung.getResource(URI.createFileURI(pfad), true);
+
+		Interpretierer interpretierer = new Interpretierer();
+		Programm prog = (Programm) ressource.getContents().get(0);
+		List<Zeile> zeilen = prog.getZeilen();
+
+		for (int pz = 0; pz < zeilen.size(); pz++) {
+			int setzePz = (int) interpretierer.doSwitch(zeilen.get(pz).getAnweisung());
+			if (setzePz >= 0) {
+				pz = setzePz - 1;
+			} else if (setzePz == -2) {
+				break;
+			}
+		}
+
 	}
 }

@@ -11,14 +11,14 @@ import org.eclipse.xtext.util.XtextSwitch;
 import de.fhdw.iis1.tarot.tarot.*;
 import de.fhdw.iis1.tarot.tarot.util.TarotSwitch;
 
-public class Interpreter extends TarotSwitch<Object>{
+public class Interpretierer extends TarotSwitch<Object>{
 	private final Map<String, Integer> speicher = new HashMap<>();
 	private final Scanner scanner = new Scanner(System.in);
 	
 	@Override
 	public Object caseZuordnung(Zuordnung zuordnung) {
 		speicher.put(zuordnung.getVar(), (Integer) this.doSwitch(zuordnung.getAusdruck()));
-		return super.caseZuordnung(zuordnung);
+		return -1;
 	}
 	
 	@Override
@@ -46,13 +46,13 @@ public class Interpreter extends TarotSwitch<Object>{
 	public Object caseEingabe(Eingabe eingabe) {
 		System.out.println("Gib einen Wert für " + eingabe.getVar() + " ein: ");
 		speicher.put(eingabe.getVar(), scanner.nextInt());
-		return super.caseEingabe(eingabe);
+		return -1;
 	}
 	
 	@Override
 	public Object caseAusgabe(Ausgabe ausgabe) {
 		System.out.println("Der Wert von " + ausgabe.getVar() + " ist " + speicher.get(ausgabe.getVar()));
-		return super.caseAusgabe(ausgabe);
+		return -1;
 	}
 	
 	@Override
@@ -105,7 +105,7 @@ public class Interpreter extends TarotSwitch<Object>{
 	
 	@Override
 	public Object caseHalt(Halt object) {
-		return -1; // Bleib
+		return -2; // Break
 	}
 	
 }
