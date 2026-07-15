@@ -6,9 +6,8 @@ Programm:
     zeilen+=Zeile+
 ;
  
- 
 Zeile:
-    name=ID ':' anweisung=Anweisung ';'?
+    name=ID ':' anweisung=Anweisung ';'
 ;
  
 Anweisung:
@@ -30,7 +29,7 @@ Ausdruck:
  
 StrichOperation:
     {StrichOperation}
-    links=ID (op=('+'|'-') rechts=ID)?
+    links=ID (op=('+'|'-') rechts=ID)
 ;
  
 Ganzzahl:
@@ -51,12 +50,8 @@ GeheZu:
 ;
  
 KonditionalerGeheZu:
-    'WENN' '(' links=ID   op=('=' | '<' | '>') rechts=Wert ')'
+    'WENN' '(' links=ID   op=('=' | '<' | '>' | '<=' | '>=' | '!=') rechts=ID ')'
     'DANN' 'GEHE' 'ZU' ziel=ID
-;
- 
-Wert:
-	ID | INT
 ;
  
 Halt:
