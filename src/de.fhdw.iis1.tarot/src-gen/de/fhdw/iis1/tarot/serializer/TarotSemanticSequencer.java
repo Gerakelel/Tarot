@@ -182,7 +182,19 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     KonditionalerGeheZu returns KonditionalerGeheZu
 	 *
 	 * Constraint:
-	 *     (links=ID (op='=' | op='&lt;' | op='&gt;') rechts=Wert ziel=ID)
+	 *     (
+	 *         links=ID 
+	 *         (
+	 *             op='=' | 
+	 *             op='&lt;' | 
+	 *             op='&gt;' | 
+	 *             op='&lt;=' | 
+	 *             op='&gt;=' | 
+	 *             op='!='
+	 *         ) 
+	 *         rechts=ID 
+	 *         ziel=ID
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_KonditionalerGeheZu(ISerializationContext context, KonditionalerGeheZu semanticObject) {
@@ -211,7 +223,7 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     StrichOperation returns StrichOperation
 	 *
 	 * Constraint:
-	 *     (links=ID ((op='+' | op='-') rechts=ID)?)
+	 *     (links=ID (op='+' | op='-') rechts=ID)
 	 * </pre>
 	 */
 	protected void sequence_StrichOperation(ISerializationContext context, StrichOperation semanticObject) {

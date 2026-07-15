@@ -1,0 +1,12 @@
+Z0: EINGABE A;
+Z1: S := 0;
+Z2: Const1 := 1;
+Z3: WENN(A=1)DANN GEHE ZU Z10;
+Z4: B := A;
+Z5: A := A - Const1;
+Z6: WENN(B=0)DANN GEHE ZU Z3;
+Z7: S := S + B;
+Z8: B := B - Const1;
+Z9: GEHE ZU Z5;
+Z10: SCHREIBE S;
+Z11: Halt!;

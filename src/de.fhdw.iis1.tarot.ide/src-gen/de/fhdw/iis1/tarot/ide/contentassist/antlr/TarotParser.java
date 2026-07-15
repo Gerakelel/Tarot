@@ -35,7 +35,6 @@ public class TarotParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAusdruckAccess().getAlternatives(), "rule__Ausdruck__Alternatives");
 			builder.put(grammarAccess.getStrichOperationAccess().getOpAlternatives_2_0_0(), "rule__StrichOperation__OpAlternatives_2_0_0");
 			builder.put(grammarAccess.getKonditionalerGeheZuAccess().getOpAlternatives_3_0(), "rule__KonditionalerGeheZu__OpAlternatives_3_0");
-			builder.put(grammarAccess.getWertAccess().getAlternatives(), "rule__Wert__Alternatives");
 			builder.put(grammarAccess.getZeileAccess().getGroup(), "rule__Zeile__Group__0");
 			builder.put(grammarAccess.getZuordnungAccess().getGroup(), "rule__Zuordnung__Group__0");
 			builder.put(grammarAccess.getStrichOperationAccess().getGroup(), "rule__StrichOperation__Group__0");
