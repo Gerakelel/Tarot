@@ -29,7 +29,7 @@ Ausdruck:
  
 StrichOperation:
     {StrichOperation}
-    links=ID (op=('+'|'-') rechts=ID)
+    links=Wert (op=('+'|'-') rechts=Wert)
 ;
  
 Ganzzahl:
