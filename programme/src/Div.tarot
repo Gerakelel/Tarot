@@ -1,0 +1,16 @@
+Z0: Q := 0;
+Z1: Const1 := 1;
+Z2: EINGABE X; //Dividend
+Z3: EINGABE Y; //Divisor
+Z4: WENN (Y = 0) DANN GEHE ZU Z12;
+Z5: WENN (X = 0) DANN GEHE ZU Z11;
+Z6: WENN (X = Y) DANN GEHE ZU Z10;
+Z7: WENN (X = 0) DANN GEHE ZU Z11;
+Z8: WENN (X < 0) DANN GEHE ZU Z14;
+Z9: X := X - Y;
+Z10: Q := Q + Const1;
+Z11: GEHE ZU Z7;
+Z12: SCHREIBE Q;
+Z13: Halt!;
+Z14: Q := Q - Const1;
+Z15: GEHE ZU Z12;

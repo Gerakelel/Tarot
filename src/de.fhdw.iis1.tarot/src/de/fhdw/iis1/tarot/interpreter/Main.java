@@ -15,10 +15,12 @@ import de.fhdw.iis1.tarot.tarot.*;
 
 public class Main {
 	public static void main(String[] args) {
+		
+		String programm = "Mul"; // Verfügbar: Mul, Div
 
 		Injector injezierer = new TarotStandaloneSetup().createInjectorAndDoEMFRegistration();
 		XtextResourceSet ressourcenSammlung = injezierer.getInstance(XtextResourceSet.class);
-		String pfad = Paths.get("..", "..", "programme", "src", "Mul.tarot").toString();
+		String pfad = Paths.get("..", "..", "programme", "src", programm + ".tarot").toString();
 		Resource ressource = ressourcenSammlung.getResource(URI.createFileURI(pfad), true);
 
 		Interpretierer interpretierer = new Interpretierer();
