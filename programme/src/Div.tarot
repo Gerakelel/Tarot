@@ -1,16 +1,30 @@
 Z0: Q := 0;
-Z1: Const1 := 1;
+Z1: Vorzeichen := 1;
 Z2: EINGABE X; //Dividend
 Z3: EINGABE Y; //Divisor
-Z4: WENN (Y = 0) DANN GEHE ZU Z12;
-Z5: WENN (X = 0) DANN GEHE ZU Z11;
-Z6: WENN (X = Y) DANN GEHE ZU Z10;
-Z7: WENN (X = 0) DANN GEHE ZU Z11;
-Z8: WENN (X < 0) DANN GEHE ZU Z14;
-Z9: X := X - Y;
-Z10: Q := Q + Const1;
-Z11: GEHE ZU Z7;
-Z12: SCHREIBE Q;
-Z13: Halt!;
-Z14: Q := Q - Const1;
-Z15: GEHE ZU Z12;
+Z4: WENN (Y = 0) DANN GEHE ZU Z20;
+Z5: WENN (X = 0) DANN GEHE ZU Z23;
+Z6: WENN (X = Y) DANN GEHE ZU Z25;
+Z7: WENN (X < 0) DANN GEHE ZU Z14;
+Z8: WENN (Y < 0) DANN GEHE ZU Z17;
+
+Z9: WENN (X = 0) DANN GEHE ZU Z21;
+Z10: WENN (X < 0) DANN GEHE ZU Z20;
+Z11: X := X - Y;
+Z12: Q := Q + 1;
+Z13: GEHE ZU Z9;
+
+Z14: X := 0 - X;
+Z15: Vorzeichen := 0 - Vorzeichen;
+Z16: GEHE ZU Z8;
+Z17: Y := 0 - Y;
+Z18: Vorzeichen := 0 - Vorzeichen;
+Z19: GEHE ZU Z9;
+
+Z20: Q := Q - 1;
+Z21: WENN (Vorzeichen > 0 ) DANN GEHE ZU Z23;
+Z22: Q := 0 - Q;
+Z23: SCHREIBE Q;
+Z24: Halt!;
+Z25: SCHREIBE Vorzeichen;
+Z26: Halt!;

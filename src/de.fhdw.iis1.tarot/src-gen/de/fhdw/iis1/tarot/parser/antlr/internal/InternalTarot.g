@@ -353,19 +353,20 @@ ruleStrichOperation returns [EObject current=null]
 		)
 		(
 			(
-				lv_links_1_0=RULE_ID
 				{
-					newLeafNode(lv_links_1_0, grammarAccess.getStrichOperationAccess().getLinksIDTerminalRuleCall_1_0());
+					newCompositeNode(grammarAccess.getStrichOperationAccess().getLinksWertParserRuleCall_1_0());
 				}
+				lv_links_1_0=ruleWert
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getStrichOperationRule());
+						$current = createModelElementForParent(grammarAccess.getStrichOperationRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
 						"links",
 						lv_links_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"de.fhdw.iis1.tarot.Tarot.Wert");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -399,19 +400,20 @@ ruleStrichOperation returns [EObject current=null]
 			)
 			(
 				(
-					lv_rechts_3_0=RULE_ID
 					{
-						newLeafNode(lv_rechts_3_0, grammarAccess.getStrichOperationAccess().getRechtsIDTerminalRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getStrichOperationAccess().getRechtsWertParserRuleCall_2_1_0());
 					}
+					lv_rechts_3_0=ruleWert
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getStrichOperationRule());
+							$current = createModelElementForParent(grammarAccess.getStrichOperationRule());
 						}
-						setWithLastConsumed(
+						set(
 							$current,
 							"rechts",
 							lv_rechts_3_0,
-							"org.eclipse.xtext.common.Terminals.ID");
+							"de.fhdw.iis1.tarot.Tarot.Wert");
+						afterParserOrEnumRuleCall();
 					}
 				)
 			)

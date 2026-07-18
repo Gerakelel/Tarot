@@ -16,7 +16,7 @@ import de.fhdw.iis1.tarot.tarot.*;
 public class Main {
 	public static void main(String[] args) {
 		
-		String programm = "Mul"; // Verfügbar: Mul, Div
+		String programm = "Div"; // Verfügbar: Mul, Div
 
 		Injector injezierer = new TarotStandaloneSetup().createInjectorAndDoEMFRegistration();
 		XtextResourceSet ressourcenSammlung = injezierer.getInstance(XtextResourceSet.class);
