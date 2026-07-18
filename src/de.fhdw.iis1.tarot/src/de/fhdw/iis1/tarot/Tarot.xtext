@@ -24,7 +24,9 @@ Zuordnung:
 ;
  
 Ausdruck:
-    StrichOperation | Ganzzahl
+    StrichOperation
+    | Ganzzahl
+    | Variable
 ;
  
 StrichOperation:
@@ -35,6 +37,11 @@ StrichOperation:
 Ganzzahl:
     {Ganzzahl}
     wert=INT
+;
+
+Variable:
+	{Variable}
+	name=ID
 ;
  
 Eingabe:
