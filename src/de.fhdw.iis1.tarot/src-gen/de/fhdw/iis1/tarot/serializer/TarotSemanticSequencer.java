@@ -223,7 +223,7 @@ public class TarotSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     StrichOperation returns StrichOperation
 	 *
 	 * Constraint:
-	 *     (links=ID (op='+' | op='-') rechts=ID)
+	 *     (links=Wert (op='+' | op='-') rechts=Wert)
 	 * </pre>
 	 */
 	protected void sequence_StrichOperation(ISerializationContext context, StrichOperation semanticObject) {

@@ -1326,7 +1326,20 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
                 alt3=1;
             }
             else if ( (LA3_0==RULE_INT) ) {
-                alt3=2;
+                int LA3_2 = input.LA(2);
+
+                if ( (LA3_2==EOF||LA3_2==20) ) {
+                    alt3=2;
+                }
+                else if ( ((LA3_2>=11 && LA3_2<=12)) ) {
+                    alt3=1;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 3, 2, input);
+
+                    throw nvae;
+                }
             }
             else {
                 NoViableAltException nvae =
@@ -2252,7 +2265,7 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
             // InternalTarot.g:730:1: ( rule__StrichOperation__Group__0__Impl rule__StrichOperation__Group__1 )
             // InternalTarot.g:731:2: rule__StrichOperation__Group__0__Impl rule__StrichOperation__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_8);
             rule__StrichOperation__Group__0__Impl();
 
             state._fsp--;
@@ -2327,7 +2340,7 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
             // InternalTarot.g:757:1: ( rule__StrichOperation__Group__1__Impl rule__StrichOperation__Group__2 )
             // InternalTarot.g:758:2: rule__StrichOperation__Group__1__Impl rule__StrichOperation__Group__2
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_9);
             rule__StrichOperation__Group__1__Impl();
 
             state._fsp--;
@@ -2492,7 +2505,7 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
             // InternalTarot.g:811:1: ( rule__StrichOperation__Group_2__0__Impl rule__StrichOperation__Group_2__1 )
             // InternalTarot.g:812:2: rule__StrichOperation__Group_2__0__Impl rule__StrichOperation__Group_2__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_8);
             rule__StrichOperation__Group_2__0__Impl();
 
             state._fsp--;
@@ -2812,7 +2825,7 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
             // InternalTarot.g:919:1: ( rule__Eingabe__Group__0__Impl rule__Eingabe__Group__1 )
             // InternalTarot.g:920:2: rule__Eingabe__Group__0__Impl rule__Eingabe__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             rule__Eingabe__Group__0__Impl();
 
             state._fsp--;
@@ -2967,7 +2980,7 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
             // InternalTarot.g:973:1: ( rule__Ausgabe__Group__0__Impl rule__Ausgabe__Group__1 )
             // InternalTarot.g:974:2: rule__Ausgabe__Group__0__Impl rule__Ausgabe__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             rule__Ausgabe__Group__0__Impl();
 
             state._fsp--;
@@ -3197,7 +3210,7 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
             // InternalTarot.g:1054:1: ( rule__GeheZu__Group__1__Impl rule__GeheZu__Group__2 )
             // InternalTarot.g:1055:2: rule__GeheZu__Group__1__Impl rule__GeheZu__Group__2
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             rule__GeheZu__Group__1__Impl();
 
             state._fsp--;
@@ -3982,7 +3995,7 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
             // InternalTarot.g:1324:1: ( rule__KonditionalerGeheZu__Group__8__Impl rule__KonditionalerGeheZu__Group__9 )
             // InternalTarot.g:1325:2: rule__KonditionalerGeheZu__Group__8__Impl rule__KonditionalerGeheZu__Group__9
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             rule__KonditionalerGeheZu__Group__8__Impl();
 
             state._fsp--;
@@ -4470,21 +4483,25 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StrichOperation__LinksAssignment_1"
-    // InternalTarot.g:1503:1: rule__StrichOperation__LinksAssignment_1 : ( RULE_ID ) ;
+    // InternalTarot.g:1503:1: rule__StrichOperation__LinksAssignment_1 : ( ruleWert ) ;
     public final void rule__StrichOperation__LinksAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTarot.g:1507:1: ( ( RULE_ID ) )
-            // InternalTarot.g:1508:2: ( RULE_ID )
+            // InternalTarot.g:1507:1: ( ( ruleWert ) )
+            // InternalTarot.g:1508:2: ( ruleWert )
             {
-            // InternalTarot.g:1508:2: ( RULE_ID )
-            // InternalTarot.g:1509:3: RULE_ID
+            // InternalTarot.g:1508:2: ( ruleWert )
+            // InternalTarot.g:1509:3: ruleWert
             {
-             before(grammarAccess.getStrichOperationAccess().getLinksIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getStrichOperationAccess().getLinksIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getStrichOperationAccess().getLinksWertParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_2);
+            ruleWert();
+
+            state._fsp--;
+
+             after(grammarAccess.getStrichOperationAccess().getLinksWertParserRuleCall_1_0()); 
 
             }
 
@@ -4554,21 +4571,25 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StrichOperation__RechtsAssignment_2_1"
-    // InternalTarot.g:1533:1: rule__StrichOperation__RechtsAssignment_2_1 : ( RULE_ID ) ;
+    // InternalTarot.g:1533:1: rule__StrichOperation__RechtsAssignment_2_1 : ( ruleWert ) ;
     public final void rule__StrichOperation__RechtsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTarot.g:1537:1: ( ( RULE_ID ) )
-            // InternalTarot.g:1538:2: ( RULE_ID )
+            // InternalTarot.g:1537:1: ( ( ruleWert ) )
+            // InternalTarot.g:1538:2: ( ruleWert )
             {
-            // InternalTarot.g:1538:2: ( RULE_ID )
-            // InternalTarot.g:1539:3: RULE_ID
+            // InternalTarot.g:1538:2: ( ruleWert )
+            // InternalTarot.g:1539:3: ruleWert
             {
-             before(grammarAccess.getStrichOperationAccess().getRechtsIDTerminalRuleCall_2_1_0()); 
-            match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getStrichOperationAccess().getRechtsIDTerminalRuleCall_2_1_0()); 
+             before(grammarAccess.getStrichOperationAccess().getRechtsWertParserRuleCall_2_1_0()); 
+            pushFollow(FOLLOW_2);
+            ruleWert();
+
+            state._fsp--;
+
+             after(grammarAccess.getStrichOperationAccess().getRechtsWertParserRuleCall_2_1_0()); 
 
             }
 
@@ -4916,8 +4937,8 @@ public class InternalTarotParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x000000000007E000L});

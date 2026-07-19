@@ -97,7 +97,7 @@ public class TarotValidator extends AbstractTarotValidator
 		if (!ref.matches("Z\\d+")
 			|| Integer.parseInt(ref.substring(1)) >= zeilenAnzahl)
 		{
-			error(UNGUELTIGE_ZEILENREFERENZ, TarotPackage.Literals.KONDITIONALER_GEHE_ZU__ZIEL);
+			error(UNGUELTIGE_ZEILENREFERENZ, attribut);
 		}
 	}
 	

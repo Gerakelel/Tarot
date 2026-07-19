@@ -1506,9 +1506,9 @@ rule__StrichOperation__LinksAssignment_1
 	}
 :
 	(
-		{ before(grammarAccess.getStrichOperationAccess().getLinksIDTerminalRuleCall_1_0()); }
-		RULE_ID
-		{ after(grammarAccess.getStrichOperationAccess().getLinksIDTerminalRuleCall_1_0()); }
+		{ before(grammarAccess.getStrichOperationAccess().getLinksWertParserRuleCall_1_0()); }
+		ruleWert
+		{ after(grammarAccess.getStrichOperationAccess().getLinksWertParserRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -1536,9 +1536,9 @@ rule__StrichOperation__RechtsAssignment_2_1
 	}
 :
 	(
-		{ before(grammarAccess.getStrichOperationAccess().getRechtsIDTerminalRuleCall_2_1_0()); }
-		RULE_ID
-		{ after(grammarAccess.getStrichOperationAccess().getRechtsIDTerminalRuleCall_2_1_0()); }
+		{ before(grammarAccess.getStrichOperationAccess().getRechtsWertParserRuleCall_2_1_0()); }
+		ruleWert
+		{ after(grammarAccess.getStrichOperationAccess().getRechtsWertParserRuleCall_2_1_0()); }
 	)
 ;
 finally {

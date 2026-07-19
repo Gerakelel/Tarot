@@ -23,18 +23,10 @@ public class Interpretierer extends TarotSwitch<Object>{
 	
 	@Override
 	public Object caseStrichOperation(StrichOperation operation) {
-		if (speicher.containsKey(operation.getLinks())) {
-			int operandA = speicher.get(operation.getLinks());
-			int operandB;
-			
-			if (speicher.containsKey(operation.getRechts())) {
-				operandB = speicher.get(operation.getRechts());	
-			} else {
-				operandB = Integer.parseInt(operation.getRechts());
-			}
-			return operation.getOp().equals("+") ? operandA + operandB : operandA - operandB;
-		}
-		throw new IllegalStateException("Ungültiger Ausdruck.");
+		int operandA = speicher.containsKey(operation.getLinks()) ? speicher.get(operation.getLinks()) : Integer.parseInt(operation.getLinks());
+		int operandB = speicher.containsKey(operation.getRechts()) ? speicher.get(operation.getRechts()) : Integer.parseInt(operation.getRechts());
+		
+		return operation.getOp().equals("+") ? operandA + operandB : operandA - operandB;
 	}
 	
 	@Override

@@ -470,10 +470,10 @@ public class InternalTarotLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTarot.g:827:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalTarot.g:827:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalTarot.g:829:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalTarot.g:829:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalTarot.g:827:11: ( '^' )?
+            // InternalTarot.g:829:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -482,7 +482,7 @@ public class InternalTarotLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalTarot.g:827:11: '^'
+                    // InternalTarot.g:829:11: '^'
                     {
                     match('^'); 
 
@@ -500,7 +500,7 @@ public class InternalTarotLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalTarot.g:827:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalTarot.g:829:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -549,10 +549,10 @@ public class InternalTarotLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTarot.g:829:10: ( ( '0' .. '9' )+ )
-            // InternalTarot.g:829:12: ( '0' .. '9' )+
+            // InternalTarot.g:831:10: ( ( '0' .. '9' )+ )
+            // InternalTarot.g:831:12: ( '0' .. '9' )+
             {
-            // InternalTarot.g:829:12: ( '0' .. '9' )+
+            // InternalTarot.g:831:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -566,7 +566,7 @@ public class InternalTarotLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalTarot.g:829:13: '0' .. '9'
+            	    // InternalTarot.g:831:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -598,10 +598,10 @@ public class InternalTarotLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTarot.g:831:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalTarot.g:831:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalTarot.g:833:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalTarot.g:833:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalTarot.g:831:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalTarot.g:833:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -619,10 +619,10 @@ public class InternalTarotLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalTarot.g:831:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalTarot.g:833:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalTarot.g:831:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalTarot.g:833:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -638,7 +638,7 @@ public class InternalTarotLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalTarot.g:831:21: '\\\\' .
+                    	    // InternalTarot.g:833:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -646,7 +646,7 @@ public class InternalTarotLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalTarot.g:831:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalTarot.g:833:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -671,10 +671,10 @@ public class InternalTarotLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalTarot.g:831:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalTarot.g:833:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalTarot.g:831:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalTarot.g:833:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -690,7 +690,7 @@ public class InternalTarotLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalTarot.g:831:54: '\\\\' .
+                    	    // InternalTarot.g:833:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -698,7 +698,7 @@ public class InternalTarotLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalTarot.g:831:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalTarot.g:833:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -741,12 +741,12 @@ public class InternalTarotLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTarot.g:833:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalTarot.g:833:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalTarot.g:835:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalTarot.g:835:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalTarot.g:833:24: ( options {greedy=false; } : . )*
+            // InternalTarot.g:835:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -771,7 +771,7 @@ public class InternalTarotLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalTarot.g:833:52: .
+            	    // InternalTarot.g:835:52: .
             	    {
             	    matchAny(); 
 
@@ -801,12 +801,12 @@ public class InternalTarotLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTarot.g:835:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalTarot.g:835:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalTarot.g:837:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalTarot.g:837:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalTarot.g:835:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalTarot.g:837:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -819,7 +819,7 @@ public class InternalTarotLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalTarot.g:835:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalTarot.g:837:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -839,7 +839,7 @@ public class InternalTarotLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalTarot.g:835:40: ( ( '\\r' )? '\\n' )?
+            // InternalTarot.g:837:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -848,9 +848,9 @@ public class InternalTarotLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalTarot.g:835:41: ( '\\r' )? '\\n'
+                    // InternalTarot.g:837:41: ( '\\r' )? '\\n'
                     {
-                    // InternalTarot.g:835:41: ( '\\r' )?
+                    // InternalTarot.g:837:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -859,7 +859,7 @@ public class InternalTarotLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalTarot.g:835:41: '\\r'
+                            // InternalTarot.g:837:41: '\\r'
                             {
                             match('\r'); 
 
@@ -891,10 +891,10 @@ public class InternalTarotLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTarot.g:837:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalTarot.g:837:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalTarot.g:839:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalTarot.g:839:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalTarot.g:837:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalTarot.g:839:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -948,8 +948,8 @@ public class InternalTarotLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTarot.g:839:16: ( . )
-            // InternalTarot.g:839:18: .
+            // InternalTarot.g:841:16: ( . )
+            // InternalTarot.g:841:18: .
             {
             matchAny(); 
 

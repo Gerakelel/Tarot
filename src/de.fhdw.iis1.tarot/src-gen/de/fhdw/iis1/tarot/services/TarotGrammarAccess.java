@@ -178,35 +178,35 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cStrichOperationAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cLinksAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cLinksIDTerminalRuleCall_1_0 = (RuleCall)cLinksAssignment_1.eContents().get(0);
+		private final RuleCall cLinksWertParserRuleCall_1_0 = (RuleCall)cLinksAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Assignment cOpAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final Alternatives cOpAlternatives_2_0_0 = (Alternatives)cOpAssignment_2_0.eContents().get(0);
 		private final Keyword cOpPlusSignKeyword_2_0_0_0 = (Keyword)cOpAlternatives_2_0_0.eContents().get(0);
 		private final Keyword cOpHyphenMinusKeyword_2_0_0_1 = (Keyword)cOpAlternatives_2_0_0.eContents().get(1);
 		private final Assignment cRechtsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cRechtsIDTerminalRuleCall_2_1_0 = (RuleCall)cRechtsAssignment_2_1.eContents().get(0);
+		private final RuleCall cRechtsWertParserRuleCall_2_1_0 = (RuleCall)cRechtsAssignment_2_1.eContents().get(0);
 		
 		//StrichOperation:
 		//    {StrichOperation}
-		//    links=ID (op=('+'|'-') rechts=ID)
+		//    links=Wert (op=('+'|'-') rechts=Wert)
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{StrichOperation}
-		//links=ID (op=('+'|'-') rechts=ID)
+		//links=Wert (op=('+'|'-') rechts=Wert)
 		public Group getGroup() { return cGroup; }
 		
 		//{StrichOperation}
 		public Action getStrichOperationAction_0() { return cStrichOperationAction_0; }
 		
-		//links=ID
+		//links=Wert
 		public Assignment getLinksAssignment_1() { return cLinksAssignment_1; }
 		
-		//ID
-		public RuleCall getLinksIDTerminalRuleCall_1_0() { return cLinksIDTerminalRuleCall_1_0; }
+		//Wert
+		public RuleCall getLinksWertParserRuleCall_1_0() { return cLinksWertParserRuleCall_1_0; }
 		
-		//(op=('+'|'-') rechts=ID)
+		//(op=('+'|'-') rechts=Wert)
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//op=('+'|'-')
@@ -221,11 +221,11 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'-'
 		public Keyword getOpHyphenMinusKeyword_2_0_0_1() { return cOpHyphenMinusKeyword_2_0_0_1; }
 		
-		//rechts=ID
+		//rechts=Wert
 		public Assignment getRechtsAssignment_2_1() { return cRechtsAssignment_2_1; }
 		
-		//ID
-		public RuleCall getRechtsIDTerminalRuleCall_2_1_0() { return cRechtsIDTerminalRuleCall_2_1_0; }
+		//Wert
+		public RuleCall getRechtsWertParserRuleCall_2_1_0() { return cRechtsWertParserRuleCall_2_1_0; }
 	}
 	public class GanzzahlElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.fhdw.iis1.tarot.Tarot.Ganzzahl");
@@ -592,7 +592,7 @@ public class TarotGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	//StrichOperation:
 	//    {StrichOperation}
-	//    links=ID (op=('+'|'-') rechts=ID)
+	//    links=Wert (op=('+'|'-') rechts=Wert)
 	//;
 	public StrichOperationElements getStrichOperationAccess() {
 		return pStrichOperation;
